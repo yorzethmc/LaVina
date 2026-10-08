@@ -159,8 +159,8 @@
     /* Logo Avatar con Aureola */
     .avatar-wrapper {
       position: relative;
-      width: 96px;
-      height: 96px;
+      width: 104px;
+      height: 104px;
       margin-bottom: 18px;
     }
 
@@ -169,14 +169,14 @@
       inset: -4px;
       border-radius: var(--radius-full);
       background: var(--wine-gradient);
-      opacity: 0.45;
-      filter: blur(10px);
+      opacity: 0.55;
+      filter: blur(12px);
       animation: pulse-aura 4s ease-in-out infinite alternate;
     }
 
     @keyframes pulse-aura {
-      0% { opacity: 0.3; transform: scale(0.96); }
-      100% { opacity: 0.65; transform: scale(1.04); }
+      0% { opacity: 0.35; transform: scale(0.96); }
+      100% { opacity: 0.7; transform: scale(1.05); }
     }
 
     .avatar-icon {
@@ -184,13 +184,25 @@
       width: 100%;
       height: 100%;
       border-radius: var(--radius-full);
-      background: linear-gradient(145deg, #1d202b 0%, #101218 100%);
-      border: 2px solid rgba(216, 178, 110, 0.55);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+      background: #ffffff;
+      border: 2.5px solid rgba(216, 178, 110, 0.7);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.75);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--gold-glow);
+      overflow: hidden;
+    }
+
+    .avatar-logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s var(--ease-spring);
+    }
+
+    .avatar-wrapper:hover .avatar-logo-img {
+      transform: scale(1.06);
     }
 
     .avatar-icon svg {
@@ -773,19 +785,7 @@
       <div class="avatar-wrapper">
         <div class="avatar-glow" aria-hidden="true"></div>
         <div class="avatar-icon" aria-label="Logo La Viña">
-          <!-- Icono SVG refinado de Copas de Vino & Botella (Dark Luxury) -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M8 22h8" />
-            <path d="M12 15v7" />
-            <path d="M12 15a5 5 0 0 0 5-5V3H7v7a5 5 0 0 0 5 5Z" fill="url(#wineGrad)" fill-opacity="0.25"/>
-            <path d="M7 7h10" />
-            <defs>
-              <linearGradient id="wineGrad" x1="7" y1="3" x2="17" y2="15" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#e04f6e"/>
-                <stop offset="1" stop-color="#a82a46"/>
-              </linearGradient>
-            </defs>
-          </svg>
+          <img src="logo.svg" alt="Logotipo Oficial Licorera & Minisúper La Viña" class="avatar-logo-img" id="brand-logo-img" />
         </div>
       </div>
 

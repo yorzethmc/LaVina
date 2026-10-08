@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800&amp;family=Playfair+Display:wght@700&amp;display=swap');
+      .dark-ring {
+        fill: none;
+        stroke: url(#goldGrad);
+        stroke-width: 28;
+      }
+      .brand-title-gold {
+        font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-weight: 800;
+        font-size: 215px;
+        fill: url(#goldGrad);
+        letter-spacing: 0.05em;
+      }
+      .brand-sub-white {
+        font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
+        font-weight: 700;
+        font-size: 54px;
+        fill: #e2e8f0;
+        text-anchor: middle;
+        letter-spacing: 0.18em;
+      }
+    </style>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6d89b" />
+      <stop offset="50%" stop-color="#d8b26e" />
+      <stop offset="100%" stop-color="#b88b3f" />
+    </linearGradient>
+    <radialGradient id="cardBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#24142a" />
+      <stop offset="80%" stop-color="#140918" />
+      <stop offset="100%" stop-color="#0a050d" />
+    </radialGradient>
+  </defs>
+
+  <!-- Fondo circular oscuro aterciopelado con matiz vino -->
+  <circle cx="500" cy="500" r="480" fill="url(#cardBg)" />
+
+  <!-- Anillo exterior dorado de lujo -->
+  <circle cx="500" cy="500" r="460" class="dark-ring" />
+
+  <!-- Título: LA VIÑA -->
+  <text x="500" y="525" class="brand-title-gold">
+    <tspan x="228">LA</tspan>
+    <tspan x="435">VI</tspan>
+    <tspan x="670">NA</tspan>
+  </text>
+
+  <!-- Tilde estilizada sobre la N en dorado -->
+  <path d="M 605 385 C 635 375, 665 410, 725 385 C 730 383, 730 405, 715 415 C 675 435, 635 390, 605 415 Z" fill="url(#goldGrad)" />
+
+  <!-- Subtítulo: MINISUPER & LICORERA -->
+  <text x="500" y="620" class="brand-sub-white">MINISUPER &amp; LICORERA</text>
+</svg>

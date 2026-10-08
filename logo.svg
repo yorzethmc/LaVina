@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800&amp;family=Playfair+Display:wght@700&amp;display=swap');
+      .circle-ring {
+        fill: none;
+        stroke: #3a0a3c;
+        stroke-width: 32;
+      }
+      .brand-title-text {
+        font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-weight: 800;
+        font-size: 215px;
+        fill: #3a0a3c;
+        text-anchor: middle;
+        letter-spacing: 0.05em;
+      }
+      .brand-sub-text {
+        font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
+        font-weight: 700;
+        font-size: 56px;
+        fill: #3a0a3c;
+        text-anchor: middle;
+        letter-spacing: 0.16em;
+      }
+    </style>
+  </defs>
+
+  <!-- Fondo circular blanco limpio para máxima legibilidad -->
+  <circle cx="500" cy="500" r="480" fill="#ffffff" />
+
+  <!-- Anillo exterior característico -->
+  <circle cx="500" cy="500" r="460" class="circle-ring" />
+
+  <!-- Título principal: LA VIÑA -->
+  <!-- Separado para posicionar la tilde con su diseño estilizado -->
+  <text x="500" y="525" class="brand-title-text">
+    <tspan x="228">LA</tspan>
+    <tspan x="435">VI</tspan>
+    <tspan x="670">NA</tspan>
+  </text>
+
+  <!-- Tilde fluida estilizada sobre la N -->
+  <path d="M 605 385 C 635 375, 665 410, 725 385 C 730 383, 730 405, 715 415 C 675 435, 635 390, 605 415 Z" fill="#3a0a3c" />
+
+  <!-- Subtítulo: MINISUPER & LICORERA -->
+  <text x="500" y="620" class="brand-sub-text">MINISUPER &amp; LICORERA</text>
+</svg>
