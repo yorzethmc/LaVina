@@ -18,56 +18,68 @@
   <meta property="og:description" content="Vinos, cervezas, licores y minisúper • Turrúcares, Alajuela, Costa Rica.">
   <meta property="og:locale" content="es_CR">
 
-  <!-- Google Fonts: Plus Jakarta Sans & Outfit para estilo Dark Luxury -->
+  <!-- Google Fonts: Cinzel (Lujo Cava & Viñedo Artesanal), Outfit & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       VARIABLES Y SISTEMA DE DISEÑO (DARK LUXURY)
+       SISTEMA DE DISEÑO: ARTESANAL AMADERADO & DARK LUXURY (LA VIÑA)
+       Inspirado en Cava de Vinos, Barricas de Roble Francés y Acabados Dorados
        ========================================================================== */
     :root {
-      --bg-base: #0a0b0e;
-      --bg-card: rgba(22, 25, 34, 0.72);
-      --bg-card-hover: rgba(30, 35, 48, 0.88);
-      --bg-card-active: rgba(38, 44, 60, 0.95);
-      --bg-glass: rgba(255, 255, 255, 0.035);
-      
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-gold: rgba(224, 182, 107, 0.28);
-      --border-wine: rgba(217, 72, 103, 0.35);
+      /* Maderas Nobles y Cava */
+      --wood-darkest: #0f0a07;
+      --wood-deep: #1a110b;
+      --wood-medium: #2a1a12;
+      --wood-warm: #382318;
+      --wood-light: #523424;
 
-      --wine-primary: #9e2a44;
-      --wine-glow: #e04f6e;
-      --wine-gradient: linear-gradient(135deg, #a82a46 0%, #e04f6e 100%);
-      
-      --gold-primary: #d8b26e;
+      /* Tarjetas estilo Tabla de Roble / Barrica */
+      --card-wood-bg: linear-gradient(180deg, rgba(42, 28, 19, 0.92) 0%, rgba(22, 14, 10, 0.95) 100%);
+      --card-wood-hover: linear-gradient(180deg, rgba(54, 36, 25, 0.95) 0%, rgba(28, 18, 12, 0.98) 100%);
+      --card-wood-border: rgba(212, 175, 55, 0.35);
+      --card-wood-inner-bevel: inset 0 1px 0 rgba(246, 216, 155, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.7);
+
+      /* Dorados Artesanales & Hoja de Oro */
+      --gold-primary: #d4af37;
       --gold-glow: #f6d89b;
-      --gold-gradient: linear-gradient(135deg, #c99e52 0%, #ecd093 50%, #b88b3f 100%);
-      
+      --gold-antique: #b88b3f;
+      --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f6d89b 45%, #b88b3f 100%);
+      --gold-border: rgba(212, 175, 55, 0.45);
+
+      /* Vino Tinto Reserva & Uvas */
+      --wine-primary: #851c33;
+      --wine-deep: #541021;
+      --wine-glow: #e04f6e;
+      --wine-gradient: linear-gradient(135deg, #8f1f38 0%, #ba2d4d 50%, #591022 100%);
+
+      /* Acentos Esmeralda */
       --emerald-online: #10b981;
       --emerald-glow: rgba(16, 185, 129, 0.35);
 
+      /* Textos y Contraste */
       --text-white: #ffffff;
-      --text-main: #f1f5f9;
-      --text-muted: #94a3b8;
-      --text-dim: #64748b;
+      --text-main: #f5ede2;
+      --text-muted: #bda897;
+      --text-dim: #8c7665;
 
+      /* Radios y Sombras */
       --radius-sm: 12px;
       --radius-md: 18px;
       --radius-lg: 24px;
       --radius-full: 9999px;
 
-      --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 0 1px 1px rgba(255, 255, 255, 0.05);
-      --shadow-glow: 0 12px 35px -8px rgba(168, 42, 70, 0.35);
-      --shadow-gold-glow: 0 10px 25px -6px rgba(216, 178, 110, 0.3);
+      --shadow-wood-card: 0 16px 36px -10px rgba(0, 0, 0, 0.85), 0 0 1px 1px rgba(212, 175, 55, 0.2);
+      --shadow-gold-glow: 0 10px 25px -4px rgba(212, 175, 55, 0.35);
+      --shadow-wine-glow: 0 10px 25px -4px rgba(133, 28, 51, 0.45);
 
       --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.15);
       --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* Reset móvil y tipografía */
+    /* Reset y Caja */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -76,7 +88,7 @@
     }
 
     body {
-      background-color: var(--bg-base);
+      background-color: var(--wood-darkest);
       color: var(--text-main);
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       min-height: 100vh;
@@ -84,34 +96,52 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding: 24px 16px 48px;
+      padding: 24px 16px 52px;
       position: relative;
       overflow-x: hidden;
       line-height: 1.5;
     }
 
-    /* Fondos de luz ambiental (Glows oscuros de lujo) */
+    /* ==========================================================================
+       FONDO INMERSIVO: CAVA DE BARRICAS Y AMBIENTE ARTESANAL DE BODEGA
+       ========================================================================== */
+    .cellar-bg-fixed {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background-image: 
+        radial-gradient(circle at 50% 12%, rgba(212, 175, 55, 0.16) 0%, transparent 60%),
+        radial-gradient(circle at 50% 85%, rgba(133, 28, 51, 0.2) 0%, transparent 65%),
+        linear-gradient(180deg, rgba(14, 10, 7, 0.83) 0%, rgba(20, 14, 10, 0.88) 45%, rgba(10, 8, 6, 0.95) 100%),
+        url('bg-cellar.jpg');
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+
+    /* Luces ambientales cálidas de candelabro y cava */
     .ambient-glow-top {
       position: fixed;
-      top: -120px;
+      top: -100px;
       left: 50%;
       transform: translateX(-50%);
-      width: 480px;
-      height: 380px;
-      background: radial-gradient(circle, rgba(168, 42, 70, 0.22) 0%, rgba(216, 178, 110, 0.08) 50%, transparent 75%);
-      filter: blur(65px);
+      width: 520px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, rgba(133, 28, 51, 0.14) 50%, transparent 75%);
+      filter: blur(75px);
       z-index: 0;
       pointer-events: none;
     }
 
     .ambient-glow-bottom {
       position: fixed;
-      bottom: -150px;
-      right: -80px;
-      width: 420px;
-      height: 420px;
-      background: radial-gradient(circle, rgba(168, 42, 70, 0.12) 0%, rgba(13, 15, 20, 0) 70%);
-      filter: blur(80px);
+      bottom: -120px;
+      right: -60px;
+      width: 440px;
+      height: 440px;
+      background: radial-gradient(circle, rgba(133, 28, 51, 0.18) 0%, rgba(212, 175, 55, 0.08) 50%, transparent 70%);
+      filter: blur(85px);
       z-index: 0;
       pointer-events: none;
     }
@@ -128,15 +158,15 @@
     }
 
     /* ==========================================================================
-       SECCIÓN A: PERFIL / ENCABEZADO
+       SECCIÓN A: PERFIL / ENCABEZADO (PLACA DE ROBLE TALLADA)
        ========================================================================== */
     .header-card {
-      background: linear-gradient(180deg, rgba(28, 32, 45, 0.85) 0%, rgba(18, 20, 28, 0.75) 100%);
-      border: 1px solid var(--border-subtle);
+      background: var(--card-wood-bg);
+      border: 1px solid var(--card-wood-border);
       border-radius: var(--radius-lg);
-      padding: 30px 22px 24px;
+      padding: 32px 22px 26px;
       text-align: center;
-      box-shadow: var(--shadow-card);
+      box-shadow: var(--shadow-wood-card);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       display: flex;
@@ -146,37 +176,50 @@
       overflow: hidden;
     }
 
+    /* Filete superior de hoja de oro */
     .header-card::before {
       content: '';
       position: absolute;
       top: 0;
-      left: 15%;
-      right: 15%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(216, 178, 110, 0.6), transparent);
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.8), rgba(246, 216, 155, 0.95), rgba(212, 175, 55, 0.8), transparent);
     }
 
-    /* Logo Avatar con Aureola */
+    /* Moldura interior tallada estilo cuadro de roble */
+    .header-card::after {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border: 1px solid rgba(212, 175, 55, 0.14);
+      border-radius: calc(var(--radius-lg) - 6px);
+      pointer-events: none;
+    }
+
+    /* Logo Avatar con Aureola de Viñedo */
     .avatar-wrapper {
       position: relative;
-      width: 104px;
-      height: 104px;
+      width: 108px;
+      height: 108px;
       margin-bottom: 18px;
+      cursor: pointer;
+      user-select: none;
     }
 
     .avatar-glow {
       position: absolute;
-      inset: -4px;
+      inset: -5px;
       border-radius: var(--radius-full);
-      background: var(--wine-gradient);
-      opacity: 0.55;
-      filter: blur(12px);
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.6) 0%, rgba(133, 28, 51, 0.5) 60%, transparent 75%);
+      opacity: 0.65;
+      filter: blur(14px);
       animation: pulse-aura 4s ease-in-out infinite alternate;
     }
 
     @keyframes pulse-aura {
-      0% { opacity: 0.35; transform: scale(0.96); }
-      100% { opacity: 0.7; transform: scale(1.05); }
+      0% { opacity: 0.45; transform: scale(0.96); }
+      100% { opacity: 0.8; transform: scale(1.06); }
     }
 
     .avatar-icon {
@@ -185,12 +228,16 @@
       height: 100%;
       border-radius: var(--radius-full);
       background: #ffffff;
-      border: 2.5px solid rgba(216, 178, 110, 0.7);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.75);
+      border: 3px solid rgba(212, 175, 55, 0.85);
+      box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.85),
+        0 0 18px rgba(212, 175, 55, 0.35),
+        inset 0 0 8px rgba(0, 0, 0, 0.2);
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      transition: transform 0.3s var(--ease-spring);
     }
 
     .avatar-logo-img {
@@ -201,30 +248,26 @@
       transition: transform 0.3s var(--ease-spring);
     }
 
-    .avatar-wrapper:hover .avatar-logo-img {
-      transform: scale(1.06);
+    .avatar-wrapper:hover .avatar-logo-img,
+    .avatar-wrapper:active .avatar-logo-img {
+      transform: scale(1.08);
     }
 
-    .avatar-icon svg {
-      width: 46px;
-      height: 46px;
-      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
-    }
-
-    /* Textos del Encabezado */
+    /* Textos del Encabezado con Tipografía Clásica de Bodega */
     .brand-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.55rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--text-white);
-      margin-bottom: 6px;
+      font-family: 'Cinzel', serif;
+      font-size: 1.58rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: #ffffff;
+      margin-bottom: 8px;
       line-height: 1.25;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 6px;
       flex-wrap: wrap;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
     }
 
     .brand-highlight {
@@ -232,14 +275,16 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline-block;
+      font-weight: 900;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
     }
 
     .brand-subtitle {
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       color: var(--text-muted);
-      line-height: 1.45;
-      max-width: 320px;
-      margin-bottom: 16px;
+      line-height: 1.5;
+      max-width: 330px;
+      margin-bottom: 18px;
       font-weight: 400;
     }
 
@@ -248,14 +293,15 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(16, 185, 129, 0.1);
-      border: 1px solid rgba(16, 185, 129, 0.28);
-      padding: 6px 14px;
+      background: linear-gradient(135deg, rgba(26, 48, 36, 0.85) 0%, rgba(16, 32, 24, 0.85) 100%);
+      border: 1px solid rgba(74, 222, 128, 0.35);
+      padding: 7px 16px;
       border-radius: var(--radius-full);
-      font-size: 0.76rem;
+      font-size: 0.77rem;
       font-weight: 600;
-      color: #6ee7b7;
-      letter-spacing: 0.01em;
+      color: #a7f3d0;
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
 
     .pulse-dot {
@@ -265,6 +311,7 @@
       background-color: var(--emerald-online);
       box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
       animation: pulse-ring 2s infinite;
+      flex-shrink: 0;
     }
 
     @keyframes pulse-ring {
@@ -274,79 +321,188 @@
     }
 
     /* ==========================================================================
-       TITULOS DE SECCIÓN
+       TITULOS DE SECCIÓN: TIPOGRAFÍA DE CAVA Y GUÍA DECORATIVA
        ========================================================================== */
     .section-label {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.8rem;
+      font-family: 'Cinzel', serif;
+      font-size: 0.82rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--text-dim);
+      letter-spacing: 0.16em;
+      color: var(--gold-glow);
       margin-left: 6px;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
     }
 
     .section-label::after {
       content: '';
       flex: 1;
       height: 1px;
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent);
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.4), transparent);
     }
 
     /* ==========================================================================
-       SECCIÓN B: SUCURSALES (BENTO SELECTOR DE SEDES)
+       TARJETA DE EXHIBICIÓN ARTESANAL & VIÑEDO (TRADICIÓN DE CAVA)
        ========================================================================== */
-    .branches-grid {
+    .artisan-showcase-card {
+      background: linear-gradient(135deg, rgba(64, 18, 30, 0.85) 0%, rgba(36, 22, 15, 0.92) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.42);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: var(--shadow-wood-card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       display: flex;
       flex-direction: column;
       gap: 14px;
-    }
-
-    .branch-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 18px;
-      box-shadow: var(--shadow-card);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      transition: transform 0.22s var(--ease-spring), border-color 0.22s ease, background 0.22s ease;
       position: relative;
       overflow: hidden;
     }
 
+    .artisan-showcase-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 15%;
+      right: 15%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(246, 216, 155, 0.7), transparent);
+    }
+
+    .artisan-badge-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .artisan-icon-cluster {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #781c32 0%, #3e121e 100%);
+      border: 1.5px solid rgba(212, 175, 55, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-glow);
+      flex-shrink: 0;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    .artisan-icon-cluster svg {
+      width: 26px;
+      height: 26px;
+      display: block;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    }
+
+    .artisan-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+      line-height: 1.25;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    .artisan-subtitle {
+      font-size: 0.79rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+      margin-top: 3px;
+    }
+
+    .artisan-tags-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .artisan-tag {
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: #faeccd;
+      background: linear-gradient(180deg, rgba(48, 30, 20, 0.8) 0%, rgba(30, 18, 12, 0.9) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      box-shadow: inset 0 1px 0 rgba(246, 216, 155, 0.15);
+    }
+
+    /* ==========================================================================
+       SECCIÓN B: SUCURSALES (PLACAS DE MADERA TALLADA & ACABADOS DE LUJO)
+       ========================================================================== */
+    .branches-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .branch-card {
+      background: var(--card-wood-bg);
+      border: 1px solid var(--card-wood-border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: var(--shadow-wood-card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      transition: transform 0.22s var(--ease-spring), border-color 0.22s ease, box-shadow 0.22s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Relieve biselado interior de tabla de madera */
+    .branch-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 12%;
+      right: 12%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+    }
+
     .branch-card:hover {
-      border-color: rgba(216, 178, 110, 0.4);
-      background: var(--bg-card-hover);
+      border-color: rgba(212, 175, 55, 0.65);
+      box-shadow: 
+        0 18px 40px -8px rgba(0, 0, 0, 0.9),
+        0 0 20px rgba(212, 175, 55, 0.25);
+      transform: translateY(-2px);
     }
 
     .branch-header {
       display: flex;
       align-items: flex-start;
       gap: 14px;
-      margin-bottom: 15px;
+      margin-bottom: 16px;
     }
 
     .branch-tag-icon {
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
       border-radius: 12px;
-      background: linear-gradient(135deg, rgba(158, 42, 68, 0.25) 0%, rgba(30, 35, 48, 0.8) 100%);
-      border: 1px solid rgba(224, 79, 110, 0.35);
+      background: linear-gradient(135deg, #4d1c29 0%, #291219 100%);
+      border: 1px solid rgba(212, 175, 55, 0.45);
       color: var(--gold-glow);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(246, 216, 155, 0.2);
     }
 
     .branch-tag-icon svg {
       width: 22px;
       height: 22px;
+      display: block;
     }
 
     .branch-info {
@@ -354,21 +510,23 @@
     }
 
     .branch-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.05rem;
+      font-family: 'Cinzel', serif;
+      font-size: 1.08rem;
       font-weight: 700;
-      color: var(--text-white);
+      letter-spacing: 0.02em;
+      color: #ffffff;
       line-height: 1.25;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
     }
 
     .branch-desc {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
       line-height: 1.35;
     }
 
-    /* Botones de acción de sucursal */
+    /* Acciones de sucursal */
     .branch-actions {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -380,16 +538,16 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 11px 12px;
-      font-size: 0.82rem;
+      padding: 12px 14px;
+      font-size: 0.84rem;
       font-weight: 600;
       border-radius: var(--radius-sm);
       text-decoration: none;
-      transition: all 0.2s var(--ease-spring);
+      transition: all 0.22s var(--ease-spring);
       cursor: pointer;
-      border: 1px solid transparent;
       user-select: none;
       line-height: 1;
+      position: relative;
     }
 
     .btn-branch svg {
@@ -405,111 +563,95 @@
       line-height: 1;
     }
 
-    /* Botón Cómo Llegar */
+    /* BOTÓN CÓMO LLEGAR: Acabado en Roble Tallado con Bisel Dorado */
     .btn-branch-map {
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--text-main);
-      border-color: rgba(255, 255, 255, 0.1);
+      background: linear-gradient(180deg, #3d281c 0%, #24160f 100%);
+      color: #faeccd;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.55),
+        inset 0 1px 0 rgba(246, 216, 155, 0.28),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.6);
     }
 
     .btn-branch-map:hover,
     .btn-branch-map:active {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.25);
-      transform: translateY(-2px);
+      background: linear-gradient(180deg, #4d3324 0%, #2f1d13 100%);
+      border-color: rgba(246, 216, 155, 0.8);
       color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 
+        0 8px 18px rgba(0, 0, 0, 0.7),
+        0 0 16px rgba(212, 175, 55, 0.3),
+        inset 0 1px 0 rgba(255, 240, 200, 0.45);
     }
 
-    /* Botón Contactar Sede */
+    /* BOTÓN CONTACTAR: Acabado en Barrica de Vino Tinto Reserva */
     .btn-branch-contact {
-      background: rgba(168, 42, 70, 0.18);
-      color: #ff9fb4;
-      border-color: rgba(224, 79, 110, 0.35);
+      background: linear-gradient(180deg, #781c32 0%, #47111e 100%);
+      color: #ffe4e9;
+      border: 1px solid rgba(224, 79, 110, 0.55);
+      box-shadow: 
+        0 4px 14px rgba(120, 28, 50, 0.4),
+        inset 0 1px 0 rgba(255, 180, 195, 0.35),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.6);
     }
 
     .btn-branch-contact:hover,
     .btn-branch-contact:active {
-      background: rgba(168, 42, 70, 0.35);
-      border-color: var(--wine-glow);
+      background: linear-gradient(180deg, #94233e 0%, #591325 100%);
+      border-color: #ffa1b5;
       color: #ffffff;
       transform: translateY(-2px);
+      box-shadow: 
+        0 8px 20px rgba(148, 35, 62, 0.55),
+        0 0 18px rgba(224, 79, 110, 0.35),
+        inset 0 1px 0 rgba(255, 205, 215, 0.5);
     }
 
-    /* Tarjeta de Exhibición Artesanal & Viñedo */
-    .artisan-showcase-card {
-      background: linear-gradient(135deg, rgba(74, 14, 46, 0.45) 0%, rgba(20, 24, 34, 0.8) 100%);
-      border: 1px solid rgba(216, 178, 110, 0.3);
-      border-radius: var(--radius-md);
-      padding: 18px 20px;
-      box-shadow: var(--shadow-card);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .artisan-badge-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .artisan-icon-cluster {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, rgba(158, 42, 68, 0.3) 0%, rgba(30, 35, 48, 0.8) 100%);
-      border: 1px solid rgba(224, 79, 110, 0.4);
+    /* BOTÓN RESEÑAS DE GOOGLE: Placa Amaderada con Estrellas de Oro 24K */
+    .btn-branch-review {
+      margin-top: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--gold-glow);
-      flex-shrink: 0;
-    }
-
-    .artisan-icon-cluster svg {
-      width: 24px;
-      height: 24px;
-      display: block;
-    }
-
-    .artisan-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.02rem;
-      font-weight: 700;
-      color: var(--text-white);
-      line-height: 1.25;
-    }
-
-    .artisan-subtitle {
-      font-size: 0.77rem;
-      color: var(--text-muted);
-      line-height: 1.35;
-      margin-top: 2px;
-    }
-
-    .artisan-tags-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .artisan-tag {
-      font-size: 0.72rem;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(180deg, rgba(46, 31, 21, 0.95) 0%, rgba(26, 17, 11, 0.98) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      color: #faeccd;
+      text-decoration: none;
+      font-size: 0.83rem;
       font-weight: 600;
-      color: #f1d59b;
-      background: rgba(216, 178, 110, 0.1);
-      border: 1px solid rgba(216, 178, 110, 0.24);
-      padding: 5px 11px;
-      border-radius: var(--radius-full);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
+      box-shadow: 
+        0 5px 15px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(246, 216, 155, 0.25),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.6);
+      transition: all 0.22s var(--ease-spring);
+    }
+
+    .btn-branch-review:hover, 
+    .btn-branch-review:active {
+      background: linear-gradient(180deg, rgba(62, 42, 29, 1) 0%, rgba(36, 23, 15, 1) 100%);
+      border-color: #f6d89b;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 
+        0 8px 22px rgba(0, 0, 0, 0.65),
+        0 0 20px rgba(212, 175, 55, 0.35),
+        inset 0 1px 0 rgba(255, 240, 200, 0.45);
+    }
+
+    .stars-gold {
+      color: #fbbf24;
+      letter-spacing: 2px;
+      font-size: 0.92rem;
+      text-shadow: 0 0 10px rgba(251, 191, 36, 0.6);
     }
 
     /* ==========================================================================
-       SECCIÓN C: ACCESOS DIRECTOS DE CONTACTO (1 TOQUE)
+       SECCIÓN C: ACCESOS DIRECTOS (WHATSAPP HERO & LLAMADA DIRECTA)
        ========================================================================== */
     .quick-actions-container {
       display: flex;
@@ -517,19 +659,22 @@
       gap: 12px;
     }
 
-    /* WhatsApp Hero CTA */
+    /* WhatsApp Hero CTA: Esmeralda Artesanal & Bisel de Lujo */
     .cta-whatsapp {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: linear-gradient(135deg, #1b8a5a 0%, #126340 100%);
+      background: linear-gradient(180deg, #1b6b44 0%, #10422a 100%);
       color: #ffffff;
-      border: 1px solid rgba(74, 222, 128, 0.3);
+      border: 1px solid rgba(74, 222, 128, 0.45);
       padding: 16px 20px;
       border-radius: var(--radius-md);
       text-decoration: none;
-      box-shadow: 0 10px 25px -6px rgba(18, 99, 64, 0.55);
+      box-shadow: 
+        0 12px 28px -6px rgba(16, 66, 42, 0.65),
+        inset 0 1px 0 rgba(147, 250, 190, 0.35),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.5);
       overflow: hidden;
       transition: all 0.25s var(--ease-spring);
     }
@@ -541,7 +686,7 @@
       left: -100%;
       width: 80%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
       transform: skewX(-25deg);
       transition: left 0.75s ease;
     }
@@ -553,7 +698,10 @@
     .cta-whatsapp:hover,
     .cta-whatsapp:active {
       transform: translateY(-3px) scale(1.01);
-      box-shadow: 0 14px 30px -6px rgba(22, 128, 83, 0.75);
+      box-shadow: 
+        0 16px 34px -6px rgba(22, 108, 68, 0.85),
+        0 0 22px rgba(74, 222, 128, 0.4);
+      border-color: #86efac;
     }
 
     .cta-content {
@@ -563,37 +711,41 @@
     }
 
     .cta-icon-box {
-      width: 44px;
-      height: 44px;
+      width: 46px;
+      height: 46px;
       border-radius: 12px;
-      background: rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.3);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
     }
 
     .cta-icon-box svg {
       width: 26px;
       height: 26px;
       fill: #ffffff;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
     }
 
     .cta-texts h3 {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Cinzel', serif;
       font-size: 1.05rem;
       font-weight: 700;
+      letter-spacing: 0.02em;
       line-height: 1.2;
     }
 
     .cta-texts p {
-      font-size: 0.78rem;
-      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.79rem;
+      color: rgba(255, 255, 255, 0.9);
       font-weight: 400;
     }
 
     .cta-arrow {
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(255, 255, 255, 0.85);
       transition: transform 0.2s ease;
     }
 
@@ -602,25 +754,31 @@
       color: #ffffff;
     }
 
-    /* Llamada Telefónica Rápida */
+    /* Llamada Telefónica Rápida: Placa de Roble y Detalles en Bronce */
     .cta-phone {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
+      background: var(--card-wood-bg);
+      border: 1px solid var(--card-wood-border);
       padding: 14px 18px;
       border-radius: var(--radius-md);
       text-decoration: none;
       color: var(--text-main);
+      box-shadow: 
+        0 6px 18px rgba(0, 0, 0, 0.55),
+        inset 0 1px 0 rgba(246, 216, 155, 0.2),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.5);
       transition: all 0.22s var(--ease-spring);
     }
 
     .cta-phone:hover,
     .cta-phone:active {
-      background: var(--bg-card-hover);
-      border-color: rgba(255, 255, 255, 0.2);
+      border-color: rgba(212, 175, 55, 0.6);
       transform: translateY(-2px);
+      box-shadow: 
+        0 10px 24px rgba(0, 0, 0, 0.7),
+        0 0 16px rgba(212, 175, 55, 0.2);
     }
 
     .phone-left {
@@ -630,45 +788,49 @@
     }
 
     .phone-icon-box {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       border-radius: 10px;
-      background: rgba(216, 178, 110, 0.15);
-      border: 1px solid rgba(216, 178, 110, 0.3);
+      background: linear-gradient(135deg, rgba(62, 40, 26, 0.9) 0%, rgba(36, 22, 14, 0.9) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.4);
       color: var(--gold-glow);
       display: flex;
       align-items: center;
       justify-content: center;
+      box-shadow: inset 0 1px 0 rgba(246, 216, 155, 0.2);
     }
 
     .phone-icon-box svg {
-      width: 19px;
-      height: 19px;
+      width: 20px;
+      height: 20px;
     }
 
     .phone-title {
-      font-weight: 600;
-      font-size: 0.92rem;
-      color: var(--text-white);
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 0.94rem;
+      letter-spacing: 0.02em;
+      color: #ffffff;
     }
 
     .phone-number {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
     }
 
     .phone-badge {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--gold-primary);
-      background: rgba(216, 178, 110, 0.1);
-      padding: 4px 10px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--gold-glow);
+      background: linear-gradient(180deg, rgba(58, 38, 24, 0.8) 0%, rgba(34, 20, 12, 0.9) 100%);
+      padding: 5px 12px;
       border-radius: var(--radius-full);
-      border: 1px solid rgba(216, 178, 110, 0.25);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      box-shadow: inset 0 1px 0 rgba(246, 216, 155, 0.2);
     }
 
     /* ==========================================================================
-       SECCIÓN D: REDES SOCIALES OFICIALES (BENTO STYLE)
+       SECCIÓN D: REDES SOCIALES (AZULEJOS DE MADERA TALLADA)
        ========================================================================== */
     .socials-grid {
       display: grid;
@@ -683,11 +845,14 @@
       justify-content: center;
       padding: 16px 8px;
       border-radius: var(--radius-md);
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
+      background: linear-gradient(180deg, rgba(38, 25, 17, 0.94) 0%, rgba(20, 13, 9, 0.97) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.32);
       text-decoration: none;
       color: var(--text-main);
-      box-shadow: var(--shadow-card);
+      box-shadow: 
+        0 6px 18px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(246, 216, 155, 0.2),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.6);
       transition: all 0.25s var(--ease-spring);
       position: relative;
       overflow: hidden;
@@ -701,62 +866,68 @@
     }
 
     .social-btn span {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 600;
       letter-spacing: -0.01em;
     }
 
     .social-handle {
-      font-size: 0.65rem;
+      font-size: 0.66rem;
       color: var(--text-dim);
-      margin-top: 1px;
+      margin-top: 2px;
     }
 
-    /* Hover Específico por Red Social */
     .social-btn.facebook:hover,
     .social-btn.facebook:active {
-      border-color: rgba(66, 103, 178, 0.6);
-      background: rgba(24, 119, 242, 0.12);
+      border-color: rgba(66, 103, 178, 0.7);
+      background: linear-gradient(180deg, rgba(24, 60, 120, 0.4) 0%, rgba(20, 13, 9, 0.95) 100%);
       transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(24, 119, 242, 0.3);
     }
     .social-btn.facebook svg { fill: #1877f2; }
 
     .social-btn.instagram:hover,
     .social-btn.instagram:active {
-      border-color: rgba(225, 48, 108, 0.6);
-      background: rgba(225, 48, 108, 0.12);
+      border-color: rgba(225, 48, 108, 0.7);
+      background: linear-gradient(180deg, rgba(120, 24, 60, 0.4) 0%, rgba(20, 13, 9, 0.95) 100%);
       transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(225, 48, 108, 0.3);
     }
     .social-btn.instagram svg { fill: #e1306c; }
 
     .social-btn.tiktok:hover,
     .social-btn.tiktok:active {
-      border-color: rgba(254, 44, 85, 0.6);
-      background: rgba(254, 44, 85, 0.12);
+      border-color: rgba(254, 44, 85, 0.7);
+      background: linear-gradient(180deg, rgba(60, 20, 40, 0.4) 0%, rgba(20, 13, 9, 0.95) 100%);
       transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(254, 44, 85, 0.3);
     }
     .social-btn.tiktok svg { fill: #ffffff; }
 
     /* ==========================================================================
-       SECCIÓN E: GUARDAR EN CONTACTOS (.VCF) & ACCIONES PLUS
+       SECCIÓN E: GUARDAR EN CONTACTOS (.VCF) - PLACA GRAN RESERVA
        ========================================================================== */
     .btn-vcard {
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      padding: 16px 20px;
+      gap: 12px;
+      padding: 17px 22px;
       border-radius: var(--radius-md);
-      background: linear-gradient(135deg, rgba(216, 178, 110, 0.15) 0%, rgba(158, 42, 68, 0.15) 100%);
-      border: 1px solid var(--border-gold);
-      color: var(--gold-glow);
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.95rem;
+      background: linear-gradient(180deg, #442a19 0%, #22140c 100%);
+      border: 1.5px solid rgba(212, 175, 55, 0.75);
+      color: #faeccd;
+      font-family: 'Cinzel', serif;
+      font-size: 0.96rem;
       font-weight: 700;
-      letter-spacing: 0.01em;
+      letter-spacing: 0.05em;
       cursor: pointer;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      box-shadow: 
+        0 10px 28px -4px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(212, 175, 55, 0.25),
+        inset 0 1px 1px rgba(255, 240, 200, 0.45),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.7);
       transition: all 0.25s var(--ease-spring);
       position: relative;
       overflow: hidden;
@@ -764,20 +935,25 @@
 
     .btn-vcard:hover,
     .btn-vcard:active {
-      background: linear-gradient(135deg, rgba(216, 178, 110, 0.25) 0%, rgba(158, 42, 68, 0.28) 100%);
-      border-color: var(--gold-primary);
+      background: linear-gradient(180deg, #54341f 0%, #2d1a10 100%);
+      border-color: #f6d89b;
       color: #ffffff;
       transform: translateY(-2px);
-      box-shadow: var(--shadow-gold-glow);
+      box-shadow: 
+        0 14px 34px -4px rgba(0, 0, 0, 0.9),
+        0 0 28px rgba(212, 175, 55, 0.45),
+        inset 0 1px 1px rgba(255, 245, 215, 0.6);
     }
 
     .btn-vcard svg {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
+      color: var(--gold-glow);
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
     }
 
     /* ==========================================================================
-       FOOTER ELEGANTE
+       FOOTER ELEGANTE DE BODEGA
        ========================================================================== */
     .app-footer {
       text-align: center;
@@ -791,10 +967,11 @@
     .footer-badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      font-size: 0.72rem;
-      color: var(--text-dim);
-      letter-spacing: 0.05em;
+      gap: 8px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
@@ -803,23 +980,23 @@
     }
 
     .footer-legal {
-      font-size: 0.7rem;
-      color: #475569;
+      font-size: 0.72rem;
+      color: #786454;
     }
 
-    /* Modal / Pop-up de confirmación de descarga vCard */
+    /* Toast Notificación */
     .toast-notification {
       position: fixed;
       bottom: 24px;
       left: 50%;
       transform: translateX(-50%) translateY(100px);
-      background: rgba(18, 22, 32, 0.95);
-      border: 1px solid var(--emerald-online);
+      background: linear-gradient(180deg, #2a1a12 0%, #170e09 100%);
+      border: 1.5px solid var(--emerald-online);
       color: #ffffff;
-      padding: 12px 20px;
+      padding: 14px 22px;
       border-radius: var(--radius-full);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-      font-size: 0.82rem;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.9), 0 0 20px rgba(16, 185, 129, 0.3);
+      font-size: 0.84rem;
       font-weight: 600;
       display: flex;
       align-items: center;
@@ -839,14 +1016,14 @@
     }
 
     /* ==========================================================================
-       MODALES: SELECTOR DE NAVEGACIÓN Y GESTOR GPS EN TIEMPO REAL
+       VENTANAS MODALES: ESTILO COFRE DE ROBLE / LIBRO DE CAVA
        ========================================================================== */
     .modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(8, 10, 14, 0.82);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: rgba(8, 6, 4, 0.86);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       z-index: 999;
       display: flex;
       align-items: center;
@@ -863,15 +1040,18 @@
     }
 
     .modal-window {
-      background: linear-gradient(180deg, #191c28 0%, #10121b 100%);
-      border: 1px solid rgba(216, 178, 110, 0.35);
+      background: linear-gradient(180deg, #2b1b12 0%, #160d09 100%);
+      border: 1.5px solid rgba(212, 175, 55, 0.55);
       border-radius: var(--radius-lg);
       width: 100%;
       max-width: 420px;
       max-height: 90vh;
       overflow-y: auto;
-      padding: 24px 20px;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(216, 178, 110, 0.12);
+      padding: 26px 22px;
+      box-shadow: 
+        0 25px 65px rgba(0, 0, 0, 0.95),
+        0 0 35px rgba(212, 175, 55, 0.22),
+        inset 0 1px 0 rgba(246, 216, 155, 0.3);
       transform: translateY(24px) scale(0.96);
       transition: transform 0.28s var(--ease-spring);
       position: relative;
@@ -886,33 +1066,34 @@
       align-items: flex-start;
       justify-content: space-between;
       gap: 12px;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .modal-title-group h3 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.18rem;
+      font-family: 'Cinzel', serif;
+      font-size: 1.22rem;
       font-weight: 700;
-      color: var(--text-white);
+      color: #ffffff;
       line-height: 1.25;
       display: flex;
       align-items: center;
       gap: 8px;
+      letter-spacing: 0.02em;
     }
 
     .modal-title-group p {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
-      margin-top: 3px;
+      margin-top: 4px;
     }
 
     .btn-close-modal {
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: var(--text-muted);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      color: var(--gold-glow);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -922,36 +1103,38 @@
     }
 
     .btn-close-modal:hover {
-      background: rgba(255, 255, 255, 0.16);
+      background: rgba(212, 175, 55, 0.2);
       color: #ffffff;
-      transform: scale(1.05);
+      transform: scale(1.08);
     }
 
     /* Opciones de apps de navegación (Waze, Maps, Apple) */
     .nav-apps-list {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-top: 14px;
+      gap: 12px;
+      margin-top: 16px;
     }
 
     .nav-app-link {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 14px 16px;
+      padding: 14px 18px;
       border-radius: var(--radius-md);
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-subtle);
+      background: linear-gradient(180deg, rgba(46, 30, 20, 0.85) 0%, rgba(28, 17, 12, 0.9) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.35);
       text-decoration: none;
       color: var(--text-main);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(246, 216, 155, 0.18);
       transition: all 0.22s var(--ease-spring);
     }
 
     .nav-app-link:hover, .nav-app-link:active {
       transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(216, 178, 110, 0.45);
+      background: linear-gradient(180deg, rgba(58, 38, 26, 0.95) 0%, rgba(36, 22, 15, 0.98) 100%);
+      border-color: rgba(246, 216, 155, 0.7);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6), 0 0 18px rgba(212, 175, 55, 0.25);
     }
 
     .nav-app-left {
@@ -961,8 +1144,8 @@
     }
 
     .nav-app-icon {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -970,18 +1153,18 @@
       flex-shrink: 0;
     }
 
-    .nav-app-icon.waze { background: rgba(51, 204, 255, 0.15); color: #33ccff; }
-    .nav-app-icon.gmaps { background: rgba(66, 133, 244, 0.15); color: #4285f4; }
-    .nav-app-icon.apple { background: rgba(255, 255, 255, 0.12); color: #ffffff; }
+    .nav-app-icon.waze { background: rgba(51, 204, 255, 0.18); color: #33ccff; }
+    .nav-app-icon.gmaps { background: rgba(66, 133, 244, 0.18); color: #4285f4; }
+    .nav-app-icon.apple { background: rgba(255, 255, 255, 0.15); color: #ffffff; }
 
     .nav-app-name {
       font-weight: 700;
-      font-size: 0.94rem;
+      font-size: 0.96rem;
       color: var(--text-white);
     }
 
     .nav-app-subtitle {
-      font-size: 0.72rem;
+      font-size: 0.74rem;
       color: var(--text-muted);
     }
 
@@ -1002,12 +1185,12 @@
     }
 
     .form-input, .form-select {
-      background: rgba(0, 0, 0, 0.35);
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(14, 9, 6, 0.75);
+      border: 1px solid rgba(212, 175, 55, 0.35);
       border-radius: var(--radius-sm);
       padding: 12px 14px;
       color: #ffffff;
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       font-family: inherit;
       outline: none;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -1016,7 +1199,7 @@
 
     .form-input:focus, .form-select:focus {
       border-color: var(--gold-primary);
-      box-shadow: 0 0 0 2px rgba(216, 178, 110, 0.2);
+      box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.25);
     }
 
     .btn-gps-trigger {
@@ -1025,30 +1208,31 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 14px 18px;
-      background: linear-gradient(135deg, #1f6b4d 0%, #154c37 100%);
+      padding: 15px 18px;
+      background: linear-gradient(180deg, #1b6b44 0%, #10422a 100%);
       color: #ffffff;
-      border: 1px solid rgba(74, 222, 128, 0.35);
+      border: 1px solid rgba(74, 222, 128, 0.45);
       border-radius: var(--radius-md);
       font-weight: 700;
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       cursor: pointer;
       transition: all 0.22s var(--ease-spring);
       margin: 8px 0 14px;
+      box-shadow: 0 8px 24px rgba(16, 66, 42, 0.5), inset 0 1px 0 rgba(147, 250, 190, 0.3);
     }
 
     .btn-gps-trigger:hover, .btn-gps-trigger:active {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(31, 107, 77, 0.5);
-      border-color: #4ade80;
+      box-shadow: 0 10px 28px rgba(22, 108, 68, 0.7);
+      border-color: #86efac;
     }
 
     .gps-results-box {
-      background: rgba(0, 0, 0, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(10, 7, 5, 0.75);
+      border: 1px solid rgba(212, 175, 55, 0.3);
       border-radius: var(--radius-sm);
-      padding: 12px;
-      font-size: 0.78rem;
+      padding: 14px;
+      font-size: 0.8rem;
       color: var(--text-muted);
       line-height: 1.5;
       margin-bottom: 14px;
@@ -1057,7 +1241,7 @@
 
     .gps-results-box.active {
       display: block;
-      border-color: rgba(74, 222, 128, 0.4);
+      border-color: rgba(74, 222, 128, 0.5);
     }
 
     .gps-coords-badge {
@@ -1075,9 +1259,9 @@
     }
 
     .btn-admin-action {
-      padding: 12px 14px;
+      padding: 13px 14px;
       border-radius: var(--radius-sm);
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 700;
       cursor: pointer;
       display: flex;
@@ -1090,7 +1274,8 @@
 
     .btn-admin-save {
       background: var(--gold-gradient);
-      color: #1a1200;
+      color: #170f03;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
     }
 
     .btn-admin-save:hover {
@@ -1100,60 +1285,43 @@
 
     .btn-admin-copy {
       background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.15);
+      border-color: rgba(212, 175, 55, 0.3);
       color: var(--text-main);
     }
 
     .btn-admin-copy:hover {
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(212, 175, 55, 0.2);
       color: #ffffff;
       transform: translateY(-2px);
-    }
-
-    /* Efecto visual al tocar el logo */
-    .avatar-wrapper {
-      cursor: pointer;
-      user-select: none;
-    }
-
-    /* Botón de Reseñas de Google */
-    .btn-branch-review {
-      margin-top: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border-radius: var(--radius-sm);
-      background: rgba(216, 178, 110, 0.08);
-      border: 1px solid rgba(216, 178, 110, 0.28);
-      color: var(--gold-glow);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      transition: all 0.22s var(--ease-spring);
-    }
-
-    .btn-branch-review:hover, .btn-branch-review:active {
-      background: rgba(216, 178, 110, 0.2);
-      border-color: var(--gold-primary);
-      color: #ffffff;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(216, 178, 110, 0.25);
-    }
-
-    .stars-gold {
-      color: #fbbf24;
-      letter-spacing: 2px;
-      font-size: 0.88rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- Luces ambientales de fondo estilo Dark Luxury -->
+  <!-- Fondo Inmersivo de Cava de Barricas de Roble y Viñedo Artesanal -->
+  <div class="cellar-bg-fixed" aria-hidden="true"></div>
   <div class="ambient-glow-top" aria-hidden="true"></div>
   <div class="ambient-glow-bottom" aria-hidden="true"></div>
+
+  <!-- SVG Global Definitions para Gradientes de Vino y Oro en Iconos -->
+  <svg style="display:none;" aria-hidden="true">
+    <defs>
+      <linearGradient id="wineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#b82a4c" />
+        <stop offset="50%" stop-color="#801a30" />
+        <stop offset="100%" stop-color="#4e0d1c" />
+      </linearGradient>
+      <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f6d89b" />
+        <stop offset="50%" stop-color="#d4af37" />
+        <stop offset="100%" stop-color="#9a7126" />
+      </linearGradient>
+      <linearGradient id="woodGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#543725" />
+        <stop offset="100%" stop-color="#24160d" />
+      </linearGradient>
+    </defs>
+  </svg>
 
   <!-- Contenedor Principal (Mobile-First / NFC Card) -->
   <main class="app-container">
@@ -1230,14 +1398,14 @@
               <!-- Racimo de uvas artesanal de viñedo -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M11 2v3m0 0c2-2 4.5-1.5 5.5-1 0 2-1 3.5-2.5 3.5" stroke-width="1.4" />
-                <circle cx="9" cy="8.5" r="2.2" fill="currentColor" fill-opacity="0.3"/>
-                <circle cx="14" cy="8.5" r="2.2" fill="currentColor" fill-opacity="0.3"/>
-                <circle cx="6.5" cy="13" r="2.2" fill="currentColor" fill-opacity="0.3"/>
-                <circle cx="11.5" cy="13" r="2.2" fill="currentColor" fill-opacity="0.3"/>
-                <circle cx="16.5" cy="13" r="2.2" fill="currentColor" fill-opacity="0.3"/>
-                <circle cx="9" cy="17.5" r="2.2" fill="currentColor" fill-opacity="0.3"/>
-                <circle cx="14" cy="17.5" r="2.2" fill="currentColor" fill-opacity="0.3"/>
-                <circle cx="11.5" cy="21.5" r="1.8" fill="currentColor" fill-opacity="0.3"/>
+                <circle cx="9" cy="8.5" r="2.2" fill="url(#goldGrad)" />
+                <circle cx="14" cy="8.5" r="2.2" fill="url(#goldGrad)" />
+                <circle cx="6.5" cy="13" r="2.2" fill="url(#goldGrad)" />
+                <circle cx="11.5" cy="13" r="2.2" fill="url(#goldGrad)" />
+                <circle cx="16.5" cy="13" r="2.2" fill="url(#goldGrad)" />
+                <circle cx="9" cy="17.5" r="2.2" fill="url(#goldGrad)" />
+                <circle cx="14" cy="17.5" r="2.2" fill="url(#goldGrad)" />
+                <circle cx="11.5" cy="21.5" r="1.8" fill="url(#goldGrad)" />
               </svg>
             </div>
             <div class="branch-info">
@@ -1290,7 +1458,7 @@
             <div class="branch-tag-icon" aria-hidden="true">
               <!-- Copa y botella artesanal de vino -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M8 22h8m-4-7v7m0-7a4.5 4.5 0 0 0 4.5-4.5V4H7.5v6.5A4.5 4.5 0 0 0 12 15Z" fill="currentColor" fill-opacity="0.25"/>
+                <path d="M8 22h8m-4-7v7m0-7a4.5 4.5 0 0 0 4.5-4.5V4H7.5v6.5A4.5 4.5 0 0 0 12 15Z" fill="url(#wineGrad)" fill-opacity="0.6"/>
                 <path d="M7.5 8h9" />
               </svg>
             </div>
