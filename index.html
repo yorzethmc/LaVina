@@ -1035,8 +1035,36 @@
       user-select: none;
     }
 
-    .avatar-wrapper:active {
-      transform: scale(0.94);
+    /* Botón de Reseñas de Google */
+    .btn-branch-review {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      background: rgba(216, 178, 110, 0.08);
+      border: 1px solid rgba(216, 178, 110, 0.28);
+      color: var(--gold-glow);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all 0.22s var(--ease-spring);
+    }
+
+    .btn-branch-review:hover, .btn-branch-review:active {
+      background: rgba(216, 178, 110, 0.2);
+      border-color: var(--gold-primary);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(216, 178, 110, 0.25);
+    }
+
+    .stars-gold {
+      color: #fbbf24;
+      letter-spacing: 2px;
+      font-size: 0.88rem;
     }
   </style>
 </head>
@@ -1122,6 +1150,18 @@
               <span>Contactar</span>
             </a>
           </div>
+
+          <!-- BOTÓN RESEÑAS DE GOOGLE SEDE 1 -->
+          <a href="https://www.google.com/maps/search/?api=1&query=Licorera+La+Vi%C3%B1a+Turr%C3%BAcares+Alajuela" 
+             id="review-link-sede-1" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn-branch-review" 
+             aria-label="Dejar reseña en Google para Viña 1">
+            <span class="stars-gold">★★★★★</span>
+            <span>Dejar Reseña en Google</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto;"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
         </article>
 
         <!-- Sede 2 -->
@@ -1164,6 +1204,18 @@
               <span>Contactar</span>
             </a>
           </div>
+
+          <!-- BOTÓN RESEÑAS DE GOOGLE SEDE 2 -->
+          <a href="https://www.google.com/maps/search/?api=1&query=Licorera+La+Vi%C3%B1a+2+Turr%C3%BAcares+Alajuela" 
+             id="review-link-sede-2" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn-branch-review" 
+             aria-label="Dejar reseña en Google para Viña 2">
+            <span class="stars-gold">★★★★★</span>
+            <span>Dejar Reseña en Google</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto;"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
         </article>
 
       </div>
@@ -1361,6 +1413,22 @@
           </div>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted);"><polyline points="9 18 15 12 9 6"/></svg>
         </a>
+
+        <!-- Opción Reseñas de Google -->
+        <a href="#" id="link-app-reviews" target="_blank" rel="noopener noreferrer" class="nav-app-link" style="border-color: rgba(216, 178, 110, 0.35); background: rgba(216, 178, 110, 0.06);">
+          <div class="nav-app-left">
+            <div class="nav-app-icon" style="background: rgba(251, 191, 36, 0.18); color: #fbbf24;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <div>
+              <div class="nav-app-name" style="color: var(--gold-glow);">Calificar en Google ★★★★★</div>
+              <div class="nav-app-subtitle">Déjanos tu opinión o reseña 5 estrellas</div>
+            </div>
+          </div>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--gold-primary);"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
       </div>
     </div>
   </div>
@@ -1405,6 +1473,13 @@
       <div class="form-group">
         <label for="admin-loc-desc" class="form-label">Subtítulo o Referencia:</label>
         <input type="text" id="admin-loc-desc" class="form-input" placeholder="Ej. Sede Principal • Centro de Turrúcares" />
+      </div>
+
+      <!-- URL de Reseñas de Google -->
+      <div class="form-group">
+        <label for="admin-review-url" class="form-label">⭐ URL de Reseñas de Google (Review Link):</label>
+        <input type="url" id="admin-review-url" class="form-input" placeholder="https://g.page/r/.../review o link de Google Maps" />
+        <span style="font-size:0.71rem; color:var(--text-muted); line-height:1.35;">Pega el enlace directo para que los clientes califiquen esta sede en Google.</span>
       </div>
 
       <!-- Botón para capturar GPS del teléfono en tiempo real -->
@@ -1466,21 +1541,23 @@
        SCRIPTS: DETECTOR 5 TOQUES, GEOLOCALIZACIÓN Y GENERACIÓN VCARD
        ==================================================================== -->
   <script>
-    // Estado global de sedes (Coordenadas por defecto en Turrúcares, Alajuela)
+    // Estado global de sedes (Coordenadas y URLs de reseñas por defecto)
     const branchesData = {
       1: {
         name: "Viña 1 - Minisúper & Licorera",
         desc: "Sede Principal • Centro de Turrúcares",
         lat: 9.95758,
         lon: -84.31885,
-        query: "Turrucares, Alajuela, Licorera La Vina 1"
+        query: "Turrucares, Alajuela, Licorera La Vina 1",
+        reviewUrl: "https://www.google.com/maps/search/?api=1&query=Licorera+La+Vi%C3%B1a+Turr%C3%BAcares+Alajuela"
       },
       2: {
         name: "Viña 2 - Minisúper & Licorera",
         desc: "Segunda Sede • Turrúcares y alrededores",
         lat: 9.96100,
         lon: -84.32200,
-        query: "Turrucares, Alajuela, Licorera La Vina 2"
+        query: "Turrucares, Alajuela, Licorera La Vina 2",
+        reviewUrl: "https://www.google.com/maps/search/?api=1&query=Licorera+La+Vi%C3%B1a+2+Turr%C3%BAcares+Alajuela"
       }
     };
 
@@ -1522,7 +1599,7 @@
     }
 
     /**
-     * Abre el modal de navegación (Waze / Google Maps / Apple Maps) para la sede seleccionada
+     * Abre el modal de navegación (Waze / Google Maps / Apple Maps / Reseñas)
      */
     function openNavSheet(branchId) {
       activeNavBranch = branchId;
@@ -1534,7 +1611,7 @@
       const lat = data.lat;
       const lon = data.lon;
 
-      // Generar enlaces para las 3 aplicaciones de mapas
+      // Generar enlaces para las aplicaciones de mapas
       const wazeUrl = `https://waze.com/ul?ll=${lat},${lon}&navigate=yes`;
       const gmapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`;
       const appleUrl = `https://maps.apple.com/?daddr=${lat},${lon}&dirflg=d`;
@@ -1542,6 +1619,12 @@
       document.getElementById('link-app-waze').href = wazeUrl;
       document.getElementById('link-app-gmaps').href = gmapsUrl;
       document.getElementById('link-app-apple').href = appleUrl;
+
+      // Enlace directo a reseñas de Google para esta tienda
+      const revLink = document.getElementById('link-app-reviews');
+      if (revLink) {
+        revLink.href = data.reviewUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(data.name)}`;
+      }
 
       openModal('modal-nav-sheet');
     }
@@ -1562,6 +1645,7 @@
       
       document.getElementById('admin-loc-name').value = data.name || '';
       document.getElementById('admin-loc-desc').value = data.desc || '';
+      document.getElementById('admin-review-url').value = data.reviewUrl || '';
       
       // Mostrar coordenadas actuales guardadas
       if (data.lat && data.lon) {
@@ -1642,12 +1726,13 @@
     }
 
     /**
-     * Guarda la ubicación en localStorage y actualiza la interfaz
+     * Guarda la ubicación y el link de reseñas en localStorage y actualiza la interfaz
      */
     function saveLocationToStorage() {
       const branchId = document.getElementById('admin-select-branch').value;
       const name = document.getElementById('admin-loc-name').value.trim();
       const desc = document.getElementById('admin-loc-desc').value.trim();
+      const reviewUrl = document.getElementById('admin-review-url').value.trim();
 
       if (!name) {
         alert('Por favor ingresa un nombre para la sede.');
@@ -1661,6 +1746,7 @@
 
       if (name) branchesData[branchId].name = name;
       if (desc) branchesData[branchId].desc = desc;
+      if (reviewUrl) branchesData[branchId].reviewUrl = reviewUrl;
 
       try {
         localStorage.setItem('vina_branches_custom', JSON.stringify(branchesData));
@@ -1670,11 +1756,11 @@
 
       applyBranchesDataToDOM();
       closeModal('modal-gps-admin');
-      showToast(`¡Ubicación de Sede ${branchId} guardada y activada!`);
+      showToast(`¡Datos y reseñas de Sede ${branchId} guardados!`);
     }
 
     /**
-     * Copia los enlaces de navegación y coordenadas al portapapeles
+     * Copia los enlaces de navegación, reseñas y coordenadas al portapapeles
      */
     function copyLocationData() {
       const branchId = document.getElementById('admin-select-branch').value;
@@ -1685,6 +1771,7 @@
       const textToCopy = [
         `📍 ${data.name}`,
         `Coordenadas: ${lat}, ${lon}`,
+        `⭐ Reseñas Google: ${data.reviewUrl || ''}`,
         `🚗 Waze: https://waze.com/ul?ll=${lat},${lon}&navigate=yes`,
         `🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=${lat},${lon}`,
         `🍏 Apple Maps: https://maps.apple.com/?daddr=${lat},${lon}&dirflg=d`
@@ -1702,7 +1789,7 @@
     }
 
     /**
-     * Aplica los nombres y referencias guardadas a las tarjetas de la página
+     * Aplica los nombres, referencias y enlaces de reseñas a las tarjetas de la página
      */
     function applyBranchesDataToDOM() {
       try {
@@ -1716,15 +1803,21 @@
         console.warn('Error reading saved branches:', e);
       }
 
+      // Sede 1
       const t1 = document.getElementById('title-sede-1');
       const d1 = document.getElementById('desc-sede-1');
+      const r1 = document.getElementById('review-link-sede-1');
       if (t1 && branchesData[1].name) t1.textContent = branchesData[1].name;
       if (d1 && branchesData[1].desc) d1.textContent = branchesData[1].desc;
+      if (r1 && branchesData[1].reviewUrl) r1.href = branchesData[1].reviewUrl;
 
+      // Sede 2
       const t2 = document.getElementById('title-sede-2');
       const d2 = document.getElementById('desc-sede-2');
+      const r2 = document.getElementById('review-link-sede-2');
       if (t2 && branchesData[2].name) t2.textContent = branchesData[2].name;
       if (d2 && branchesData[2].desc) d2.textContent = branchesData[2].desc;
+      if (r2 && branchesData[2].reviewUrl) r2.href = branchesData[2].reviewUrl;
     }
 
     function openModal(id) {
