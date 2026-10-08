@@ -758,14 +758,285 @@
     }
 
     /* ==========================================================================
-       ACCESIBILIDAD Y REDUCCIÓN DE MOVIMIENTO
+       MODALES: SELECTOR DE NAVEGACIÓN Y GESTOR GPS EN TIEMPO REAL
        ========================================================================== */
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 10, 14, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.28s ease;
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-window {
+      background: linear-gradient(180deg, #191c28 0%, #10121b 100%);
+      border: 1px solid rgba(216, 178, 110, 0.35);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 420px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 24px 20px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(216, 178, 110, 0.12);
+      transform: translateY(24px) scale(0.96);
+      transition: transform 0.28s var(--ease-spring);
+      position: relative;
+    }
+
+    .modal-backdrop.active .modal-window {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .modal-title-group h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--text-white);
+      line-height: 1.25;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .modal-title-group p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .btn-close-modal {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+
+    .btn-close-modal:hover {
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+
+    /* Opciones de apps de navegación (Waze, Maps, Apple) */
+    .nav-apps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .nav-app-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      text-decoration: none;
+      color: var(--text-main);
+      transition: all 0.22s var(--ease-spring);
+    }
+
+    .nav-app-link:hover, .nav-app-link:active {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(216, 178, 110, 0.45);
+    }
+
+    .nav-app-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-app-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .nav-app-icon.waze { background: rgba(51, 204, 255, 0.15); color: #33ccff; }
+    .nav-app-icon.gmaps { background: rgba(66, 133, 244, 0.15); color: #4285f4; }
+    .nav-app-icon.apple { background: rgba(255, 255, 255, 0.12); color: #ffffff; }
+
+    .nav-app-name {
+      font-weight: 700;
+      font-size: 0.94rem;
+      color: var(--text-white);
+    }
+
+    .nav-app-subtitle {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    /* Estilos del Formulario GPS Admin */
+    .form-group {
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-label {
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-glow);
+    }
+
+    .form-input, .form-select {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      color: #ffffff;
+      font-size: 0.88rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      width: 100%;
+    }
+
+    .form-input:focus, .form-select:focus {
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 0 2px rgba(216, 178, 110, 0.2);
+    }
+
+    .btn-gps-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 18px;
+      background: linear-gradient(135deg, #1f6b4d 0%, #154c37 100%);
+      color: #ffffff;
+      border: 1px solid rgba(74, 222, 128, 0.35);
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.22s var(--ease-spring);
+      margin: 8px 0 14px;
+    }
+
+    .btn-gps-trigger:hover, .btn-gps-trigger:active {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(31, 107, 77, 0.5);
+      border-color: #4ade80;
+    }
+
+    .gps-results-box {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 14px;
+      display: none;
+    }
+
+    .gps-results-box.active {
+      display: block;
+      border-color: rgba(74, 222, 128, 0.4);
+    }
+
+    .gps-coords-badge {
+      font-family: monospace;
+      color: #6ee7b7;
+      font-weight: 700;
+      word-break: break-all;
+    }
+
+    .admin-actions-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn-admin-action {
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border: 1px solid transparent;
+      transition: all 0.2s var(--ease-spring);
+    }
+
+    .btn-admin-save {
+      background: var(--gold-gradient);
+      color: #1a1200;
+    }
+
+    .btn-admin-save:hover {
+      box-shadow: var(--shadow-gold-glow);
+      transform: translateY(-2px);
+    }
+
+    .btn-admin-copy {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.15);
+      color: var(--text-main);
+    }
+
+    .btn-admin-copy:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Efecto visual al tocar el logo */
+    .avatar-wrapper {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .avatar-wrapper:active {
+      transform: scale(0.94);
     }
   </style>
 </head>
@@ -782,7 +1053,7 @@
          SECCIÓN A: ENCABEZADO / PERFIL
          ==================================================================== -->
     <header class="header-card">
-      <div class="avatar-wrapper">
+      <div class="avatar-wrapper" id="brand-avatar" onclick="handleLogoTap()" role="button" aria-label="Logotipo La Viña (Toca 5 veces para configurar ubicación GPS)" tabindex="0">
         <div class="avatar-glow" aria-hidden="true"></div>
         <div class="avatar-icon" aria-label="Logo La Viña">
           <img src="logo.svg" alt="Logotipo Oficial Licorera & Minisúper La Viña" class="avatar-logo-img" id="brand-logo-img" />
@@ -822,23 +1093,22 @@
               </svg>
             </div>
             <div class="branch-info">
-              <h3 class="branch-title">Viña 1 - Minisúper & Licorera</h3>
-              <p class="branch-desc">Sede Principal • Centro de Turrúcares</p>
+              <h3 class="branch-title" id="title-sede-1">Viña 1 - Minisúper & Licorera</h3>
+              <p class="branch-desc" id="desc-sede-1">Sede Principal • Centro de Turrúcares</p>
             </div>
           </div>
           
           <div class="branch-actions">
-            <!-- PLACEHOLDER GOOGLE MAPS / WAZE SEDE 1: Reemplaza con las coordenadas o link real -->
-            <a href="https://www.google.com/maps/search/?api=1&query=Turrucares+Alajuela+Costa+Rica+Licorera+La+Vina+1" 
-               target="_blank" 
-               rel="noopener noreferrer" 
+            <!-- BOTÓN CÓMO LLEGAR (Abre selector Waze / Google Maps / Apple Maps) -->
+            <button type="button" 
                class="btn-branch btn-branch-map"
-               aria-label="Cómo llegar a Viña 1 en Waze o Google Maps">
+               onclick="openNavSheet(1)"
+               aria-label="Abrir opciones de navegación para Viña 1">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="3 11 22 2 13 21 11 13 3 11"/>
               </svg>
               <span>Cómo llegar</span>
-            </a>
+            </button>
 
             <!-- WHATSAPP O LLAMADA DIRECTA SEDE 1 -->
             <a href="https://wa.me/50687759835?text=Hola%20La%20Vi%C3%B1a%201%2C%20quisiera%20hacer%20una%20consulta%20o%20pedido." 
@@ -865,23 +1135,22 @@
               </svg>
             </div>
             <div class="branch-info">
-              <h3 class="branch-title">Viña 2 - Minisúper & Licorera</h3>
-              <p class="branch-desc">Segunda Sede • Turrúcares y alrededores</p>
+              <h3 class="branch-title" id="title-sede-2">Viña 2 - Minisúper & Licorera</h3>
+              <p class="branch-desc" id="desc-sede-2">Segunda Sede • Turrúcares y alrededores</p>
             </div>
           </div>
           
           <div class="branch-actions">
-            <!-- PLACEHOLDER GOOGLE MAPS / WAZE SEDE 2: Reemplaza con las coordenadas o link real -->
-            <a href="https://www.google.com/maps/search/?api=1&query=Turrucares+Alajuela+Costa+Rica+Licorera+La+Vina+2" 
-               target="_blank" 
-               rel="noopener noreferrer" 
+            <!-- BOTÓN CÓMO LLEGAR (Abre selector Waze / Google Maps / Apple Maps) -->
+            <button type="button" 
                class="btn-branch btn-branch-map"
-               aria-label="Cómo llegar a Viña 2 en Waze o Google Maps">
+               onclick="openNavSheet(2)"
+               aria-label="Abrir opciones de navegación para Viña 2">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="3 11 22 2 13 21 11 13 3 11"/>
               </svg>
               <span>Cómo llegar</span>
-            </a>
+            </button>
 
             <!-- WHATSAPP O LLAMADA DIRECTA SEDE 2 -->
             <a href="https://wa.me/50687759835?text=Hola%20La%20Vi%C3%B1a%202%2C%20quisiera%20hacer%20una%20consulta%20o%20pedido." 
@@ -1026,7 +1295,166 @@
 
   </main>
 
-  <!-- Notificación Toast Dinámica al descargar vCard -->
+  <!-- ====================================================================
+       MODAL 1: SELECTOR DE NAVEGACIÓN (WAZE / GOOGLE MAPS / APPLE MAPS)
+       ==================================================================== -->
+  <div class="modal-backdrop" id="modal-nav-sheet" role="dialog" aria-modal="true" aria-labelledby="nav-sheet-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="nav-sheet-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--gold-glow);">
+              <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+            </svg>
+            <span id="nav-target-name">Cómo llegar</span>
+          </h3>
+          <p>Selecciona tu aplicación de navegación preferida:</p>
+        </div>
+        <button type="button" class="btn-close-modal" onclick="closeModal('modal-nav-sheet')" aria-label="Cerrar ventana">✕</button>
+      </div>
+
+      <div class="nav-apps-list">
+        <!-- Opción Waze -->
+        <a href="#" id="link-app-waze" target="_blank" rel="noopener noreferrer" class="nav-app-link">
+          <div class="nav-app-left">
+            <div class="nav-app-icon waze">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.78 12.18c0-4.42-3.58-8-8-8-3.48 0-6.44 2.22-7.53 5.34-.35-.08-.71-.12-1.08-.12-2.58 0-4.67 2.09-4.67 4.67 0 2.21 1.54 4.07 3.59 4.54.34 2.16 2.05 3.86 4.23 4.25l-.26.87a.8.8 0 0 0 .76 1.03h7.24a.8.8 0 0 0 .77-1.01l-.29-.98c2.94-.8 5.14-3.48 5.14-6.68 0-.3-.02-.59-.06-.88.61-.83.96-1.85.96-2.95 0-.06 0-.11-.03-.16-.03.03-.04.08-.06.12zM9.33 11.08a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm5.34 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm-5.74 3.75c.34-.1.7.09.8.44.33 1.05 1.15 1.56 2.07 1.56s1.74-.51 2.07-1.56c.11-.35.47-.54.8-.44.35.11.54.47.44.8-.52 1.66-1.84 2.45-3.31 2.45s-2.79-.79-3.31-2.45a.62.62 0 0 1 .44-.8z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="nav-app-name">Waze</div>
+              <div class="nav-app-subtitle">Ruta con tráfico en vivo y alertas</div>
+            </div>
+          </div>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted);"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+
+        <!-- Opción Google Maps -->
+        <a href="#" id="link-app-gmaps" target="_blank" rel="noopener noreferrer" class="nav-app-link">
+          <div class="nav-app-left">
+            <div class="nav-app-icon gmaps">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="nav-app-name">Google Maps</div>
+              <div class="nav-app-subtitle">Navegación estándar y satélite</div>
+            </div>
+          </div>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted);"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+
+        <!-- Opción Apple Maps -->
+        <a href="#" id="link-app-apple" target="_blank" rel="noopener noreferrer" class="nav-app-link">
+          <div class="nav-app-left">
+            <div class="nav-app-icon apple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+              </svg>
+            </div>
+            <div>
+              <div class="nav-app-name">Apple Maps</div>
+              <div class="nav-app-subtitle">Recomendado para iPhone / iOS</div>
+            </div>
+          </div>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted);"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       MODAL 2: GESTOR GPS EN TIEMPO REAL (MODO ADMIN - 5 TOQUES EN LOGO)
+       ==================================================================== -->
+  <div class="modal-backdrop" id="modal-gps-admin" role="dialog" aria-modal="true" aria-labelledby="gps-admin-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="gps-admin-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--gold-glow);">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="22" y1="12" x2="18" y2="12"/>
+              <line x1="6" y1="12" x2="2" y2="12"/>
+              <line x1="12" y1="6" x2="12" y2="2"/>
+              <line x1="12" y1="22" x2="12" y2="18"/>
+            </svg>
+            <span>Configurar Ubicación GPS</span>
+          </h3>
+          <p>Toca el botón cuando estés en el negocio para guardar la ubicación satelital exacta.</p>
+        </div>
+        <button type="button" class="btn-close-modal" onclick="closeModal('modal-gps-admin')" aria-label="Cerrar ventana">✕</button>
+      </div>
+
+      <!-- Selector de Sede -->
+      <div class="form-group">
+        <label for="admin-select-branch" class="form-label">Sede a Configurar:</label>
+        <select id="admin-select-branch" class="form-select" onchange="loadBranchDataInForm()">
+          <option value="1">Sede 1: Viña 1 (Centro)</option>
+          <option value="2">Sede 2: Viña 2 (Segunda Sede)</option>
+        </select>
+      </div>
+
+      <!-- Nombre del Lugar / Descripción -->
+      <div class="form-group">
+        <label for="admin-loc-name" class="form-label">Nombre del Lugar / Descripción:</label>
+        <input type="text" id="admin-loc-name" class="form-input" placeholder="Ej. Viña 1 - Minisúper & Licorera" />
+      </div>
+
+      <div class="form-group">
+        <label for="admin-loc-desc" class="form-label">Subtítulo o Referencia:</label>
+        <input type="text" id="admin-loc-desc" class="form-input" placeholder="Ej. Sede Principal • Centro de Turrúcares" />
+      </div>
+
+      <!-- Botón para capturar GPS del teléfono en tiempo real -->
+      <button type="button" class="btn-gps-trigger" id="btn-gps-capture" onclick="captureLiveGPS()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 2v3m0 14v3M2 12h3m14 0h3"/>
+        </svg>
+        <span id="btn-gps-text">Capturar Ubicación Actual de mi Celular</span>
+      </button>
+
+      <!-- Caja de Coordenadas Capturadas -->
+      <div class="gps-results-box" id="gps-results-box">
+        <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+          <strong style="color:#ffffff;">📍 Coordenadas Capturadas:</strong>
+          <span id="gps-accuracy-badge" style="color:var(--gold-primary); font-size:0.7rem;"></span>
+        </div>
+        <div class="gps-coords-badge" id="gps-coords-display">Lat: 0.00000, Lon: 0.00000</div>
+        
+        <div style="margin-top:10px; display:flex; gap:6px; flex-wrap:wrap;">
+          <a href="#" id="preview-waze" target="_blank" class="btn-branch btn-branch-map" style="padding:6px 10px; font-size:0.72rem;">Probar Waze</a>
+          <a href="#" id="preview-gmaps" target="_blank" class="btn-branch btn-branch-map" style="padding:6px 10px; font-size:0.72rem;">Probar Maps</a>
+          <a href="#" id="preview-apple" target="_blank" class="btn-branch btn-branch-map" style="padding:6px 10px; font-size:0.72rem;">Probar Apple</a>
+        </div>
+      </div>
+
+      <!-- Acciones de Guardar y Copiar -->
+      <div class="admin-actions-row">
+        <button type="button" class="btn-admin-action btn-admin-save" onclick="saveLocationToStorage()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+            <polyline points="17 21 17 13 7 13 7 21"/>
+            <polyline points="7 3 7 8 15 8"/>
+          </svg>
+          <span>Guardar Sede</span>
+        </button>
+
+        <button type="button" class="btn-admin-action btn-admin-copy" onclick="copyLocationData()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+          </svg>
+          <span>Copiar Enlaces</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Notificación Toast Dinámica -->
   <div class="toast-notification" id="toast-notify" role="alert" aria-live="polite">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--emerald-online);">
       <polyline points="20 6 9 17 4 12"/>
@@ -1035,9 +1463,287 @@
   </div>
 
   <!-- ====================================================================
-       SCRIPT: GENERACIÓN Y DESCARGA DINÁMICA DE .VCF (VCARD 3.0)
+       SCRIPTS: DETECTOR 5 TOQUES, GEOLOCALIZACIÓN Y GENERACIÓN VCARD
        ==================================================================== -->
   <script>
+    // Estado global de sedes (Coordenadas por defecto en Turrúcares, Alajuela)
+    const branchesData = {
+      1: {
+        name: "Viña 1 - Minisúper & Licorera",
+        desc: "Sede Principal • Centro de Turrúcares",
+        lat: 9.95758,
+        lon: -84.31885,
+        query: "Turrucares, Alajuela, Licorera La Vina 1"
+      },
+      2: {
+        name: "Viña 2 - Minisúper & Licorera",
+        desc: "Segunda Sede • Turrúcares y alrededores",
+        lat: 9.96100,
+        lon: -84.32200,
+        query: "Turrucares, Alajuela, Licorera La Vina 2"
+      }
+    };
+
+    let activeNavBranch = 1;
+    let tempCapturedGPS = null;
+
+    // Detector de toques secretos en el logotipo (5 toques para Modo Admin)
+    let logoTapCounter = 0;
+    let logoTapTimer = null;
+
+    function handleLogoTap() {
+      logoTapCounter++;
+
+      // Animación táctil suave en el avatar
+      const avatar = document.getElementById('brand-avatar');
+      if (avatar) {
+        avatar.style.transform = 'scale(0.92)';
+        setTimeout(() => { avatar.style.transform = 'scale(1)'; }, 140);
+      }
+
+      if (navigator.vibrate) {
+        navigator.vibrate(35);
+      }
+
+      clearTimeout(logoTapTimer);
+      logoTapTimer = setTimeout(() => {
+        logoTapCounter = 0;
+      }, 2800);
+
+      if (logoTapCounter === 3) {
+        showToast('Modo Admin: Toque 3 de 5...');
+      } else if (logoTapCounter === 4) {
+        showToast('Modo Admin: Toque 4 de 5...');
+      } else if (logoTapCounter >= 5) {
+        logoTapCounter = 0;
+        if (navigator.vibrate) navigator.vibrate([70, 50, 70]);
+        openGPSAdminModal();
+      }
+    }
+
+    /**
+     * Abre el modal de navegación (Waze / Google Maps / Apple Maps) para la sede seleccionada
+     */
+    function openNavSheet(branchId) {
+      activeNavBranch = branchId;
+      const data = branchesData[branchId];
+      
+      const titleElem = document.getElementById('nav-target-name');
+      if (titleElem) titleElem.textContent = data.name;
+
+      const lat = data.lat;
+      const lon = data.lon;
+
+      // Generar enlaces para las 3 aplicaciones de mapas
+      const wazeUrl = `https://waze.com/ul?ll=${lat},${lon}&navigate=yes`;
+      const gmapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`;
+      const appleUrl = `https://maps.apple.com/?daddr=${lat},${lon}&dirflg=d`;
+
+      document.getElementById('link-app-waze').href = wazeUrl;
+      document.getElementById('link-app-gmaps').href = gmapsUrl;
+      document.getElementById('link-app-apple').href = appleUrl;
+
+      openModal('modal-nav-sheet');
+    }
+
+    /**
+     * Abre el modal de administración GPS
+     */
+    function openGPSAdminModal() {
+      loadBranchDataInForm();
+      openModal('modal-gps-admin');
+      showToast('📍 Modo Administrador GPS Activado');
+    }
+
+    function loadBranchDataInForm() {
+      const select = document.getElementById('admin-select-branch');
+      const branchId = select ? select.value : 1;
+      const data = branchesData[branchId];
+      
+      document.getElementById('admin-loc-name').value = data.name || '';
+      document.getElementById('admin-loc-desc').value = data.desc || '';
+      
+      // Mostrar coordenadas actuales guardadas
+      if (data.lat && data.lon) {
+        displayCoords(data.lat, data.lon, null);
+      }
+    }
+
+    /**
+     * Captura en tiempo real la ubicación GPS del celular con alta precisión
+     */
+    function captureLiveGPS() {
+      const btn = document.getElementById('btn-gps-capture');
+      const btnText = document.getElementById('btn-gps-text');
+
+      if (!navigator.geolocation) {
+        alert('Tu navegador o dispositivo no soporta geolocalización GPS.');
+        return;
+      }
+
+      btnText.textContent = '🛰️ Conectando con satélites GPS...';
+      btn.style.opacity = '0.75';
+
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          btnText.textContent = '📍 Capturar Ubicación Actual de mi Celular';
+          btn.style.opacity = '1';
+
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+          const accuracy = Math.round(position.coords.accuracy);
+
+          tempCapturedGPS = { lat, lon, accuracy };
+          displayCoords(lat, lon, accuracy);
+
+          if (navigator.vibrate) navigator.vibrate([50, 40, 50]);
+          showToast(`¡Ubicación GPS capturada con precisión de ±${accuracy}m!`);
+        },
+        (error) => {
+          btnText.textContent = '📍 Capturar Ubicación Actual de mi Celular';
+          btn.style.opacity = '1';
+          console.error('Error de geolocalización:', error);
+          
+          let errMsg = 'No se pudo obtener la ubicación.';
+          if (error.code === error.PERMISSION_DENIED) {
+            errMsg = 'Permiso denegado. Por favor permite el acceso a la ubicación en tu navegador.';
+          } else if (error.code === error.POSITION_UNAVAILABLE) {
+            errMsg = 'Señal GPS no disponible. Verifica que tu ubicación esté activada en ajustes.';
+          } else if (error.code === error.TIMEOUT) {
+            errMsg = 'Tiempo de espera agotado al conectar con el GPS.';
+          }
+          alert(errMsg);
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 12000,
+          maximumAge: 0
+        }
+      );
+    }
+
+    function displayCoords(lat, lon, accuracy) {
+      const box = document.getElementById('gps-results-box');
+      const coordsDisplay = document.getElementById('gps-coords-display');
+      const accBadge = document.getElementById('gps-accuracy-badge');
+
+      box.classList.add('active');
+      coordsDisplay.textContent = `Lat: ${lat.toFixed(6)}, Lon: ${lon.toFixed(6)}`;
+      accBadge.textContent = accuracy ? `Precisión: ±${accuracy}m` : 'Guardado';
+
+      // Actualizar botones de prueba previa
+      const wazeUrl = `https://waze.com/ul?ll=${lat},${lon}&navigate=yes`;
+      const gmapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`;
+      const appleUrl = `https://maps.apple.com/?daddr=${lat},${lon}&dirflg=d`;
+
+      document.getElementById('preview-waze').href = wazeUrl;
+      document.getElementById('preview-gmaps').href = gmapsUrl;
+      document.getElementById('preview-apple').href = appleUrl;
+    }
+
+    /**
+     * Guarda la ubicación en localStorage y actualiza la interfaz
+     */
+    function saveLocationToStorage() {
+      const branchId = document.getElementById('admin-select-branch').value;
+      const name = document.getElementById('admin-loc-name').value.trim();
+      const desc = document.getElementById('admin-loc-desc').value.trim();
+
+      if (!name) {
+        alert('Por favor ingresa un nombre para la sede.');
+        return;
+      }
+
+      if (tempCapturedGPS) {
+        branchesData[branchId].lat = tempCapturedGPS.lat;
+        branchesData[branchId].lon = tempCapturedGPS.lon;
+      }
+
+      if (name) branchesData[branchId].name = name;
+      if (desc) branchesData[branchId].desc = desc;
+
+      try {
+        localStorage.setItem('vina_branches_custom', JSON.stringify(branchesData));
+      } catch (e) {
+        console.warn('LocalStorage error:', e);
+      }
+
+      applyBranchesDataToDOM();
+      closeModal('modal-gps-admin');
+      showToast(`¡Ubicación de Sede ${branchId} guardada y activada!`);
+    }
+
+    /**
+     * Copia los enlaces de navegación y coordenadas al portapapeles
+     */
+    function copyLocationData() {
+      const branchId = document.getElementById('admin-select-branch').value;
+      const data = branchesData[branchId];
+      const lat = tempCapturedGPS ? tempCapturedGPS.lat : data.lat;
+      const lon = tempCapturedGPS ? tempCapturedGPS.lon : data.lon;
+
+      const textToCopy = [
+        `📍 ${data.name}`,
+        `Coordenadas: ${lat}, ${lon}`,
+        `🚗 Waze: https://waze.com/ul?ll=${lat},${lon}&navigate=yes`,
+        `🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=${lat},${lon}`,
+        `🍏 Apple Maps: https://maps.apple.com/?daddr=${lat},${lon}&dirflg=d`
+      ].join('\n');
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          showToast('¡Enlaces y coordenadas copiados al portapapeles!');
+        }).catch(() => {
+          prompt('Copia tus coordenadas y enlaces:', textToCopy);
+        });
+      } else {
+        prompt('Copia tus coordenadas y enlaces:', textToCopy);
+      }
+    }
+
+    /**
+     * Aplica los nombres y referencias guardadas a las tarjetas de la página
+     */
+    function applyBranchesDataToDOM() {
+      try {
+        const saved = localStorage.getItem('vina_branches_custom');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (parsed[1]) Object.assign(branchesData[1], parsed[1]);
+          if (parsed[2]) Object.assign(branchesData[2], parsed[2]);
+        }
+      } catch (e) {
+        console.warn('Error reading saved branches:', e);
+      }
+
+      const t1 = document.getElementById('title-sede-1');
+      const d1 = document.getElementById('desc-sede-1');
+      if (t1 && branchesData[1].name) t1.textContent = branchesData[1].name;
+      if (d1 && branchesData[1].desc) d1.textContent = branchesData[1].desc;
+
+      const t2 = document.getElementById('title-sede-2');
+      const d2 = document.getElementById('desc-sede-2');
+      if (t2 && branchesData[2].name) t2.textContent = branchesData[2].name;
+      if (d2 && branchesData[2].desc) d2.textContent = branchesData[2].desc;
+    }
+
+    function openModal(id) {
+      const m = document.getElementById(id);
+      if (m) m.classList.add('active');
+    }
+
+    function closeModal(id) {
+      const m = document.getElementById(id);
+      if (m) m.classList.remove('active');
+    }
+
+    // Cerrar modal al tocar el fondo oscuro exterior
+    window.addEventListener('click', (e) => {
+      if (e.target.classList.contains('modal-backdrop')) {
+        e.target.classList.remove('active');
+      }
+    });
+
     /**
      * Genera y descarga el archivo de contacto vCard (.vcf)
      * Compatible con iOS (Contactos de Apple) y Android (Contactos de Google).
@@ -1070,7 +1776,6 @@
         document.body.removeChild(link);
         URL.revokeObjectURL(url);
 
-        // Feedback visual táctil
         showToast('Tarjeta de contacto descargada con éxito');
       } catch (err) {
         console.error('Error al generar la vCard:', err);
@@ -1094,6 +1799,11 @@
         toast.classList.remove('show');
       }, 3500);
     }
+
+    // Inicializar datos al cargar la página
+    document.addEventListener('DOMContentLoaded', () => {
+      applyBranchesDataToDOM();
+    });
   </script>
 </body>
 </html>
