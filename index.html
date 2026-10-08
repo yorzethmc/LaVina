@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Licorera & Minisúper La Viña | Turrúcares</title>
+  <meta name="description" content="Licorera & Minisúper La Viña en Turrúcares, Alajuela. Vinos, cervezas artesanales e importadas, licores selectos y minisúper. Servicio a domicilio y retiro en tienda.">
+  <meta name="theme-color" content="#0d0f14">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Open Graph / Meta para compartir en redes -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Licorera & Minisúper La Viña">
+  <meta property="og:description" content="Vinos, cervezas, licores y minisúper • Turrúcares, Alajuela, Costa Rica.">
+  <meta property="og:locale" content="es_CR">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit para estilo Dark Luxury -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       VARIABLES Y SISTEMA DE DISEÑO (DARK LUXURY)
+       ========================================================================== */
+    :root {
+      --bg-base: #0a0b0e;
+      --bg-card: rgba(22, 25, 34, 0.72);
+      --bg-card-hover: rgba(30, 35, 48, 0.88);
+      --bg-card-active: rgba(38, 44, 60, 0.95);
+      --bg-glass: rgba(255, 255, 255, 0.035);
+      
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-gold: rgba(224, 182, 107, 0.28);
+      --border-wine: rgba(217, 72, 103, 0.35);
+
+      --wine-primary: #9e2a44;
+      --wine-glow: #e04f6e;
+      --wine-gradient: linear-gradient(135deg, #a82a46 0%, #e04f6e 100%);
+      
+      --gold-primary: #d8b26e;
+      --gold-glow: #f6d89b;
+      --gold-gradient: linear-gradient(135deg, #c99e52 0%, #ecd093 50%, #b88b3f 100%);
+      
+      --emerald-online: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.35);
+
+      --text-white: #ffffff;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --radius-sm: 12px;
+      --radius-md: 18px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+
+      --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 0 1px 1px rgba(255, 255, 255, 0.05);
+      --shadow-glow: 0 12px 35px -8px rgba(168, 42, 70, 0.35);
+      --shadow-gold-glow: 0 10px 25px -6px rgba(216, 178, 110, 0.3);
+
+      --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+      --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Reset móvil y tipografía */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 24px 16px 48px;
+      position: relative;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    /* Fondos de luz ambiental (Glows oscuros de lujo) */
+    .ambient-glow-top {
+      position: fixed;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 480px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(168, 42, 70, 0.22) 0%, rgba(216, 178, 110, 0.08) 50%, transparent 75%);
+      filter: blur(65px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .ambient-glow-bottom {
+      position: fixed;
+      bottom: -150px;
+      right: -80px;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(168, 42, 70, 0.12) 0%, rgba(13, 15, 20, 0) 70%);
+      filter: blur(80px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Contenedor central estilo Bento Mobile */
+    .app-container {
+      width: 100%;
+      max-width: 440px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* ==========================================================================
+       SECCIÓN A: PERFIL / ENCABEZADO
+       ========================================================================== */
+    .header-card {
+      background: linear-gradient(180deg, rgba(28, 32, 45, 0.85) 0%, rgba(18, 20, 28, 0.75) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 30px 22px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 15%;
+      right: 15%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(216, 178, 110, 0.6), transparent);
+    }
+
+    /* Logo Avatar con Aureola */
+    .avatar-wrapper {
+      position: relative;
+      width: 96px;
+      height: 96px;
+      margin-bottom: 18px;
+    }
+
+    .avatar-glow {
+      position: absolute;
+      inset: -4px;
+      border-radius: var(--radius-full);
+      background: var(--wine-gradient);
+      opacity: 0.45;
+      filter: blur(10px);
+      animation: pulse-aura 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse-aura {
+      0% { opacity: 0.3; transform: scale(0.96); }
+      100% { opacity: 0.65; transform: scale(1.04); }
+    }
+
+    .avatar-icon {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: var(--radius-full);
+      background: linear-gradient(145deg, #1d202b 0%, #101218 100%);
+      border: 2px solid rgba(216, 178, 110, 0.55);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-glow);
+    }
+
+    .avatar-icon svg {
+      width: 46px;
+      height: 46px;
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+    }
+
+    /* Textos del Encabezado */
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-white);
+      margin-bottom: 6px;
+      line-height: 1.25;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .brand-highlight {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .brand-subtitle {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      max-width: 320px;
+      margin-bottom: 16px;
+      font-weight: 400;
+    }
+
+    /* Badge de estado en tiempo real */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.28);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: #6ee7b7;
+      letter-spacing: 0.01em;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--emerald-online);
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse-ring 2s infinite;
+    }
+
+    @keyframes pulse-ring {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+      70% { box-shadow: 0 0 0 7px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    /* ==========================================================================
+       TITULOS DE SECCIÓN
+       ========================================================================== */
+    .section-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-dim);
+      margin-left: 6px;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent);
+    }
+
+    /* ==========================================================================
+       SECCIÓN B: SUCURSALES (BENTO SELECTOR DE SEDES)
+       ========================================================================== */
+    .branches-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .branch-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      box-shadow: var(--shadow-card);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: transform 0.22s var(--ease-spring), border-color 0.22s ease, background 0.22s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .branch-card:hover {
+      border-color: rgba(216, 178, 110, 0.4);
+      background: var(--bg-card-hover);
+    }
+
+    .branch-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 15px;
+    }
+
+    .branch-tag-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(158, 42, 68, 0.25) 0%, rgba(30, 35, 48, 0.8) 100%);
+      border: 1px solid rgba(224, 79, 110, 0.35);
+      color: var(--gold-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .branch-tag-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .branch-info {
+      flex: 1;
+    }
+
+    .branch-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-white);
+      line-height: 1.25;
+      margin-bottom: 3px;
+    }
+
+    .branch-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    /* Botones de acción de sucursal */
+    .branch-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .btn-branch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 12px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: all 0.2s var(--ease-spring);
+      cursor: pointer;
+      border: 1px solid transparent;
+      user-select: none;
+    }
+
+    .btn-branch svg {
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+    }
+
+    /* Botón Cómo Llegar */
+    .btn-branch-map {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-branch-map:hover,
+    .btn-branch-map:active {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+      color: #ffffff;
+    }
+
+    /* Botón Contactar Sede */
+    .btn-branch-contact {
+      background: rgba(168, 42, 70, 0.18);
+      color: #ff9fb4;
+      border-color: rgba(224, 79, 110, 0.35);
+    }
+
+    .btn-branch-contact:hover,
+    .btn-branch-contact:active {
+      background: rgba(168, 42, 70, 0.35);
+      border-color: var(--wine-glow);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       SECCIÓN C: ACCESOS DIRECTOS DE CONTACTO (1 TOQUE)
+       ========================================================================== */
+    .quick-actions-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* WhatsApp Hero CTA */
+    .cta-whatsapp {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(135deg, #1b8a5a 0%, #126340 100%);
+      color: #ffffff;
+      border: 1px solid rgba(74, 222, 128, 0.3);
+      padding: 16px 20px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      box-shadow: 0 10px 25px -6px rgba(18, 99, 64, 0.55);
+      overflow: hidden;
+      transition: all 0.25s var(--ease-spring);
+    }
+
+    .cta-whatsapp::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 80%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transform: skewX(-25deg);
+      transition: left 0.75s ease;
+    }
+
+    .cta-whatsapp:hover::before {
+      left: 150%;
+    }
+
+    .cta-whatsapp:hover,
+    .cta-whatsapp:active {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 14px 30px -6px rgba(22, 128, 83, 0.75);
+    }
+
+    .cta-content {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .cta-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .cta-icon-box svg {
+      width: 26px;
+      height: 26px;
+      fill: #ffffff;
+    }
+
+    .cta-texts h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .cta-texts p {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 400;
+    }
+
+    .cta-arrow {
+      color: rgba(255, 255, 255, 0.8);
+      transition: transform 0.2s ease;
+    }
+
+    .cta-whatsapp:hover .cta-arrow {
+      transform: translateX(4px);
+      color: #ffffff;
+    }
+
+    /* Llamada Telefónica Rápida */
+    .cta-phone {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 14px 18px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: var(--text-main);
+      transition: all 0.22s var(--ease-spring);
+    }
+
+    .cta-phone:hover,
+    .cta-phone:active {
+      background: var(--bg-card-hover);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .phone-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .phone-icon-box {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(216, 178, 110, 0.15);
+      border: 1px solid rgba(216, 178, 110, 0.3);
+      color: var(--gold-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .phone-icon-box svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    .phone-title {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--text-white);
+    }
+
+    .phone-number {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .phone-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--gold-primary);
+      background: rgba(216, 178, 110, 0.1);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(216, 178, 110, 0.25);
+    }
+
+    /* ==========================================================================
+       SECCIÓN D: REDES SOCIALES OFICIALES (BENTO STYLE)
+       ========================================================================== */
+    .socials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .social-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 8px;
+      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      text-decoration: none;
+      color: var(--text-main);
+      box-shadow: var(--shadow-card);
+      transition: all 0.25s var(--ease-spring);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-btn svg {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 8px;
+      transition: transform 0.25s var(--ease-spring);
+    }
+
+    .social-btn span {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .social-handle {
+      font-size: 0.65rem;
+      color: var(--text-dim);
+      margin-top: 1px;
+    }
+
+    /* Hover Específico por Red Social */
+    .social-btn.facebook:hover,
+    .social-btn.facebook:active {
+      border-color: rgba(66, 103, 178, 0.6);
+      background: rgba(24, 119, 242, 0.12);
+      transform: translateY(-3px);
+    }
+    .social-btn.facebook svg { fill: #1877f2; }
+
+    .social-btn.instagram:hover,
+    .social-btn.instagram:active {
+      border-color: rgba(225, 48, 108, 0.6);
+      background: rgba(225, 48, 108, 0.12);
+      transform: translateY(-3px);
+    }
+    .social-btn.instagram svg { fill: #e1306c; }
+
+    .social-btn.tiktok:hover,
+    .social-btn.tiktok:active {
+      border-color: rgba(254, 44, 85, 0.6);
+      background: rgba(254, 44, 85, 0.12);
+      transform: translateY(-3px);
+    }
+    .social-btn.tiktok svg { fill: #ffffff; }
+
+    /* ==========================================================================
+       SECCIÓN E: GUARDAR EN CONTACTOS (.VCF) & ACCIONES PLUS
+       ========================================================================== */
+    .btn-vcard {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 20px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, rgba(216, 178, 110, 0.15) 0%, rgba(158, 42, 68, 0.15) 100%);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-glow);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      transition: all 0.25s var(--ease-spring);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-vcard:hover,
+    .btn-vcard:active {
+      background: linear-gradient(135deg, rgba(216, 178, 110, 0.25) 0%, rgba(158, 42, 68, 0.28) 100%);
+      border-color: var(--gold-primary);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold-glow);
+    }
+
+    .btn-vcard svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* ==========================================================================
+       FOOTER ELEGANTE
+       ========================================================================== */
+    .app-footer {
+      text-align: center;
+      padding: 16px 0 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .footer-badge span {
+      color: var(--gold-primary);
+    }
+
+    .footer-legal {
+      font-size: 0.7rem;
+      color: #475569;
+    }
+
+    /* Modal / Pop-up de confirmación de descarga vCard */
+    .toast-notification {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: rgba(18, 22, 32, 0.95);
+      border: 1px solid var(--emerald-online);
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 100;
+      opacity: 0;
+      transition: all 0.35s var(--ease-spring);
+      backdrop-filter: blur(16px);
+      pointer-events: none;
+      width: max-content;
+      max-width: 90%;
+    }
+
+    .toast-notification.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* ==========================================================================
+       ACCESIBILIDAD Y REDUCCIÓN DE MOVIMIENTO
+       ========================================================================== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Luces ambientales de fondo estilo Dark Luxury -->
+  <div class="ambient-glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow-bottom" aria-hidden="true"></div>
+
+  <!-- Contenedor Principal (Mobile-First / NFC Card) -->
+  <main class="app-container">
+
+    <!-- ====================================================================
+         SECCIÓN A: ENCABEZADO / PERFIL
+         ==================================================================== -->
+    <header class="header-card">
+      <div class="avatar-wrapper">
+        <div class="avatar-glow" aria-hidden="true"></div>
+        <div class="avatar-icon" aria-label="Logo La Viña">
+          <!-- Icono SVG refinado de Copas de Vino & Botella (Dark Luxury) -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 22h8" />
+            <path d="M12 15v7" />
+            <path d="M12 15a5 5 0 0 0 5-5V3H7v7a5 5 0 0 0 5 5Z" fill="url(#wineGrad)" fill-opacity="0.25"/>
+            <path d="M7 7h10" />
+            <defs>
+              <linearGradient id="wineGrad" x1="7" y1="3" x2="17" y2="15" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#e04f6e"/>
+                <stop offset="1" stop-color="#a82a46"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <h1 class="brand-title">
+        Licorera & Minisúper <span class="brand-highlight">La Viña</span>
+      </h1>
+      
+      <p class="brand-subtitle">
+        Vinos, cervezas, licores y artículos de conveniencia • Turrúcares, Alajuela, Costa Rica
+      </p>
+
+      <!-- Badge de Estado en tiempo real -->
+      <div class="status-badge" role="status" aria-label="Estado del negocio">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        <span>Abierto ahora • Domicilio y retiro en tienda</span>
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         SECCIÓN B: SUCURSALES (SELECTOR BENTO DE SEDES)
+         ==================================================================== -->
+    <section aria-labelledby="sedes-title">
+      <h2 id="sedes-title" class="section-label">Nuestras Sucursales</h2>
+      
+      <div class="branches-grid">
+        
+        <!-- Sede 1 -->
+        <article class="branch-card" id="sede-1">
+          <div class="branch-header">
+            <div class="branch-tag-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <div class="branch-info">
+              <h3 class="branch-title">Viña 1 - Minisúper & Licorera</h3>
+              <p class="branch-desc">Sede Principal • Centro de Turrúcares</p>
+            </div>
+          </div>
+          
+          <div class="branch-actions">
+            <!-- PLACEHOLDER GOOGLE MAPS / WAZE SEDE 1: Reemplaza con las coordenadas o link real -->
+            <a href="https://www.google.com/maps/search/?api=1&query=Turrucares+Alajuela+Costa+Rica+Licorera+La+Vina+1" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-branch btn-branch-map"
+               aria-label="Cómo llegar a Viña 1 en Waze o Google Maps">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+              </svg>
+              <span>Cómo llegar</span>
+            </a>
+
+            <!-- WHATSAPP O LLAMADA DIRECTA SEDE 1 -->
+            <a href="https://wa.me/50687759835?text=Hola%20La%20Vi%C3%B1a%201%2C%20quisiera%20hacer%20una%20consulta%20o%20pedido." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-branch btn-branch-contact"
+               aria-label="Contactar a Viña 1 por WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span>Contactar</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Sede 2 -->
+        <article class="branch-card" id="sede-2">
+          <div class="branch-header">
+            <div class="branch-tag-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+                <path d="M3 6h18"/>
+                <path d="M16 10a4 4 0 0 1-8 0"/>
+              </svg>
+            </div>
+            <div class="branch-info">
+              <h3 class="branch-title">Viña 2 - Minisúper & Licorera</h3>
+              <p class="branch-desc">Segunda Sede • Turrúcares y alrededores</p>
+            </div>
+          </div>
+          
+          <div class="branch-actions">
+            <!-- PLACEHOLDER GOOGLE MAPS / WAZE SEDE 2: Reemplaza con las coordenadas o link real -->
+            <a href="https://www.google.com/maps/search/?api=1&query=Turrucares+Alajuela+Costa+Rica+Licorera+La+Vina+2" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-branch btn-branch-map"
+               aria-label="Cómo llegar a Viña 2 en Waze o Google Maps">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+              </svg>
+              <span>Cómo llegar</span>
+            </a>
+
+            <!-- WHATSAPP O LLAMADA DIRECTA SEDE 2 -->
+            <a href="https://wa.me/50687759835?text=Hola%20La%20Vi%C3%B1a%202%2C%20quisiera%20hacer%20una%20consulta%20o%20pedido." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-branch btn-branch-contact"
+               aria-label="Contactar a Viña 2 por WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span>Contactar</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN C: ACCESOS DIRECTOS DE CONTACTO (1 TOQUE)
+         ==================================================================== -->
+    <section aria-labelledby="contacto-title" class="quick-actions-container">
+      <h2 id="contacto-title" class="section-label">Pedidos y Atención Directa</h2>
+
+      <!-- WhatsApp Principal (Pedido a Domicilio) -->
+      <a href="https://wa.me/50687759835?text=Hola%2C%20me%20gustar%C3%ADa%20hacer%20un%20pedido%20a%20domicilio." 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="cta-whatsapp"
+         aria-label="Hacer pedido a domicilio por WhatsApp">
+        <div class="cta-content">
+          <div class="cta-icon-box">
+            <!-- Icono Oficial WhatsApp SVG -->
+            <svg viewBox="0 0 24 24">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.76-1.85-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29Z"/>
+            </svg>
+          </div>
+          <div class="cta-texts">
+            <h3>WhatsApp Oficial</h3>
+            <p>Hacer pedido a domicilio exprés</p>
+          </div>
+        </div>
+        <div class="cta-arrow" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Llamada Directa con 1 Toque -->
+      <a href="tel:+50687759835" class="cta-phone" aria-label="Llamar al teléfono 8775 9835">
+        <div class="phone-left">
+          <div class="phone-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="phone-title">Llamada Directa</div>
+            <div class="phone-number">+506 8775 9835</div>
+          </div>
+        </div>
+        <span class="phone-badge">1 Toque</span>
+      </a>
+
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN D: REDES SOCIALES OFICIALES (BENTO STYLE)
+         ==================================================================== -->
+    <section aria-labelledby="socials-title">
+      <h2 id="socials-title" class="section-label">Redes Sociales</h2>
+      
+      <div class="socials-grid">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/LicoLaVina/" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="social-btn facebook"
+           aria-label="Visitar Facebook de Licorera La Viña">
+          <svg viewBox="0 0 24 24">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          <span>Facebook</span>
+          <span class="social-handle">@LicoLaVina</span>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/licolavina" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="social-btn instagram"
+           aria-label="Visitar Instagram de Licorera La Viña">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          <span>Instagram</span>
+          <span class="social-handle">@licolavina</span>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://tiktok.com/@licolavina" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="social-btn tiktok"
+           aria-label="Visitar TikTok de Licorera La Viña">
+          <svg viewBox="0 0 24 24">
+            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.97-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+          </svg>
+          <span>TikTok</span>
+          <span class="social-handle">@licolavina</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN E: GUARDAR EN CONTACTOS (.VCF)
+         ==================================================================== -->
+    <section aria-label="Guardar contacto telefónico">
+      <button type="button" class="btn-vcard" id="btn-save-contact" onclick="saveVCard()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+          <line x1="19" y1="8" x2="19" y2="14"/>
+          <line x1="22" y1="11" x2="16" y2="11"/>
+        </svg>
+        <span>Guardar en Contactos</span>
+      </button>
+    </section>
+
+    <!-- ====================================================================
+         FOOTER ELEGANTE
+         ==================================================================== -->
+    <footer class="app-footer">
+      <div class="footer-badge">
+        <span>◆</span> Licorera & Minisúper La Viña <span>◆</span>
+      </div>
+      <p class="footer-legal">
+        Turrúcares, Alajuela, Costa Rica • Tarjeta Digital NFC
+      </p>
+    </footer>
+
+  </main>
+
+  <!-- Notificación Toast Dinámica al descargar vCard -->
+  <div class="toast-notification" id="toast-notify" role="alert" aria-live="polite">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--emerald-online);">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+    <span>Tarjeta de contacto lista para guardar</span>
+  </div>
+
+  <!-- ====================================================================
+       SCRIPT: GENERACIÓN Y DESCARGA DINÁMICA DE .VCF (VCARD 3.0)
+       ==================================================================== -->
+  <script>
+    /**
+     * Genera y descarga el archivo de contacto vCard (.vcf)
+     * Compatible con iOS (Contactos de Apple) y Android (Contactos de Google).
+     */
+    function saveVCard() {
+      const vcardContent = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'N:La Viña;Licorera & Minisúper;;;',
+        'FN:Licorera & Minisúper La Viña',
+        'ORG:Licorera & Minisúper La Viña',
+        'TITLE:Vinos, cervezas, licores y minisúper',
+        'TEL;TYPE=CELL,VOICE,PREF:+50687759835',
+        'ADR;TYPE=WORK,PREF:;;Turrúcares;Alajuela;;;Costa Rica',
+        'NOTE:Licorera & Minisúper La Viña en Turrúcares, Alajuela. Servicio a domicilio y retiro en tienda. WhatsApp: +506 8775 9835',
+        'URL;TYPE=Facebook:https://www.facebook.com/LicoLaVina/',
+        'URL;TYPE=Instagram:https://instagram.com/licolavina',
+        'URL;TYPE=TikTok:https://tiktok.com/@licolavina',
+        'END:VCARD'
+      ].join('\r\n');
+
+      try {
+        const blob = new Blob([vcardContent], { type: 'text/vcard;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', 'Licorera_La_Vina_Contacto.vcf');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+
+        // Feedback visual táctil
+        showToast('Tarjeta de contacto descargada con éxito');
+      } catch (err) {
+        console.error('Error al generar la vCard:', err);
+        showToast('Abriendo llamada directa...');
+        window.location.href = 'tel:+50687759835';
+      }
+    }
+
+    /**
+     * Muestra una notificación visual no intrusiva
+     */
+    function showToast(message) {
+      const toast = document.getElementById('toast-notify');
+      if (!toast) return;
+      if (message) {
+        const span = toast.querySelector('span');
+        if (span) span.textContent = message;
+      }
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3500);
+    }
+  </script>
+</body>
+</html>
