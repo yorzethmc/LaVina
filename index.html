@@ -2,84 +2,84 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-  <title>Licorera & Minisúper La Viña | Turrúcares</title>
-  <meta name="description" content="Licorera & Minisúper La Viña en Turrúcares, Alajuela. Vinos, cervezas artesanales e importadas, licores selectos y minisúper. Servicio a domicilio y retiro en tienda.">
-  <meta name="theme-color" content="#0d0f14">
+  <title>Licorera &amp; Minisúper La Viña | Turrúcares</title>
+  <meta name="description" content="Licorera &amp; Minisúper La Viña en Turrúcares, Alajuela. Vinos, cervezas artesanales e importadas, licores selectos y minisúper. Servicio a domicilio y retiro en tienda.">
+  <meta name="theme-color" content="#2a1810">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="format-detection" content="telephone=no">
 
-  <!-- Open Graph / Meta para compartir en redes -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Licorera & Minisúper La Viña">
+  <meta property="og:title" content="Licorera &amp; Minisúper La Viña">
   <meta property="og:description" content="Vinos, cervezas, licores y minisúper • Turrúcares, Alajuela, Costa Rica.">
   <meta property="og:locale" content="es_CR">
 
-  <!-- Google Fonts: Cinzel (Lujo Cava & Viñedo Artesanal), Outfit & Plus Jakarta Sans -->
+  <!-- Google Fonts: Cinzel Decorative + Playfair Display + Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       SISTEMA DE DISEÑO: ARTESANAL AMADERADO & DARK LUXURY (LA VIÑA)
-       Inspirado en Cava de Vinos, Barricas de Roble Francés y Acabados Dorados
+       SISTEMA DE DISEÑO: CAVA ARTESANAL PREMIUM — LA VIÑA
+       Roble Cálido · Oro Vivo · Vino Granate · Partículas Doradas
        ========================================================================== */
     :root {
-      /* Maderas Nobles y Cava */
-      --wood-darkest: #0f0a07;
-      --wood-deep: #1a110b;
-      --wood-medium: #2a1a12;
-      --wood-warm: #382318;
-      --wood-light: #523424;
+      /* Maderas Cálidas y Luminosas */
+      --wood-base: #1e130c;
+      --wood-warm: #3a2518;
+      --wood-medium: #5a3d2a;
+      --wood-light: #7a5a42;
+      --wood-highlight: #a07858;
 
-      /* Tarjetas estilo Tabla de Roble / Barrica */
-      --card-wood-bg: linear-gradient(180deg, rgba(42, 28, 19, 0.92) 0%, rgba(22, 14, 10, 0.95) 100%);
-      --card-wood-hover: linear-gradient(180deg, rgba(54, 36, 25, 0.95) 0%, rgba(28, 18, 12, 0.98) 100%);
-      --card-wood-border: rgba(212, 175, 55, 0.35);
-      --card-wood-inner-bevel: inset 0 1px 0 rgba(246, 216, 155, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.7);
+      /* Tarjetas con Acabado Roble Satinado */
+      --card-bg: linear-gradient(180deg, rgba(62, 42, 28, 0.88) 0%, rgba(32, 20, 14, 0.92) 100%);
+      --card-hover: linear-gradient(180deg, rgba(78, 54, 36, 0.92) 0%, rgba(42, 28, 18, 0.95) 100%);
+      --card-border: rgba(212, 175, 55, 0.42);
 
-      /* Dorados Artesanales & Hoja de Oro */
-      --gold-primary: #d4af37;
-      --gold-glow: #f6d89b;
-      --gold-antique: #b88b3f;
-      --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f6d89b 45%, #b88b3f 100%);
-      --gold-border: rgba(212, 175, 55, 0.45);
+      /* Oro Vivo 24K — Reflejos Brillantes */
+      --gold: #ffd700;
+      --gold-warm: #f5c542;
+      --gold-deep: #d4af37;
+      --gold-soft: #f6d89b;
+      --gold-gradient: linear-gradient(135deg, #ffd700 0%, #f6d89b 40%, #d4af37 70%, #f5c542 100%);
 
-      /* Vino Tinto Reserva & Uvas */
-      --wine-primary: #851c33;
-      --wine-deep: #541021;
-      --wine-glow: #e04f6e;
-      --wine-gradient: linear-gradient(135deg, #8f1f38 0%, #ba2d4d 50%, #591022 100%);
+      /* Vino Reserva — Rubí Granate Brillante */
+      --wine: #c81e48;
+      --wine-deep: #9d1738;
+      --wine-glow: #ff4d73;
+      --wine-gradient: linear-gradient(135deg, #c81e48 0%, #e8476a 50%, #9d1738 100%);
 
-      /* Acentos Esmeralda */
-      --emerald-online: #10b981;
-      --emerald-glow: rgba(16, 185, 129, 0.35);
+      /* Esmeralda Fresca */
+      --emerald: #22c55e;
+      --emerald-deep: #16a34a;
 
-      /* Textos y Contraste */
+      /* Textos Premium */
       --text-white: #ffffff;
-      --text-main: #f5ede2;
-      --text-muted: #bda897;
-      --text-dim: #8c7665;
+      --text-cream: #faf3e8;
+      --text-warm: #d4c4b0;
+      --text-muted: #b09a86;
+      --text-dim: #8a7462;
 
-      /* Radios y Sombras */
-      --radius-sm: 12px;
-      --radius-md: 18px;
-      --radius-lg: 24px;
+      /* Dimensiones */
+      --radius-sm: 14px;
+      --radius-md: 20px;
+      --radius-lg: 28px;
       --radius-full: 9999px;
 
-      --shadow-wood-card: 0 16px 36px -10px rgba(0, 0, 0, 0.85), 0 0 1px 1px rgba(212, 175, 55, 0.2);
-      --shadow-gold-glow: 0 10px 25px -4px rgba(212, 175, 55, 0.35);
-      --shadow-wine-glow: 0 10px 25px -4px rgba(133, 28, 51, 0.45);
+      /* Sombras Cálidas */
+      --shadow-card: 0 20px 40px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(212, 175, 55, 0.18);
+      --shadow-gold: 0 12px 28px -4px rgba(255, 215, 0, 0.3);
+      --shadow-wine: 0 12px 28px -4px rgba(200, 30, 72, 0.35);
 
-      --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.15);
-      --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+      --spring: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+      --smooth: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* Reset y Caja */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -87,88 +87,117 @@
       -webkit-tap-highlight-color: transparent;
     }
 
+    html { scroll-behavior: smooth; }
+
     body {
-      background-color: var(--wood-darkest);
-      color: var(--text-main);
+      background: var(--wood-base);
+      color: var(--text-cream);
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       min-height: 100vh;
-      min-height: -webkit-fill-available;
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding: 24px 16px 52px;
+      padding: 20px 16px 52px;
       position: relative;
       overflow-x: hidden;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     /* ==========================================================================
-       FONDO INMERSIVO: CAVA DE BARRICAS Y AMBIENTE ARTESANAL DE BODEGA
+       FONDO: CAVA ILUMINADA CON PARTÍCULAS DORADAS (CANVAS)
        ========================================================================== */
-    .cellar-bg-fixed {
+    #particles-canvas {
       position: fixed;
       inset: 0;
       z-index: 0;
-      background-image: 
-        radial-gradient(circle at 50% 12%, rgba(212, 175, 55, 0.16) 0%, transparent 60%),
-        radial-gradient(circle at 50% 85%, rgba(133, 28, 51, 0.2) 0%, transparent 65%),
-        linear-gradient(180deg, rgba(14, 10, 7, 0.83) 0%, rgba(20, 14, 10, 0.88) 45%, rgba(10, 8, 6, 0.95) 100%),
-        url('bg-cellar.jpg');
-      background-size: cover;
-      background-position: center top;
-      background-repeat: no-repeat;
       pointer-events: none;
     }
 
-    /* Luces ambientales cálidas de candelabro y cava */
-    .ambient-glow-top {
+    .cellar-bg {
       position: fixed;
-      top: -100px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 520px;
-      height: 420px;
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, rgba(133, 28, 51, 0.14) 50%, transparent 75%);
-      filter: blur(75px);
+      inset: 0;
       z-index: 0;
+      background:
+        radial-gradient(ellipse at 50% 15%, rgba(255, 215, 0, 0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 50% 85%, rgba(200, 30, 72, 0.14) 0%, transparent 55%),
+        radial-gradient(ellipse at 20% 50%, rgba(90, 61, 42, 0.4) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(90, 61, 42, 0.4) 0%, transparent 50%),
+        linear-gradient(180deg, #2a1810 0%, #1e130c 40%, #15100a 100%);
       pointer-events: none;
     }
 
-    .ambient-glow-bottom {
-      position: fixed;
-      bottom: -120px;
-      right: -60px;
-      width: 440px;
-      height: 440px;
-      background: radial-gradient(circle, rgba(133, 28, 51, 0.18) 0%, rgba(212, 175, 55, 0.08) 50%, transparent 70%);
-      filter: blur(85px);
-      z-index: 0;
-      pointer-events: none;
+    .cellar-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('bg-cellar.jpg') center/cover no-repeat;
+      opacity: 0.22;
+      mix-blend-mode: soft-light;
     }
 
-    /* Contenedor central estilo Bento Mobile */
-    .app-container {
+    /* ==========================================================================
+       LAYOUT RESPONSIVO BENTO: MÓVIL → TABLET → DESKTOP
+       ========================================================================== */
+    .app-shell {
       width: 100%;
       max-width: 440px;
       position: relative;
       z-index: 1;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 18px;
+    }
+
+    /* TABLET (≥ 768px): 2 columnas Bento */
+    @media (min-width: 768px) {
+      body { padding: 32px 24px 52px; }
+      .app-shell {
+        max-width: 740px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 18px;
+      }
+      .app-shell .header-card { grid-column: 1 / -1; }
+      .app-shell .artisan-card { grid-column: 1 / -1; }
+      .app-shell .about-section { grid-column: 1 / -1; }
+      .app-shell .quick-actions { grid-column: 1 / -1; }
+      .app-shell .socials-section { grid-column: 1 / -1; }
+      .app-shell .vcard-section { grid-column: 1 / -1; }
+      .app-shell .app-footer { grid-column: 1 / -1; }
+    }
+
+    /* DESKTOP (≥ 1080px): Showroom Premium */
+    @media (min-width: 1080px) {
+      body { padding: 40px 32px 60px; align-items: center; }
+      .app-shell {
+        max-width: 1100px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+      }
+      .app-shell .header-card { grid-column: 1 / -1; }
+      .app-shell .artisan-card { grid-column: 1; }
+      .app-shell .about-section { grid-column: 2 / 4; }
+      .app-shell .branch-card:nth-of-type(1) { grid-column: auto; }
+      .app-shell .branch-card:nth-of-type(2) { grid-column: auto; }
+      .app-shell .quick-actions { grid-column: 3; grid-row: span 1; }
+      .app-shell .socials-section { grid-column: 1 / -1; }
+      .app-shell .vcard-section { grid-column: 1 / -1; }
+      .app-shell .app-footer { grid-column: 1 / -1; }
     }
 
     /* ==========================================================================
-       SECCIÓN A: PERFIL / ENCABEZADO (PLACA DE ROBLE TALLADA)
+       ENCABEZADO: PLACA DE ROBLE SATINADO CON FILIGRANA DE ORO
        ========================================================================== */
     .header-card {
-      background: var(--card-wood-bg);
-      border: 1px solid var(--card-wood-border);
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
       border-radius: var(--radius-lg);
-      padding: 32px 22px 26px;
+      padding: 34px 24px 28px;
       text-align: center;
-      box-shadow: var(--shadow-wood-card);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      box-shadow: var(--shadow-card);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -176,186 +205,165 @@
       overflow: hidden;
     }
 
-    /* Filete superior de hoja de oro */
     .header-card::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 10%;
-      right: 10%;
+      top: 0; left: 8%; right: 8%;
       height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.8), rgba(246, 216, 155, 0.95), rgba(212, 175, 55, 0.8), transparent);
+      background: linear-gradient(90deg, transparent, var(--gold) 30%, var(--gold-soft) 50%, var(--gold) 70%, transparent);
     }
 
-    /* Moldura interior tallada estilo cuadro de roble */
     .header-card::after {
       content: '';
       position: absolute;
-      inset: 6px;
-      border: 1px solid rgba(212, 175, 55, 0.14);
-      border-radius: calc(var(--radius-lg) - 6px);
+      inset: 7px;
+      border: 1px solid rgba(212, 175, 55, 0.12);
+      border-radius: calc(var(--radius-lg) - 7px);
       pointer-events: none;
     }
 
-    /* Logo Avatar con Aureola de Viñedo */
-    .avatar-wrapper {
+    /* Avatar / Logo */
+    .avatar-wrap {
       position: relative;
-      width: 108px;
-      height: 108px;
-      margin-bottom: 18px;
+      width: 112px; height: 112px;
+      margin-bottom: 20px;
       cursor: pointer;
       user-select: none;
     }
 
     .avatar-glow {
       position: absolute;
-      inset: -5px;
+      inset: -6px;
       border-radius: var(--radius-full);
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.6) 0%, rgba(133, 28, 51, 0.5) 60%, transparent 75%);
-      opacity: 0.65;
-      filter: blur(14px);
-      animation: pulse-aura 4s ease-in-out infinite alternate;
+      background: radial-gradient(circle, rgba(255,215,0,0.55) 0%, rgba(200,30,72,0.35) 55%, transparent 75%);
+      opacity: 0.7;
+      filter: blur(16px);
+      animation: aura 4s ease-in-out infinite alternate;
     }
 
-    @keyframes pulse-aura {
-      0% { opacity: 0.45; transform: scale(0.96); }
-      100% { opacity: 0.8; transform: scale(1.06); }
+    @keyframes aura {
+      0% { opacity: 0.5; transform: scale(0.96); }
+      100% { opacity: 0.85; transform: scale(1.07); }
     }
 
-    .avatar-icon {
+    .avatar-ring {
       position: relative;
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       border-radius: var(--radius-full);
-      background: #ffffff;
-      border: 3px solid rgba(212, 175, 55, 0.85);
-      box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.85),
-        0 0 18px rgba(212, 175, 55, 0.35),
-        inset 0 0 8px rgba(0, 0, 0, 0.2);
+      background: #fff;
+      border: 3px solid var(--gold);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.8), 0 0 22px rgba(255,215,0,0.3);
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      transition: transform 0.3s var(--ease-spring);
     }
 
-    .avatar-logo-img {
-      width: 100%;
-      height: 100%;
+    .avatar-ring img {
+      width: 100%; height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.3s var(--ease-spring);
+      transition: transform 0.3s var(--spring);
     }
 
-    .avatar-wrapper:hover .avatar-logo-img,
-    .avatar-wrapper:active .avatar-logo-img {
-      transform: scale(1.08);
-    }
+    .avatar-wrap:hover .avatar-ring img,
+    .avatar-wrap:active .avatar-ring img { transform: scale(1.08); }
 
-    /* Textos del Encabezado con Tipografía Clásica de Bodega */
+    /* Título con Tipografía de Gran Reserva */
     .brand-title {
-      font-family: 'Cinzel', serif;
-      font-size: 1.58rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      color: #ffffff;
+      font-family: 'Cinzel Decorative', 'Cinzel', serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      color: #fff;
       margin-bottom: 8px;
-      line-height: 1.25;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      flex-wrap: wrap;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+      line-height: 1.3;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.7);
     }
 
-    .brand-highlight {
+    .brand-gold {
       background: var(--gold-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      display: inline-block;
       font-weight: 900;
-      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+      filter: drop-shadow(0 2px 6px rgba(255,215,0,0.4));
     }
 
-    .brand-subtitle {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-      max-width: 330px;
+    .brand-sub {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.92rem;
+      font-style: italic;
+      color: var(--text-warm);
+      line-height: 1.55;
+      max-width: 360px;
       margin-bottom: 18px;
-      font-weight: 400;
+      font-weight: 500;
     }
 
-    /* Badge de estado en tiempo real */
-    .status-badge {
+    .status-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, rgba(26, 48, 36, 0.85) 0%, rgba(16, 32, 24, 0.85) 100%);
-      border: 1px solid rgba(74, 222, 128, 0.35);
-      padding: 7px 16px;
+      background: linear-gradient(135deg, rgba(22,80,46,0.85) 0%, rgba(14,50,30,0.88) 100%);
+      border: 1px solid rgba(34,197,94,0.45);
+      padding: 8px 18px;
       border-radius: var(--radius-full);
-      font-size: 0.77rem;
+      font-size: 0.78rem;
       font-weight: 600;
       color: #a7f3d0;
-      letter-spacing: 0.02em;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      letter-spacing: 0.015em;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.12);
     }
 
     .pulse-dot {
-      width: 8px;
-      height: 8px;
+      width: 8px; height: 8px;
       border-radius: 50%;
-      background-color: var(--emerald-online);
-      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-      animation: pulse-ring 2s infinite;
+      background: var(--emerald);
+      box-shadow: 0 0 0 0 rgba(34,197,94,0.7);
+      animation: pulse 2s infinite;
       flex-shrink: 0;
     }
 
-    @keyframes pulse-ring {
-      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
-      70% { box-shadow: 0 0 0 7px rgba(16, 185, 129, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(34,197,94,0.6); }
+      70% { box-shadow: 0 0 0 8px rgba(34,197,94,0); }
+      100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
     }
 
     /* ==========================================================================
-       TITULOS DE SECCIÓN: TIPOGRAFÍA DE CAVA Y GUÍA DECORATIVA
+       ETIQUETAS DE SECCIÓN: CINCEL CLÁSICO CON FILETE DORADO
        ========================================================================== */
     .section-label {
       font-family: 'Cinzel', serif;
       font-size: 0.82rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--gold-glow);
-      margin-left: 6px;
-      margin-bottom: 4px;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      margin-left: 4px;
+      margin-bottom: 6px;
       display: flex;
       align-items: center;
       gap: 10px;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+      text-shadow: 0 1px 6px rgba(0,0,0,0.7);
     }
 
     .section-label::after {
       content: '';
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(90deg, rgba(212, 175, 55, 0.4), transparent);
+      flex: 1; height: 1px;
+      background: linear-gradient(90deg, rgba(255,215,0,0.5), transparent);
     }
 
     /* ==========================================================================
-       TARJETA DE EXHIBICIÓN ARTESANAL & VIÑEDO (TRADICIÓN DE CAVA)
+       TARJETA ARTESANAL / TRADICIÓN
        ========================================================================== */
-    .artisan-showcase-card {
-      background: linear-gradient(135deg, rgba(64, 18, 30, 0.85) 0%, rgba(36, 22, 15, 0.92) 100%);
-      border: 1px solid rgba(212, 175, 55, 0.42);
+    .artisan-card {
+      background: linear-gradient(135deg, rgba(92,28,42,0.7) 0%, rgba(48,30,20,0.88) 100%);
+      border: 1.5px solid rgba(255,215,0,0.38);
       border-radius: var(--radius-md);
-      padding: 20px;
-      box-shadow: var(--shadow-wood-card);
+      padding: 22px;
+      box-shadow: var(--shadow-card);
       backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
       display: flex;
       flex-direction: column;
       gap: 14px;
@@ -363,177 +371,222 @@
       overflow: hidden;
     }
 
-    .artisan-showcase-card::before {
+    .artisan-card::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 15%;
-      right: 15%;
+      top: 0; left: 12%; right: 12%;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(246, 216, 155, 0.7), transparent);
+      background: linear-gradient(90deg, transparent, var(--gold-soft), transparent);
     }
 
-    .artisan-badge-header {
+    .artisan-head {
       display: flex;
       align-items: center;
       gap: 14px;
     }
 
-    .artisan-icon-cluster {
-      width: 48px;
-      height: 48px;
+    .artisan-icon {
+      width: 50px; height: 50px;
       border-radius: 14px;
-      background: linear-gradient(135deg, #781c32 0%, #3e121e 100%);
-      border: 1.5px solid rgba(212, 175, 55, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold-glow);
+      background: linear-gradient(135deg, #a82048 0%, #5c1428 100%);
+      border: 1.5px solid rgba(255,215,0,0.55);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold);
       flex-shrink: 0;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.22);
     }
 
-    .artisan-icon-cluster svg {
-      width: 26px;
-      height: 26px;
-      display: block;
-      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
-    }
+    .artisan-icon svg { width: 28px; height: 28px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
 
     .artisan-title {
       font-family: 'Cinzel', serif;
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       font-weight: 700;
       letter-spacing: 0.02em;
-      color: #ffffff;
-      line-height: 1.25;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+      color: #fff;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.7);
     }
 
-    .artisan-subtitle {
-      font-size: 0.79rem;
-      color: var(--text-muted);
-      line-height: 1.35;
-      margin-top: 3px;
-    }
+    .artisan-sub { font-size: 0.8rem; color: var(--text-warm); line-height: 1.4; margin-top: 2px; }
 
-    .artisan-tags-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
+    .tags-row { display: flex; gap: 8px; flex-wrap: wrap; }
 
-    .artisan-tag {
-      font-size: 0.74rem;
+    .tag {
+      font-size: 0.76rem;
       font-weight: 600;
-      color: #faeccd;
-      background: linear-gradient(180deg, rgba(48, 30, 20, 0.8) 0%, rgba(30, 18, 12, 0.9) 100%);
-      border: 1px solid rgba(212, 175, 55, 0.35);
-      padding: 6px 12px;
+      color: #faecd0;
+      background: linear-gradient(180deg, rgba(62,40,26,0.85) 0%, rgba(38,24,16,0.9) 100%);
+      border: 1px solid rgba(255,215,0,0.32);
+      padding: 6px 13px;
       border-radius: var(--radius-full);
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      box-shadow: inset 0 1px 0 rgba(246, 216, 155, 0.15);
+      display: inline-flex; align-items: center; gap: 5px;
+      box-shadow: inset 0 1px 0 rgba(255,240,200,0.18);
     }
 
     /* ==========================================================================
-       SECCIÓN B: SUCURSALES (PLACAS DE MADERA TALLADA & ACABADOS DE LUJO)
+       BOTÓN Y MODAL: SOBRE NOSOTROS
        ========================================================================== */
-    .branches-grid {
+    .about-section { display: flex; flex-direction: column; gap: 0; }
+
+    .btn-about {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 22px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(180deg, rgba(92,28,42,0.75) 0%, rgba(42,22,15,0.88) 100%);
+      border: 1.5px solid rgba(255,215,0,0.45);
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      font-size: 0.94rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      box-shadow: var(--shadow-card);
+      transition: all 0.25s var(--spring);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-about::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-soft), transparent);
+    }
+
+    .btn-about:hover, .btn-about:active {
+      background: linear-gradient(180deg, rgba(120,38,55,0.85) 0%, rgba(52,30,20,0.92) 100%);
+      border-color: var(--gold);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .btn-about svg { width: 20px; height: 20px; }
+
+    .about-content {
+      display: none;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-top: none;
+      border-radius: 0 0 var(--radius-md) var(--radius-md);
+      padding: 24px 22px 20px;
+      backdrop-filter: blur(14px);
+      animation: slideDown 0.35s var(--smooth);
+    }
+
+    .about-content.open { display: block; }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .about-content.open ~ .btn-about,
+    .about-section.expanded .btn-about {
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
+    }
+
+    .about-block { margin-bottom: 18px; }
+    .about-block:last-child { margin-bottom: 0; }
+
+    .about-block h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 6px;
+      letter-spacing: 0.04em;
+      display: flex; align-items: center; gap: 8px;
+    }
+
+    .about-block p {
+      font-size: 0.84rem;
+      color: var(--text-warm);
+      line-height: 1.6;
+    }
+
+    .about-divider {
+      width: 60px; height: 1px;
+      background: linear-gradient(90deg, var(--gold-deep), transparent);
+      margin: 16px 0;
+    }
+
+    /* ==========================================================================
+       SUCURSALES: PLACAS DE MADERA TALLADA
+       ========================================================================== */
+    .branches-wrap {
       display: flex;
       flex-direction: column;
       gap: 16px;
     }
 
+    @media (min-width: 768px) {
+      .branches-wrap {
+        display: contents;
+      }
+    }
+
     .branch-card {
-      background: var(--card-wood-bg);
-      border: 1px solid var(--card-wood-border);
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
       border-radius: var(--radius-md);
-      padding: 20px;
-      box-shadow: var(--shadow-wood-card);
+      padding: 22px;
+      box-shadow: var(--shadow-card);
       backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      transition: transform 0.22s var(--ease-spring), border-color 0.22s ease, box-shadow 0.22s ease;
+      transition: all 0.22s var(--spring);
       position: relative;
       overflow: hidden;
     }
 
-    /* Relieve biselado interior de tabla de madera */
     .branch-card::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 12%;
-      right: 12%;
+      top: 0; left: 10%; right: 10%;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255,215,0,0.55), transparent);
     }
 
     .branch-card:hover {
-      border-color: rgba(212, 175, 55, 0.65);
-      box-shadow: 
-        0 18px 40px -8px rgba(0, 0, 0, 0.9),
-        0 0 20px rgba(212, 175, 55, 0.25);
-      transform: translateY(-2px);
+      border-color: rgba(255,215,0,0.65);
+      box-shadow: 0 20px 45px -8px rgba(0,0,0,0.8), 0 0 22px rgba(255,215,0,0.2);
+      transform: translateY(-3px);
     }
 
-    .branch-header {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      margin-bottom: 16px;
-    }
+    .branch-head { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px; }
 
-    .branch-tag-icon {
-      width: 44px;
-      height: 44px;
+    .branch-icon {
+      width: 46px; height: 46px;
       border-radius: 12px;
-      background: linear-gradient(135deg, #4d1c29 0%, #291219 100%);
-      border: 1px solid rgba(212, 175, 55, 0.45);
-      color: var(--gold-glow);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: linear-gradient(135deg, #6b1e30 0%, #3a1018 100%);
+      border: 1px solid rgba(255,215,0,0.5);
+      color: var(--gold);
+      display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(246, 216, 155, 0.2);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,240,200,0.25);
     }
 
-    .branch-tag-icon svg {
-      width: 22px;
-      height: 22px;
-      display: block;
-    }
+    .branch-icon svg { width: 24px; height: 24px; display: block; }
 
-    .branch-info {
-      flex: 1;
-    }
-
-    .branch-title {
+    .branch-name {
       font-family: 'Cinzel', serif;
-      font-size: 1.08rem;
+      font-size: 1.06rem;
       font-weight: 700;
-      letter-spacing: 0.02em;
-      color: #ffffff;
+      color: #fff;
       line-height: 1.25;
       margin-bottom: 4px;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+      text-shadow: 0 1px 4px rgba(0,0,0,0.7);
     }
 
-    .branch-desc {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      line-height: 1.35;
-    }
+    .branch-desc { font-size: 0.82rem; color: var(--text-muted); }
 
-    /* Acciones de sucursal */
-    .branch-actions {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
+    .branch-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
-    .btn-branch {
+    .btn-act {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -543,295 +596,206 @@
       font-weight: 600;
       border-radius: var(--radius-sm);
       text-decoration: none;
-      transition: all 0.22s var(--ease-spring);
       cursor: pointer;
       user-select: none;
       line-height: 1;
-      position: relative;
+      transition: all 0.22s var(--spring);
     }
 
-    .btn-branch svg {
-      width: 17px;
-      height: 17px;
-      flex-shrink: 0;
-      display: block;
+    .btn-act svg { width: 17px; height: 17px; flex-shrink: 0; display: block; }
+    .btn-act span { display: inline-flex; align-items: center; line-height: 1; }
+
+    /* Botón Cómo Llegar */
+    .btn-map {
+      background: linear-gradient(180deg, #4d3322 0%, #2e1c12 100%);
+      color: #faecd0;
+      border: 1px solid rgba(255,215,0,0.5);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,240,200,0.3), inset 0 -1px 0 rgba(0,0,0,0.55);
     }
 
-    .btn-branch span {
-      display: inline-flex;
-      align-items: center;
-      line-height: 1;
-    }
-
-    /* BOTÓN CÓMO LLEGAR: Acabado en Roble Tallado con Bisel Dorado */
-    .btn-branch-map {
-      background: linear-gradient(180deg, #3d281c 0%, #24160f 100%);
-      color: #faeccd;
-      border: 1px solid rgba(212, 175, 55, 0.45);
-      box-shadow: 
-        0 4px 12px rgba(0, 0, 0, 0.55),
-        inset 0 1px 0 rgba(246, 216, 155, 0.28),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.6);
-    }
-
-    .btn-branch-map:hover,
-    .btn-branch-map:active {
-      background: linear-gradient(180deg, #4d3324 0%, #2f1d13 100%);
-      border-color: rgba(246, 216, 155, 0.8);
-      color: #ffffff;
+    .btn-map:hover, .btn-map:active {
+      background: linear-gradient(180deg, #614028 0%, #3a2416 100%);
+      border-color: var(--gold);
+      color: #fff;
       transform: translateY(-2px);
-      box-shadow: 
-        0 8px 18px rgba(0, 0, 0, 0.7),
-        0 0 16px rgba(212, 175, 55, 0.3),
-        inset 0 1px 0 rgba(255, 240, 200, 0.45);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.65), 0 0 18px rgba(255,215,0,0.25);
     }
 
-    /* BOTÓN CONTACTAR: Acabado en Barrica de Vino Tinto Reserva */
-    .btn-branch-contact {
-      background: linear-gradient(180deg, #781c32 0%, #47111e 100%);
-      color: #ffe4e9;
-      border: 1px solid rgba(224, 79, 110, 0.55);
-      box-shadow: 
-        0 4px 14px rgba(120, 28, 50, 0.4),
-        inset 0 1px 0 rgba(255, 180, 195, 0.35),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.6);
+    /* Botón Contactar */
+    .btn-contact {
+      background: linear-gradient(180deg, #a02240 0%, #5c1428 100%);
+      color: #ffe0e8;
+      border: 1px solid rgba(255,77,115,0.5);
+      box-shadow: 0 4px 14px rgba(160,34,64,0.4), inset 0 1px 0 rgba(255,200,215,0.35), inset 0 -1px 0 rgba(0,0,0,0.5);
     }
 
-    .btn-branch-contact:hover,
-    .btn-branch-contact:active {
-      background: linear-gradient(180deg, #94233e 0%, #591325 100%);
+    .btn-contact:hover, .btn-contact:active {
+      background: linear-gradient(180deg, #c02a50 0%, #721a32 100%);
       border-color: #ffa1b5;
-      color: #ffffff;
+      color: #fff;
       transform: translateY(-2px);
-      box-shadow: 
-        0 8px 20px rgba(148, 35, 62, 0.55),
-        0 0 18px rgba(224, 79, 110, 0.35),
-        inset 0 1px 0 rgba(255, 205, 215, 0.5);
+      box-shadow: 0 8px 22px rgba(200,30,72,0.45), 0 0 20px rgba(255,77,115,0.3);
     }
 
-    /* BOTÓN RESEÑAS DE GOOGLE: Placa Amaderada con Estrellas de Oro 24K */
-    .btn-branch-review {
+    /* Botón Reseñas Google */
+    .btn-review {
       margin-top: 12px;
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 10px;
       padding: 12px 16px;
       border-radius: var(--radius-sm);
-      background: linear-gradient(180deg, rgba(46, 31, 21, 0.95) 0%, rgba(26, 17, 11, 0.98) 100%);
-      border: 1px solid rgba(212, 175, 55, 0.5);
-      color: #faeccd;
+      background: linear-gradient(180deg, rgba(52,36,24,0.95) 0%, rgba(30,20,14,0.98) 100%);
+      border: 1px solid rgba(255,215,0,0.45);
+      color: var(--gold-soft);
       text-decoration: none;
-      font-size: 0.83rem;
+      font-size: 0.84rem;
       font-weight: 600;
-      box-shadow: 
-        0 5px 15px rgba(0, 0, 0, 0.5),
-        inset 0 1px 0 rgba(246, 216, 155, 0.25),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.6);
-      transition: all 0.22s var(--ease-spring);
+      box-shadow: 0 5px 16px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,240,200,0.22);
+      transition: all 0.22s var(--spring);
     }
 
-    .btn-branch-review:hover, 
-    .btn-branch-review:active {
-      background: linear-gradient(180deg, rgba(62, 42, 29, 1) 0%, rgba(36, 23, 15, 1) 100%);
-      border-color: #f6d89b;
-      color: #ffffff;
+    .btn-review:hover, .btn-review:active {
+      background: linear-gradient(180deg, rgba(68,48,32,1) 0%, rgba(40,26,18,1) 100%);
+      border-color: var(--gold);
+      color: #fff;
       transform: translateY(-2px);
-      box-shadow: 
-        0 8px 22px rgba(0, 0, 0, 0.65),
-        0 0 20px rgba(212, 175, 55, 0.35),
-        inset 0 1px 0 rgba(255, 240, 200, 0.45);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.55), 0 0 22px rgba(255,215,0,0.3);
     }
+
+    /* Google "G" icon colors */
+    .google-g { width: 18px; height: 18px; flex-shrink: 0; }
 
     .stars-gold {
       color: #fbbf24;
       letter-spacing: 2px;
-      font-size: 0.92rem;
-      text-shadow: 0 0 10px rgba(251, 191, 36, 0.6);
+      font-size: 0.94rem;
+      text-shadow: 0 0 12px rgba(251,191,36,0.6);
     }
+
+    .review-arrow { margin-left: auto; opacity: 0.7; }
 
     /* ==========================================================================
-       SECCIÓN C: ACCESOS DIRECTOS (WHATSAPP HERO & LLAMADA DIRECTA)
+       ACCIONES RÁPIDAS: WHATSAPP + TELÉFONO
        ========================================================================== */
-    .quick-actions-container {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
+    .quick-actions { display: flex; flex-direction: column; gap: 12px; }
 
-    /* WhatsApp Hero CTA: Esmeralda Artesanal & Bisel de Lujo */
-    .cta-whatsapp {
+    .cta-wa {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: linear-gradient(180deg, #1b6b44 0%, #10422a 100%);
-      color: #ffffff;
-      border: 1px solid rgba(74, 222, 128, 0.45);
+      background: linear-gradient(180deg, #1d8050 0%, #126338 100%);
+      color: #fff;
+      border: 1px solid rgba(34,197,94,0.5);
       padding: 16px 20px;
       border-radius: var(--radius-md);
       text-decoration: none;
-      box-shadow: 
-        0 12px 28px -6px rgba(16, 66, 42, 0.65),
-        inset 0 1px 0 rgba(147, 250, 190, 0.35),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+      box-shadow: 0 14px 30px -6px rgba(18,99,56,0.6), inset 0 1px 0 rgba(160,255,200,0.35);
       overflow: hidden;
-      transition: all 0.25s var(--ease-spring);
+      transition: all 0.25s var(--spring);
     }
 
-    .cta-whatsapp::before {
+    .cta-wa::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: -100%;
-      width: 80%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+      top: 0; left: -100%;
+      width: 80%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
       transform: skewX(-25deg);
-      transition: left 0.75s ease;
+      transition: left 0.7s ease;
     }
 
-    .cta-whatsapp:hover::before {
-      left: 150%;
-    }
-
-    .cta-whatsapp:hover,
-    .cta-whatsapp:active {
+    .cta-wa:hover::before { left: 150%; }
+    .cta-wa:hover, .cta-wa:active {
       transform: translateY(-3px) scale(1.01);
-      box-shadow: 
-        0 16px 34px -6px rgba(22, 108, 68, 0.85),
-        0 0 22px rgba(74, 222, 128, 0.4);
+      box-shadow: 0 18px 36px -6px rgba(22,130,70,0.8), 0 0 24px rgba(34,197,94,0.35);
       border-color: #86efac;
     }
 
-    .cta-content {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
+    .cta-left { display: flex; align-items: center; gap: 14px; }
 
-    .cta-icon-box {
-      width: 46px;
-      height: 46px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.18);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .cta-icon {
+      width: 48px; height: 48px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.35);
+      display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
     }
 
-    .cta-icon-box svg {
-      width: 26px;
-      height: 26px;
-      fill: #ffffff;
-      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
-    }
+    .cta-icon svg { width: 26px; height: 26px; fill: #fff; }
 
-    .cta-texts h3 {
+    .cta-title {
       font-family: 'Cinzel', serif;
-      font-size: 1.05rem;
+      font-size: 1.04rem;
       font-weight: 700;
       letter-spacing: 0.02em;
-      line-height: 1.2;
     }
 
-    .cta-texts p {
-      font-size: 0.79rem;
-      color: rgba(255, 255, 255, 0.9);
-      font-weight: 400;
-    }
+    .cta-sub { font-size: 0.8rem; color: rgba(255,255,255,0.9); }
 
-    .cta-arrow {
-      color: rgba(255, 255, 255, 0.85);
-      transition: transform 0.2s ease;
-    }
+    .cta-arrow { color: rgba(255,255,255,0.85); transition: transform 0.2s; }
+    .cta-wa:hover .cta-arrow { transform: translateX(4px); color: #fff; }
 
-    .cta-whatsapp:hover .cta-arrow {
-      transform: translateX(4px);
-      color: #ffffff;
-    }
-
-    /* Llamada Telefónica Rápida: Placa de Roble y Detalles en Bronce */
+    /* Teléfono */
     .cta-phone {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: var(--card-wood-bg);
-      border: 1px solid var(--card-wood-border);
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
       padding: 14px 18px;
       border-radius: var(--radius-md);
       text-decoration: none;
-      color: var(--text-main);
-      box-shadow: 
-        0 6px 18px rgba(0, 0, 0, 0.55),
-        inset 0 1px 0 rgba(246, 216, 155, 0.2),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.5);
-      transition: all 0.22s var(--ease-spring);
+      color: var(--text-cream);
+      box-shadow: var(--shadow-card);
+      transition: all 0.22s var(--spring);
     }
 
-    .cta-phone:hover,
-    .cta-phone:active {
-      border-color: rgba(212, 175, 55, 0.6);
+    .cta-phone:hover, .cta-phone:active {
+      border-color: rgba(255,215,0,0.6);
       transform: translateY(-2px);
-      box-shadow: 
-        0 10px 24px rgba(0, 0, 0, 0.7),
-        0 0 16px rgba(212, 175, 55, 0.2);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.6), 0 0 18px rgba(255,215,0,0.2);
     }
 
-    .phone-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+    .phone-left { display: flex; align-items: center; gap: 12px; }
+
+    .phone-icon {
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(72,48,30,0.9) 0%, rgba(42,26,16,0.9) 100%);
+      border: 1px solid rgba(255,215,0,0.4);
+      color: var(--gold);
+      display: flex; align-items: center; justify-content: center;
     }
 
-    .phone-icon-box {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, rgba(62, 40, 26, 0.9) 0%, rgba(36, 22, 14, 0.9) 100%);
-      border: 1px solid rgba(212, 175, 55, 0.4);
-      color: var(--gold-glow);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: inset 0 1px 0 rgba(246, 216, 155, 0.2);
-    }
+    .phone-icon svg { width: 20px; height: 20px; }
 
-    .phone-icon-box svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    .phone-title {
+    .phone-name {
       font-family: 'Cinzel', serif;
       font-weight: 700;
       font-size: 0.94rem;
-      letter-spacing: 0.02em;
-      color: #ffffff;
+      color: #fff;
     }
 
-    .phone-number {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
+    .phone-num { font-size: 0.8rem; color: var(--text-muted); }
 
-    .phone-badge {
+    .phone-pill {
       font-size: 0.76rem;
       font-weight: 700;
-      color: var(--gold-glow);
-      background: linear-gradient(180deg, rgba(58, 38, 24, 0.8) 0%, rgba(34, 20, 12, 0.9) 100%);
+      color: var(--gold);
+      background: linear-gradient(180deg, rgba(62,42,26,0.8) 0%, rgba(38,24,14,0.9) 100%);
       padding: 5px 12px;
       border-radius: var(--radius-full);
-      border: 1px solid rgba(212, 175, 55, 0.35);
-      box-shadow: inset 0 1px 0 rgba(246, 216, 155, 0.2);
+      border: 1px solid rgba(255,215,0,0.35);
     }
 
     /* ==========================================================================
-       SECCIÓN D: REDES SOCIALES (AZULEJOS DE MADERA TALLADA)
+       REDES SOCIALES: AZULEJOS DE MADERA PREMIUM
        ========================================================================== */
+    .socials-section { display: flex; flex-direction: column; gap: 6px; }
+
     .socials-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -845,391 +809,248 @@
       justify-content: center;
       padding: 16px 8px;
       border-radius: var(--radius-md);
-      background: linear-gradient(180deg, rgba(38, 25, 17, 0.94) 0%, rgba(20, 13, 9, 0.97) 100%);
-      border: 1px solid rgba(212, 175, 55, 0.32);
+      background: var(--card-bg);
+      border: 1px solid rgba(255,215,0,0.3);
       text-decoration: none;
-      color: var(--text-main);
-      box-shadow: 
-        0 6px 18px rgba(0, 0, 0, 0.6),
-        inset 0 1px 0 rgba(246, 216, 155, 0.2),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.6);
-      transition: all 0.25s var(--ease-spring);
-      position: relative;
+      color: var(--text-cream);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,240,200,0.18);
+      transition: all 0.25s var(--spring);
       overflow: hidden;
     }
 
-    .social-btn svg {
-      width: 24px;
-      height: 24px;
-      margin-bottom: 8px;
-      transition: transform 0.25s var(--ease-spring);
-    }
+    .social-btn svg { width: 26px; height: 26px; margin-bottom: 8px; transition: transform 0.25s var(--spring); }
+    .social-btn:hover svg { transform: scale(1.12) translateY(-2px); }
+    .social-btn span { font-size: 0.82rem; font-weight: 600; }
+    .social-handle { font-size: 0.68rem; color: var(--text-dim); margin-top: 2px; }
 
-    .social-btn span {
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-    }
-
-    .social-handle {
-      font-size: 0.66rem;
-      color: var(--text-dim);
-      margin-top: 2px;
-    }
-
-    .social-btn.facebook:hover,
-    .social-btn.facebook:active {
-      border-color: rgba(66, 103, 178, 0.7);
-      background: linear-gradient(180deg, rgba(24, 60, 120, 0.4) 0%, rgba(20, 13, 9, 0.95) 100%);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 24px rgba(24, 119, 242, 0.3);
-    }
+    .social-btn.facebook:hover { border-color: #1877f2; box-shadow: 0 10px 25px rgba(24,119,242,0.3); transform: translateY(-3px); }
     .social-btn.facebook svg { fill: #1877f2; }
 
-    .social-btn.instagram:hover,
-    .social-btn.instagram:active {
-      border-color: rgba(225, 48, 108, 0.7);
-      background: linear-gradient(180deg, rgba(120, 24, 60, 0.4) 0%, rgba(20, 13, 9, 0.95) 100%);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 24px rgba(225, 48, 108, 0.3);
-    }
+    .social-btn.instagram:hover { border-color: #e1306c; box-shadow: 0 10px 25px rgba(225,48,108,0.3); transform: translateY(-3px); }
     .social-btn.instagram svg { fill: #e1306c; }
 
-    .social-btn.tiktok:hover,
-    .social-btn.tiktok:active {
-      border-color: rgba(254, 44, 85, 0.7);
-      background: linear-gradient(180deg, rgba(60, 20, 40, 0.4) 0%, rgba(20, 13, 9, 0.95) 100%);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 24px rgba(254, 44, 85, 0.3);
-    }
-    .social-btn.tiktok svg { fill: #ffffff; }
+    .social-btn.tiktok:hover { border-color: #ff004f; box-shadow: 0 10px 25px rgba(255,0,79,0.3); transform: translateY(-3px); }
+    .social-btn.tiktok svg { fill: #fff; }
 
     /* ==========================================================================
-       SECCIÓN E: GUARDAR EN CONTACTOS (.VCF) - PLACA GRAN RESERVA
+       GUARDAR CONTACTO: PLACA GRAN RESERVA
        ========================================================================== */
+    .vcard-section {}
+
     .btn-vcard {
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      padding: 17px 22px;
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      padding: 18px 24px;
       border-radius: var(--radius-md);
-      background: linear-gradient(180deg, #442a19 0%, #22140c 100%);
-      border: 1.5px solid rgba(212, 175, 55, 0.75);
-      color: #faeccd;
+      background: linear-gradient(180deg, #523620 0%, #2a1810 100%);
+      border: 2px solid rgba(255,215,0,0.7);
+      color: #faecd0;
       font-family: 'Cinzel', serif;
       font-size: 0.96rem;
       font-weight: 700;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
       cursor: pointer;
-      box-shadow: 
-        0 10px 28px -4px rgba(0, 0, 0, 0.8),
-        0 0 20px rgba(212, 175, 55, 0.25),
-        inset 0 1px 1px rgba(255, 240, 200, 0.45),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.7);
-      transition: all 0.25s var(--ease-spring);
-      position: relative;
-      overflow: hidden;
+      box-shadow: 0 12px 30px -4px rgba(0,0,0,0.75), 0 0 22px rgba(255,215,0,0.22), inset 0 1px 1px rgba(255,245,215,0.45);
+      transition: all 0.25s var(--spring);
     }
 
-    .btn-vcard:hover,
-    .btn-vcard:active {
-      background: linear-gradient(180deg, #54341f 0%, #2d1a10 100%);
-      border-color: #f6d89b;
-      color: #ffffff;
+    .btn-vcard:hover, .btn-vcard:active {
+      background: linear-gradient(180deg, #664428 0%, #3a2014 100%);
+      border-color: var(--gold);
+      color: #fff;
       transform: translateY(-2px);
-      box-shadow: 
-        0 14px 34px -4px rgba(0, 0, 0, 0.9),
-        0 0 28px rgba(212, 175, 55, 0.45),
-        inset 0 1px 1px rgba(255, 245, 215, 0.6);
+      box-shadow: 0 16px 36px -4px rgba(0,0,0,0.85), 0 0 32px rgba(255,215,0,0.4);
     }
 
-    .btn-vcard svg {
-      width: 22px;
-      height: 22px;
-      color: var(--gold-glow);
-      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
-    }
+    .btn-vcard svg { width: 22px; height: 22px; color: var(--gold); }
 
     /* ==========================================================================
-       FOOTER ELEGANTE DE BODEGA
+       FOOTER
        ========================================================================== */
     .app-footer {
       text-align: center;
-      padding: 16px 0 8px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
+      padding: 18px 0 8px;
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
     }
 
     .footer-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      display: inline-flex; align-items: center; gap: 8px;
       font-family: 'Cinzel', serif;
-      font-size: 0.74rem;
+      font-size: 0.76rem;
       color: var(--text-muted);
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
     }
 
-    .footer-badge span {
-      color: var(--gold-primary);
-    }
-
-    .footer-legal {
-      font-size: 0.72rem;
-      color: #786454;
-    }
-
-    /* Toast Notificación */
-    .toast-notification {
-      position: fixed;
-      bottom: 24px;
-      left: 50%;
-      transform: translateX(-50%) translateY(100px);
-      background: linear-gradient(180deg, #2a1a12 0%, #170e09 100%);
-      border: 1.5px solid var(--emerald-online);
-      color: #ffffff;
-      padding: 14px 22px;
-      border-radius: var(--radius-full);
-      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.9), 0 0 20px rgba(16, 185, 129, 0.3);
-      font-size: 0.84rem;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      z-index: 100;
-      opacity: 0;
-      transition: all 0.35s var(--ease-spring);
-      backdrop-filter: blur(16px);
-      pointer-events: none;
-      width: max-content;
-      max-width: 90%;
-    }
-
-    .toast-notification.show {
-      transform: translateX(-50%) translateY(0);
-      opacity: 1;
-    }
+    .footer-badge span { color: var(--gold); }
+    .footer-legal { font-size: 0.73rem; color: var(--text-dim); }
 
     /* ==========================================================================
-       VENTANAS MODALES: ESTILO COFRE DE ROBLE / LIBRO DE CAVA
+       TOAST NOTIFICATION
        ========================================================================== */
-    .modal-backdrop {
+    .toast {
       position: fixed;
-      inset: 0;
-      background: rgba(8, 6, 4, 0.86);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 18px;
+      bottom: 24px; left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: linear-gradient(180deg, #3a2518 0%, #1e130c 100%);
+      border: 1.5px solid var(--emerald);
+      color: #fff;
+      padding: 14px 22px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 16px 38px rgba(0,0,0,0.85), 0 0 22px rgba(34,197,94,0.3);
+      font-size: 0.84rem; font-weight: 600;
+      display: flex; align-items: center; gap: 10px;
+      z-index: 100;
       opacity: 0;
+      transition: all 0.35s var(--spring);
       pointer-events: none;
+      width: max-content; max-width: 90%;
+    }
+
+    .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+    /* ==========================================================================
+       MODALES: COFRE DE ROBLE PREMIUM
+       ========================================================================== */
+    .modal-bg {
+      position: fixed; inset: 0;
+      background: rgba(10,8,6,0.88);
+      backdrop-filter: blur(16px);
+      z-index: 999;
+      display: flex; align-items: center; justify-content: center;
+      padding: 18px;
+      opacity: 0; pointer-events: none;
       transition: opacity 0.28s ease;
     }
 
-    .modal-backdrop.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
+    .modal-bg.active { opacity: 1; pointer-events: auto; }
 
-    .modal-window {
-      background: linear-gradient(180deg, #2b1b12 0%, #160d09 100%);
-      border: 1.5px solid rgba(212, 175, 55, 0.55);
+    .modal-win {
+      background: linear-gradient(180deg, #3a2518 0%, #1e130c 100%);
+      border: 1.5px solid rgba(255,215,0,0.55);
       border-radius: var(--radius-lg);
-      width: 100%;
-      max-width: 420px;
-      max-height: 90vh;
+      width: 100%; max-width: 440px; max-height: 90vh;
       overflow-y: auto;
       padding: 26px 22px;
-      box-shadow: 
-        0 25px 65px rgba(0, 0, 0, 0.95),
-        0 0 35px rgba(212, 175, 55, 0.22),
-        inset 0 1px 0 rgba(246, 216, 155, 0.3);
+      box-shadow: 0 28px 70px rgba(0,0,0,0.92), 0 0 38px rgba(255,215,0,0.2), inset 0 1px 0 rgba(255,240,200,0.3);
       transform: translateY(24px) scale(0.96);
-      transition: transform 0.28s var(--ease-spring);
-      position: relative;
+      transition: transform 0.28s var(--spring);
     }
 
-    .modal-backdrop.active .modal-window {
-      transform: translateY(0) scale(1);
+    .modal-bg.active .modal-win { transform: translateY(0) scale(1); }
+
+    .modal-head {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      gap: 12px; margin-bottom: 18px;
     }
 
-    .modal-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    .modal-title-group h3 {
+    .modal-head h3 {
       font-family: 'Cinzel', serif;
-      font-size: 1.22rem;
-      font-weight: 700;
-      color: #ffffff;
-      line-height: 1.25;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      font-size: 1.22rem; font-weight: 700;
+      color: #fff; line-height: 1.25;
+      display: flex; align-items: center; gap: 8px;
       letter-spacing: 0.02em;
     }
 
-    .modal-title-group p {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
+    .modal-head p { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; }
 
-    .btn-close-modal {
-      width: 36px;
-      height: 36px;
+    .btn-close {
+      width: 38px; height: 38px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      color: var(--gold-glow);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      flex-shrink: 0;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,215,0,0.3);
+      color: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; flex-shrink: 0;
+      font-size: 1rem;
       transition: all 0.2s ease;
     }
 
-    .btn-close-modal:hover {
-      background: rgba(212, 175, 55, 0.2);
-      color: #ffffff;
-      transform: scale(1.08);
-    }
+    .btn-close:hover { background: rgba(255,215,0,0.2); color: #fff; transform: scale(1.08); }
 
-    /* Opciones de apps de navegación (Waze, Maps, Apple) */
-    .nav-apps-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 16px;
-    }
+    .nav-list { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
 
-    .nav-app-link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    .nav-link {
+      display: flex; align-items: center; justify-content: space-between;
       padding: 14px 18px;
       border-radius: var(--radius-md);
-      background: linear-gradient(180deg, rgba(46, 30, 20, 0.85) 0%, rgba(28, 17, 12, 0.9) 100%);
-      border: 1px solid rgba(212, 175, 55, 0.35);
+      background: linear-gradient(180deg, rgba(52,36,24,0.88) 0%, rgba(32,20,14,0.92) 100%);
+      border: 1px solid rgba(255,215,0,0.35);
       text-decoration: none;
-      color: var(--text-main);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(246, 216, 155, 0.18);
-      transition: all 0.22s var(--ease-spring);
+      color: var(--text-cream);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,240,200,0.18);
+      transition: all 0.22s var(--spring);
     }
 
-    .nav-app-link:hover, .nav-app-link:active {
+    .nav-link:hover, .nav-link:active {
       transform: translateY(-2px);
-      background: linear-gradient(180deg, rgba(58, 38, 26, 0.95) 0%, rgba(36, 22, 15, 0.98) 100%);
-      border-color: rgba(246, 216, 155, 0.7);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6), 0 0 18px rgba(212, 175, 55, 0.25);
+      border-color: var(--gold);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.55), 0 0 18px rgba(255,215,0,0.22);
     }
 
-    .nav-app-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+    .nav-left { display: flex; align-items: center; gap: 12px; }
 
-    .nav-app-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .nav-icon {
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
     }
 
-    .nav-app-icon.waze { background: rgba(51, 204, 255, 0.18); color: #33ccff; }
-    .nav-app-icon.gmaps { background: rgba(66, 133, 244, 0.18); color: #4285f4; }
-    .nav-app-icon.apple { background: rgba(255, 255, 255, 0.15); color: #ffffff; }
+    .nav-icon.waze { background: rgba(51,204,255,0.2); color: #33ccff; }
+    .nav-icon.gmaps { background: rgba(66,133,244,0.2); color: #4285f4; }
+    .nav-icon.apple { background: rgba(255,255,255,0.15); color: #fff; }
 
-    .nav-app-name {
-      font-weight: 700;
-      font-size: 0.96rem;
-      color: var(--text-white);
-    }
+    .nav-name { font-weight: 700; font-size: 0.96rem; color: #fff; }
+    .nav-sub { font-size: 0.74rem; color: var(--text-muted); }
 
-    .nav-app-subtitle {
-      font-size: 0.74rem;
-      color: var(--text-muted);
-    }
-
-    /* Estilos del Formulario GPS Admin */
-    .form-group {
-      margin-bottom: 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .form-label {
-      font-size: 0.76rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--gold-glow);
-    }
+    /* GPS Admin Form */
+    .form-group { margin-bottom: 14px; display: flex; flex-direction: column; gap: 6px; }
+    .form-label { font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); }
 
     .form-input, .form-select {
-      background: rgba(14, 9, 6, 0.75);
-      border: 1px solid rgba(212, 175, 55, 0.35);
+      background: rgba(14,10,7,0.7);
+      border: 1px solid rgba(255,215,0,0.35);
       border-radius: var(--radius-sm);
       padding: 12px 14px;
-      color: #ffffff;
+      color: #fff;
       font-size: 0.9rem;
       font-family: inherit;
       outline: none;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      transition: border-color 0.2s, box-shadow 0.2s;
       width: 100%;
     }
 
     .form-input:focus, .form-select:focus {
-      border-color: var(--gold-primary);
-      box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.25);
+      border-color: var(--gold);
+      box-shadow: 0 0 0 2px rgba(255,215,0,0.22);
     }
 
-    .btn-gps-trigger {
+    .btn-gps {
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
       padding: 15px 18px;
-      background: linear-gradient(180deg, #1b6b44 0%, #10422a 100%);
-      color: #ffffff;
-      border: 1px solid rgba(74, 222, 128, 0.45);
+      background: linear-gradient(180deg, #1d8050 0%, #126338 100%);
+      color: #fff;
+      border: 1px solid rgba(34,197,94,0.5);
       border-radius: var(--radius-md);
       font-weight: 700;
       font-size: 0.9rem;
       cursor: pointer;
-      transition: all 0.22s var(--ease-spring);
       margin: 8px 0 14px;
-      box-shadow: 0 8px 24px rgba(16, 66, 42, 0.5), inset 0 1px 0 rgba(147, 250, 190, 0.3);
+      box-shadow: 0 8px 24px rgba(18,99,56,0.5), inset 0 1px 0 rgba(160,255,200,0.3);
+      transition: all 0.22s var(--spring);
     }
 
-    .btn-gps-trigger:hover, .btn-gps-trigger:active {
+    .btn-gps:hover, .btn-gps:active {
       transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba(22, 108, 68, 0.7);
+      box-shadow: 0 12px 30px rgba(22,130,70,0.65);
       border-color: #86efac;
     }
 
-    .gps-results-box {
-      background: rgba(10, 7, 5, 0.75);
-      border: 1px solid rgba(212, 175, 55, 0.3);
+    .gps-box {
+      background: rgba(10,7,5,0.7);
+      border: 1px solid rgba(255,215,0,0.3);
       border-radius: var(--radius-sm);
       padding: 14px;
       font-size: 0.8rem;
@@ -1239,377 +1060,286 @@
       display: none;
     }
 
-    .gps-results-box.active {
-      display: block;
-      border-color: rgba(74, 222, 128, 0.5);
-    }
+    .gps-box.active { display: block; border-color: rgba(34,197,94,0.5); }
+    .gps-coords { font-family: monospace; color: #6ee7b7; font-weight: 700; word-break: break-all; }
 
-    .gps-coords-badge {
-      font-family: monospace;
-      color: #6ee7b7;
-      font-weight: 700;
-      word-break: break-all;
-    }
+    .admin-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
 
-    .admin-actions-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .btn-admin-action {
+    .btn-admin {
       padding: 13px 14px;
       border-radius: var(--radius-sm);
-      font-size: 0.82rem;
-      font-weight: 700;
+      font-size: 0.82rem; font-weight: 700;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
       border: 1px solid transparent;
-      transition: all 0.2s var(--ease-spring);
+      transition: all 0.2s var(--spring);
     }
 
-    .btn-admin-save {
-      background: var(--gold-gradient);
-      color: #170f03;
-      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
-    }
-
-    .btn-admin-save:hover {
-      box-shadow: var(--shadow-gold-glow);
-      transform: translateY(-2px);
-    }
-
-    .btn-admin-copy {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(212, 175, 55, 0.3);
-      color: var(--text-main);
-    }
-
-    .btn-admin-copy:hover {
-      background: rgba(212, 175, 55, 0.2);
-      color: #ffffff;
-      transform: translateY(-2px);
-    }
+    .btn-save { background: var(--gold-gradient); color: #1a0f03; box-shadow: 0 4px 14px rgba(255,215,0,0.3); }
+    .btn-save:hover { box-shadow: var(--shadow-gold); transform: translateY(-2px); }
+    .btn-copy { background: rgba(255,255,255,0.08); border-color: rgba(255,215,0,0.3); color: var(--text-cream); }
+    .btn-copy:hover { background: rgba(255,215,0,0.18); color: #fff; transform: translateY(-2px); }
   </style>
 </head>
 <body>
 
-  <!-- Fondo Inmersivo de Cava de Barricas de Roble y Viñedo Artesanal -->
-  <div class="cellar-bg-fixed" aria-hidden="true"></div>
-  <div class="ambient-glow-top" aria-hidden="true"></div>
-  <div class="ambient-glow-bottom" aria-hidden="true"></div>
+  <!-- Fondo Inmersivo de Cava Iluminada -->
+  <div class="cellar-bg" aria-hidden="true"></div>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
 
-  <!-- SVG Global Definitions para Gradientes de Vino y Oro en Iconos -->
+  <!-- SVG Global Defs -->
   <svg style="display:none;" aria-hidden="true">
     <defs>
       <linearGradient id="wineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#b82a4c" />
-        <stop offset="50%" stop-color="#801a30" />
-        <stop offset="100%" stop-color="#4e0d1c" />
+        <stop offset="0%" stop-color="#c81e48"/>
+        <stop offset="100%" stop-color="#6b1028"/>
       </linearGradient>
       <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#f6d89b" />
-        <stop offset="50%" stop-color="#d4af37" />
-        <stop offset="100%" stop-color="#9a7126" />
-      </linearGradient>
-      <linearGradient id="woodGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="#543725" />
-        <stop offset="100%" stop-color="#24160d" />
+        <stop offset="0%" stop-color="#ffd700"/>
+        <stop offset="50%" stop-color="#f5c542"/>
+        <stop offset="100%" stop-color="#b88b3f"/>
       </linearGradient>
     </defs>
   </svg>
 
-  <!-- Contenedor Principal (Mobile-First / NFC Card) -->
-  <main class="app-container">
+  <!-- ================================================================
+       LAYOUT BENTO RESPONSIVO
+       ================================================================ -->
+  <main class="app-shell">
 
-    <!-- ====================================================================
-         SECCIÓN A: ENCABEZADO / PERFIL
-         ==================================================================== -->
+    <!-- ENCABEZADO -->
     <header class="header-card">
-      <div class="avatar-wrapper" id="brand-avatar" onclick="handleLogoTap()" role="button" aria-label="Logotipo La Viña (Toca 5 veces para configurar ubicación GPS)" tabindex="0">
+      <div class="avatar-wrap" id="brand-avatar" onclick="handleLogoTap()" role="button" aria-label="Logotipo La Viña (Toca 5 veces para configurar GPS)" tabindex="0">
         <div class="avatar-glow" aria-hidden="true"></div>
-        <div class="avatar-icon" aria-label="Logo La Viña">
-          <img src="logo.svg" alt="Logotipo Oficial Licorera & Minisúper La Viña" class="avatar-logo-img" id="brand-logo-img" />
+        <div class="avatar-ring" aria-label="Logo La Viña">
+          <img src="logo.svg" alt="Logotipo Oficial Licorera &amp; Minisúper La Viña" id="brand-logo-img">
         </div>
       </div>
 
       <h1 class="brand-title">
-        Licorera &amp; Minisúper <span class="brand-highlight">La Viña</span>
+        Licorera &amp; Minisúper <span class="brand-gold">La Viña</span>
       </h1>
-      
-      <p class="brand-subtitle">
-        Cava de Vinos, Viñedo &amp; Selección Artesanal • Licores finos, cervezas y minisúper • Turrúcares, Alajuela, Costa Rica
+
+      <p class="brand-sub">
+        Cava de Vinos &amp; Viñedo Artesanal · Licores finos, cervezas selectas y minisúper · Turrúcares, Alajuela, Costa Rica
       </p>
 
-      <!-- Badge de Estado en tiempo real -->
-      <div class="status-badge" role="status" aria-label="Estado del negocio">
+      <div class="status-pill" role="status">
         <span class="pulse-dot" aria-hidden="true"></span>
-        <span>🍇 Viñedo &amp; Licorera Abierta • Domicilio y retiro en tienda</span>
+        <span>🍇 Viñedo &amp; Licorera Abierta · Domicilio y retiro</span>
       </div>
     </header>
 
-    <!-- ====================================================================
-         DESTACADO: TRADICIÓN DE VIÑEDO & SELECCIÓN ARTESANAL
-         ==================================================================== -->
-    <section class="artisan-showcase-card" aria-label="Tradición de Viñedo y Cava">
-      <div class="artisan-badge-header">
-        <div class="artisan-icon-cluster" aria-hidden="true">
-          <!-- Racimo de Uvas Artesanal SVG -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M11 2v3m0 0c2-2 4.5-1.5 5.5-1 0 2-1 3.5-2.5 3.5" stroke-width="1.4" />
-            <circle cx="9" cy="8.5" r="2.2" fill="url(#wineGrad)" fill-opacity="0.5"/>
-            <circle cx="14" cy="8.5" r="2.2" fill="url(#wineGrad)" fill-opacity="0.5"/>
-            <circle cx="6.5" cy="13" r="2.2" fill="url(#wineGrad)" fill-opacity="0.5"/>
-            <circle cx="11.5" cy="13" r="2.2" fill="url(#wineGrad)" fill-opacity="0.5"/>
-            <circle cx="16.5" cy="13" r="2.2" fill="url(#wineGrad)" fill-opacity="0.5"/>
-            <circle cx="9" cy="17.5" r="2.2" fill="url(#wineGrad)" fill-opacity="0.5"/>
-            <circle cx="14" cy="17.5" r="2.2" fill="url(#wineGrad)" fill-opacity="0.5"/>
-            <circle cx="11.5" cy="21.5" r="1.8" fill="url(#wineGrad)" fill-opacity="0.5"/>
+    <!-- TRADICIÓN ARTESANAL -->
+    <section class="artisan-card" aria-label="Tradición de Viñedo y Cava">
+      <div class="artisan-head">
+        <div class="artisan-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 2v3m0 0c2-2 4.5-1.5 5.5-1 0 2-1 3.5-2.5 3.5" stroke-width="1.3"/>
+            <circle cx="9" cy="8.5" r="2.2" fill="url(#goldGrad)"/>
+            <circle cx="14" cy="8.5" r="2.2" fill="url(#goldGrad)"/>
+            <circle cx="6.5" cy="13" r="2.2" fill="url(#goldGrad)"/>
+            <circle cx="11.5" cy="13" r="2.2" fill="url(#goldGrad)"/>
+            <circle cx="16.5" cy="13" r="2.2" fill="url(#goldGrad)"/>
+            <circle cx="9" cy="17.5" r="2.2" fill="url(#goldGrad)"/>
+            <circle cx="14" cy="17.5" r="2.2" fill="url(#goldGrad)"/>
+            <circle cx="11.5" cy="21.5" r="1.8" fill="url(#goldGrad)"/>
           </svg>
         </div>
         <div>
           <h3 class="artisan-title">Tradición de Viñedo &amp; Bodega</h3>
-          <p class="artisan-subtitle">Vinos de cava seleccionados, licores premium y artículos de conveniencia</p>
+          <p class="artisan-sub">Vinos de cava seleccionados, licores premium y artículos de conveniencia</p>
         </div>
       </div>
-      <div class="artisan-tags-row">
-        <span class="artisan-tag">🍷 Vinos de Cava</span>
-        <span class="artisan-tag">🍇 Cosecha &amp; Licores</span>
-        <span class="artisan-tag">🍺 Cervezas Especiales</span>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         SECCIÓN B: SUCURSALES (SELECTOR BENTO DE SEDES)
-         ==================================================================== -->
-    <section aria-labelledby="sedes-title">
-      <h2 id="sedes-title" class="section-label">Nuestras Sucursales</h2>
-      
-      <div class="branches-grid">
-        
-        <!-- Sede 1 -->
-        <article class="branch-card" id="sede-1">
-          <div class="branch-header">
-            <div class="branch-tag-icon" aria-hidden="true">
-              <!-- Racimo de uvas artesanal de viñedo -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M11 2v3m0 0c2-2 4.5-1.5 5.5-1 0 2-1 3.5-2.5 3.5" stroke-width="1.4" />
-                <circle cx="9" cy="8.5" r="2.2" fill="url(#goldGrad)" />
-                <circle cx="14" cy="8.5" r="2.2" fill="url(#goldGrad)" />
-                <circle cx="6.5" cy="13" r="2.2" fill="url(#goldGrad)" />
-                <circle cx="11.5" cy="13" r="2.2" fill="url(#goldGrad)" />
-                <circle cx="16.5" cy="13" r="2.2" fill="url(#goldGrad)" />
-                <circle cx="9" cy="17.5" r="2.2" fill="url(#goldGrad)" />
-                <circle cx="14" cy="17.5" r="2.2" fill="url(#goldGrad)" />
-                <circle cx="11.5" cy="21.5" r="1.8" fill="url(#goldGrad)" />
-              </svg>
-            </div>
-            <div class="branch-info">
-              <h3 class="branch-title" id="title-sede-1">Viña 1 - Cava &amp; Licorera Principal</h3>
-              <p class="branch-desc" id="desc-sede-1">Sede Principal • Centro de Turrúcares</p>
-            </div>
-          </div>
-          
-          <div class="branch-actions">
-            <!-- BOTÓN CÓMO LLEGAR (Abre selector Waze / Google Maps / Apple Maps) -->
-            <button type="button" 
-               class="btn-branch btn-branch-map"
-               onclick="openNavSheet(1)"
-               aria-label="Abrir opciones de navegación para Viña 1">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
-              </svg>
-              <span>Cómo llegar</span>
-            </button>
-
-            <!-- WHATSAPP O LLAMADA DIRECTA SEDE 1 -->
-            <a href="https://wa.me/50687759835?text=Hola%20La%20Vi%C3%B1a%201%2C%20quisiera%20hacer%20una%20consulta%20o%20pedido." 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="btn-branch btn-branch-contact"
-               aria-label="Contactar a Viña 1 por WhatsApp">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
-              <span>Contactar</span>
-            </a>
-          </div>
-
-          <!-- BOTÓN RESEÑAS DE GOOGLE SEDE 1 -->
-          <a href="https://www.google.com/maps/search/?api=1&query=Licorera+La+Vi%C3%B1a+Turr%C3%BAcares+Alajuela" 
-             id="review-link-sede-1" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="btn-branch-review" 
-             aria-label="Dejar reseña en Google para Viña 1">
-            <span class="stars-gold">★★★★★</span>
-            <span>Dejar Reseña en Google</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto;"><polyline points="9 18 15 12 9 6"/></svg>
-          </a>
-        </article>
-
-        <!-- Sede 2 -->
-        <article class="branch-card" id="sede-2">
-          <div class="branch-header">
-            <div class="branch-tag-icon" aria-hidden="true">
-              <!-- Copa y botella artesanal de vino -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M8 22h8m-4-7v7m0-7a4.5 4.5 0 0 0 4.5-4.5V4H7.5v6.5A4.5 4.5 0 0 0 12 15Z" fill="url(#wineGrad)" fill-opacity="0.6"/>
-                <path d="M7.5 8h9" />
-              </svg>
-            </div>
-            <div class="branch-info">
-              <h3 class="branch-title" id="title-sede-2">Viña 2 - Minisúper &amp; Cava Artesanal</h3>
-              <p class="branch-desc" id="desc-sede-2">Segunda Sede • Turrúcares y alrededores</p>
-            </div>
-          </div>
-          
-          <div class="branch-actions">
-            <!-- BOTÓN CÓMO LLEGAR (Abre selector Waze / Google Maps / Apple Maps) -->
-            <button type="button" 
-               class="btn-branch btn-branch-map"
-               onclick="openNavSheet(2)"
-               aria-label="Abrir opciones de navegación para Viña 2">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
-              </svg>
-              <span>Cómo llegar</span>
-            </button>
-
-            <!-- WHATSAPP O LLAMADA DIRECTA SEDE 2 -->
-            <a href="https://wa.me/50687759835?text=Hola%20La%20Vi%C3%B1a%202%2C%20quisiera%20hacer%20una%20consulta%20o%20pedido." 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="btn-branch btn-branch-contact"
-               aria-label="Contactar a Viña 2 por WhatsApp">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
-              <span>Contactar</span>
-            </a>
-          </div>
-
-          <!-- BOTÓN RESEÑAS DE GOOGLE SEDE 2 -->
-          <a href="https://www.google.com/maps/search/?api=1&query=Licorera+La+Vi%C3%B1a+2+Turr%C3%BAcares+Alajuela" 
-             id="review-link-sede-2" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="btn-branch-review" 
-             aria-label="Dejar reseña en Google para Viña 2">
-            <span class="stars-gold">★★★★★</span>
-            <span>Dejar Reseña en Google</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto;"><polyline points="9 18 15 12 9 6"/></svg>
-          </a>
-        </article>
-
+      <div class="tags-row">
+        <span class="tag">🍷 Vinos de Cava</span>
+        <span class="tag">🍇 Cosecha &amp; Licores</span>
+        <span class="tag">🍺 Cervezas Selectas</span>
       </div>
     </section>
 
-    <!-- ====================================================================
-         SECCIÓN C: ACCESOS DIRECTOS DE CONTACTO (1 TOQUE)
-         ==================================================================== -->
-    <section aria-labelledby="contacto-title" class="quick-actions-container">
-      <h2 id="contacto-title" class="section-label">Pedidos y Atención Directa</h2>
-
-      <!-- WhatsApp Principal (Pedido a Domicilio) -->
-      <a href="https://wa.me/50687759835?text=Hola%2C%20me%20gustar%C3%ADa%20hacer%20un%20pedido%20a%20domicilio." 
-         target="_blank" 
-         rel="noopener noreferrer" 
-         class="cta-whatsapp"
-         aria-label="Hacer pedido a domicilio por WhatsApp">
-        <div class="cta-content">
-          <div class="cta-icon-box">
-            <!-- Icono Oficial WhatsApp SVG -->
-            <svg viewBox="0 0 24 24">
-              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.76-1.85-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29Z"/>
-            </svg>
-          </div>
-          <div class="cta-texts">
-            <h3>WhatsApp Oficial</h3>
-            <p>Hacer pedido a domicilio exprés</p>
-          </div>
+    <!-- SOBRE NOSOTROS -->
+    <section class="about-section" id="about-section">
+      <button type="button" class="btn-about" id="btn-about" onclick="toggleAbout()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+        </svg>
+        <span>✦ Conoce Nuestra Historia ✦</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" id="about-chevron" style="transition:transform 0.3s ease;">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </button>
+      <div class="about-content" id="about-content">
+        <div class="about-block">
+          <h4>📜 Nuestra Historia</h4>
+          <p>Nacimos en el corazón de Turrúcares, Alajuela, con una pasión profunda por ofrecer a nuestra comunidad la mejor selección de vinos, cervezas artesanales e importadas, licores selectos y todo lo esencial en un minisúper de confianza. Desde nuestros inicios, cada botella que exhibimos cuenta una historia de tradición y dedicación.</p>
         </div>
-        <div class="cta-arrow" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"/>
-          </svg>
+        <div class="about-divider"></div>
+        <div class="about-block">
+          <h4>🎯 Misión</h4>
+          <p>Ser la licorera y minisúper de referencia en Turrúcares y sus alrededores, brindando una selección curada de bebidas finas, servicio a domicilio ágil y una experiencia de compra cálida, cercana y confiable para cada uno de nuestros clientes.</p>
         </div>
-      </a>
+        <div class="about-divider"></div>
+        <div class="about-block">
+          <h4>🔭 Visión</h4>
+          <p>Convertirnos en el referente comercial y licorero preferido de la zona de Turrúcares y Alajuela, reconocidos por nuestra calidad, variedad artesanal, servicio exprés a domicilio y la experiencia premium que ofrecemos en cada visita.</p>
+        </div>
+        <div class="about-divider"></div>
+        <div class="about-block">
+          <h4>💎 Valores</h4>
+          <p><strong>Excelencia:</strong> En cada producto que seleccionamos.<br>
+          <strong>Tradición Familiar:</strong> El calor de un negocio con alma costarricense.<br>
+          <strong>Cercanía:</strong> Conocemos a nuestros clientes por su nombre.<br>
+          <strong>Autenticidad:</strong> Productos genuinos, precios justos, servicio real.</p>
+        </div>
+      </div>
+    </section>
 
-      <!-- Llamada Directa con 1 Toque -->
-      <a href="tel:+50687759835" class="cta-phone" aria-label="Llamar al teléfono 8775 9835">
-        <div class="phone-left">
-          <div class="phone-icon-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    <!-- SUCURSALES -->
+    <h2 class="section-label" style="grid-column:1/-1;">Nuestras Sucursales</h2>
+
+    <div class="branches-wrap">
+      <!-- Sede 1 -->
+      <article class="branch-card" id="sede-1">
+        <div class="branch-head">
+          <div class="branch-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 2v3m0 0c2-2 4.5-1.5 5.5-1 0 2-1 3.5-2.5 3.5" stroke-width="1.3"/>
+              <circle cx="9" cy="8.5" r="2.2" fill="url(#goldGrad)"/>
+              <circle cx="14" cy="8.5" r="2.2" fill="url(#goldGrad)"/>
+              <circle cx="6.5" cy="13" r="2.2" fill="url(#goldGrad)"/>
+              <circle cx="11.5" cy="13" r="2.2" fill="url(#goldGrad)"/>
+              <circle cx="16.5" cy="13" r="2.2" fill="url(#goldGrad)"/>
+              <circle cx="9" cy="17.5" r="2.2" fill="url(#goldGrad)"/>
+              <circle cx="14" cy="17.5" r="2.2" fill="url(#goldGrad)"/>
+              <circle cx="11.5" cy="21.5" r="1.8" fill="url(#goldGrad)"/>
             </svg>
           </div>
           <div>
-            <div class="phone-title">Llamada Directa</div>
-            <div class="phone-number">+506 8775 9835</div>
+            <h3 class="branch-name" id="title-sede-1">Viña 1 — Cava &amp; Licorera Principal</h3>
+            <p class="branch-desc" id="desc-sede-1">Sede Principal · Centro de Turrúcares</p>
           </div>
         </div>
-        <span class="phone-badge">1 Toque</span>
+        <div class="branch-actions">
+          <button type="button" class="btn-act btn-map" onclick="openNavSheet(1)" aria-label="Cómo llegar a Viña 1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            <span>Cómo llegar</span>
+          </button>
+          <a href="https://wa.me/50687759835?text=Hola%20La%20Vi%C3%B1a%201%2C%20quisiera%20hacer%20una%20consulta%20o%20pedido." target="_blank" rel="noopener noreferrer" class="btn-act btn-contact" aria-label="Contactar Viña 1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c1.21.34 2 .57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Contactar</span>
+          </a>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=Licorera+La+Vi%C3%B1a+Turr%C3%BAcares+Alajuela" id="review-link-sede-1" target="_blank" rel="noopener noreferrer" class="btn-review" aria-label="Reseña en Google Viña 1">
+          <!-- Google G Official Colors -->
+          <svg class="google-g" viewBox="0 0 24 24" fill="none">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.44 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+          <span class="stars-gold">★★★★★</span>
+          <span>Dejar Reseña</span>
+          <svg class="review-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </article>
+
+      <!-- Sede 2 -->
+      <article class="branch-card" id="sede-2">
+        <div class="branch-head">
+          <div class="branch-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 22h8m-4-7v7m0-7a4.5 4.5 0 0 0 4.5-4.5V4H7.5v6.5A4.5 4.5 0 0 0 12 15Z" fill="url(#wineGrad)" fill-opacity="0.6"/>
+              <path d="M7.5 8h9"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="branch-name" id="title-sede-2">Viña 2 — Minisúper &amp; Cava Artesanal</h3>
+            <p class="branch-desc" id="desc-sede-2">Segunda Sede · Turrúcares y alrededores</p>
+          </div>
+        </div>
+        <div class="branch-actions">
+          <button type="button" class="btn-act btn-map" onclick="openNavSheet(2)" aria-label="Cómo llegar a Viña 2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            <span>Cómo llegar</span>
+          </button>
+          <a href="https://wa.me/50687759835?text=Hola%20La%20Vi%C3%B1a%202%2C%20quisiera%20hacer%20una%20consulta%20o%20pedido." target="_blank" rel="noopener noreferrer" class="btn-act btn-contact" aria-label="Contactar Viña 2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c1.21.34 2 .57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Contactar</span>
+          </a>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=Licorera+La+Vi%C3%B1a+2+Turr%C3%BAcares+Alajuela" id="review-link-sede-2" target="_blank" rel="noopener noreferrer" class="btn-review" aria-label="Reseña en Google Viña 2">
+          <svg class="google-g" viewBox="0 0 24 24" fill="none">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.44 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+          <span class="stars-gold">★★★★★</span>
+          <span>Dejar Reseña</span>
+          <svg class="review-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </article>
+    </div>
+
+    <!-- CONTACTO RÁPIDO -->
+    <section class="quick-actions" aria-labelledby="contacto-title">
+      <h2 id="contacto-title" class="section-label">Pedidos y Atención Directa</h2>
+
+      <a href="https://wa.me/50687759835?text=Hola%2C%20me%20gustar%C3%ADa%20hacer%20un%20pedido%20a%20domicilio." target="_blank" rel="noopener noreferrer" class="cta-wa" aria-label="WhatsApp pedido a domicilio">
+        <div class="cta-left">
+          <div class="cta-icon">
+            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.76-1.85-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
+          </div>
+          <div>
+            <div class="cta-title">WhatsApp Oficial</div>
+            <div class="cta-sub">Hacer pedido a domicilio exprés</div>
+          </div>
+        </div>
+        <div class="cta-arrow" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
       </a>
 
+      <a href="tel:+50687759835" class="cta-phone" aria-label="Llamar +506 8775 9835">
+        <div class="phone-left">
+          <div class="phone-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c1.21.34 2 .57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="phone-name">Llamada Directa</div>
+            <div class="phone-num">+506 8775 9835</div>
+          </div>
+        </div>
+        <span class="phone-pill">1 Toque</span>
+      </a>
     </section>
 
-    <!-- ====================================================================
-         SECCIÓN D: REDES SOCIALES OFICIALES (BENTO STYLE)
-         ==================================================================== -->
-    <section aria-labelledby="socials-title">
+    <!-- REDES SOCIALES -->
+    <section class="socials-section" aria-labelledby="socials-title">
       <h2 id="socials-title" class="section-label">Redes Sociales</h2>
-      
       <div class="socials-grid">
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/LicoLaVina/" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="social-btn facebook"
-           aria-label="Visitar Facebook de Licorera La Viña">
-          <svg viewBox="0 0 24 24">
-            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-          </svg>
+        <a href="https://www.facebook.com/LicoLaVina/" target="_blank" rel="noopener noreferrer" class="social-btn facebook" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           <span>Facebook</span>
           <span class="social-handle">@LicoLaVina</span>
         </a>
-
-        <!-- Instagram -->
-        <a href="https://instagram.com/licolavina" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="social-btn instagram"
-           aria-label="Visitar Instagram de Licorera La Viña">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-          </svg>
+        <a href="https://instagram.com/licolavina" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           <span>Instagram</span>
           <span class="social-handle">@licolavina</span>
         </a>
-
-        <!-- TikTok -->
-        <a href="https://tiktok.com/@licolavina" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="social-btn tiktok"
-           aria-label="Visitar TikTok de Licorera La Viña">
-          <svg viewBox="0 0 24 24">
-            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.97-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-          </svg>
+        <a href="https://tiktok.com/@licolavina" target="_blank" rel="noopener noreferrer" class="social-btn tiktok" aria-label="TikTok">
+          <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.97-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
           <span>TikTok</span>
           <span class="social-handle">@licolavina</span>
         </a>
       </div>
     </section>
 
-    <!-- ====================================================================
-         SECCIÓN E: GUARDAR EN CONTACTOS (.VCF)
-         ==================================================================== -->
-    <section aria-label="Guardar contacto telefónico">
+    <!-- GUARDAR CONTACTO -->
+    <section class="vcard-section" aria-label="Guardar contacto">
       <button type="button" class="btn-vcard" id="btn-save-contact" onclick="saveVCard()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
@@ -1621,525 +1351,434 @@
       </button>
     </section>
 
-    <!-- ====================================================================
-         FOOTER ELEGANTE
-         ==================================================================== -->
+    <!-- FOOTER -->
     <footer class="app-footer">
       <div class="footer-badge">
-        <span>◆</span> Licorera & Minisúper La Viña <span>◆</span>
+        <span>◆</span> Licorera &amp; Minisúper La Viña <span>◆</span>
       </div>
-      <p class="footer-legal">
-        Turrúcares, Alajuela, Costa Rica • Tarjeta Digital NFC
-      </p>
+      <p class="footer-legal">Turrúcares, Alajuela, Costa Rica · Tarjeta Digital NFC</p>
     </footer>
 
   </main>
 
-  <!-- ====================================================================
-       MODAL 1: SELECTOR DE NAVEGACIÓN (WAZE / GOOGLE MAPS / APPLE MAPS)
-       ==================================================================== -->
-  <div class="modal-backdrop" id="modal-nav-sheet" role="dialog" aria-modal="true" aria-labelledby="nav-sheet-title">
-    <div class="modal-window">
-      <div class="modal-header">
-        <div class="modal-title-group">
-          <h3 id="nav-sheet-title">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--gold-glow);">
-              <polygon points="3 11 22 2 13 21 11 13 3 11"/>
-            </svg>
+  <!-- ================================================================
+       MODAL 1: SELECTOR DE NAVEGACIÓN
+       ================================================================ -->
+  <div class="modal-bg" id="modal-nav" role="dialog" aria-modal="true" aria-labelledby="nav-title">
+    <div class="modal-win">
+      <div class="modal-head">
+        <div>
+          <h3 id="nav-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gold);"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
             <span id="nav-target-name">Cómo llegar</span>
           </h3>
           <p>Selecciona tu aplicación de navegación preferida:</p>
         </div>
-        <button type="button" class="btn-close-modal" onclick="closeModal('modal-nav-sheet')" aria-label="Cerrar ventana">✕</button>
+        <button type="button" class="btn-close" onclick="closeModal('modal-nav')" aria-label="Cerrar">✕</button>
       </div>
 
-      <div class="nav-apps-list">
-        <!-- Opción Waze -->
-        <a href="#" id="link-app-waze" target="_blank" rel="noopener noreferrer" class="nav-app-link">
-          <div class="nav-app-left">
-            <div class="nav-app-icon waze">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19.78 12.18c0-4.42-3.58-8-8-8-3.48 0-6.44 2.22-7.53 5.34-.35-.08-.71-.12-1.08-.12-2.58 0-4.67 2.09-4.67 4.67 0 2.21 1.54 4.07 3.59 4.54.34 2.16 2.05 3.86 4.23 4.25l-.26.87a.8.8 0 0 0 .76 1.03h7.24a.8.8 0 0 0 .77-1.01l-.29-.98c2.94-.8 5.14-3.48 5.14-6.68 0-.3-.02-.59-.06-.88.61-.83.96-1.85.96-2.95 0-.06 0-.11-.03-.16-.03.03-.04.08-.06.12zM9.33 11.08a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm5.34 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm-5.74 3.75c.34-.1.7.09.8.44.33 1.05 1.15 1.56 2.07 1.56s1.74-.51 2.07-1.56c.11-.35.47-.54.8-.44.35.11.54.47.44.8-.52 1.66-1.84 2.45-3.31 2.45s-2.79-.79-3.31-2.45a.62.62 0 0 1 .44-.8z"/>
-              </svg>
+      <div class="nav-list">
+        <a href="#" id="link-waze" target="_blank" rel="noopener noreferrer" class="nav-link">
+          <div class="nav-left">
+            <div class="nav-icon waze">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.78 12.18c0-4.42-3.58-8-8-8-3.48 0-6.44 2.22-7.53 5.34-.35-.08-.71-.12-1.08-.12-2.58 0-4.67 2.09-4.67 4.67 0 2.21 1.54 4.07 3.59 4.54.34 2.16 2.05 3.86 4.23 4.25l-.26.87a.8.8 0 0 0 .76 1.03h7.24a.8.8 0 0 0 .77-1.01l-.29-.98c2.94-.8 5.14-3.48 5.14-6.68 0-.3-.02-.59-.06-.88.61-.83.96-1.85.96-2.95 0-.06 0-.11-.03-.16zM9.33 11.08a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm5.34 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm-5.74 3.75c.34-.1.7.09.8.44.33 1.05 1.15 1.56 2.07 1.56s1.74-.51 2.07-1.56c.11-.35.47-.54.8-.44.35.11.54.47.44.8-.52 1.66-1.84 2.45-3.31 2.45s-2.79-.79-3.31-2.45a.62.62 0 0 1 .44-.8z"/></svg>
             </div>
-            <div>
-              <div class="nav-app-name">Waze</div>
-              <div class="nav-app-subtitle">Ruta con tráfico en vivo y alertas</div>
-            </div>
+            <div><div class="nav-name">Waze</div><div class="nav-sub">Ruta con tráfico en vivo</div></div>
           </div>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted);"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--text-muted);"><polyline points="9 18 15 12 9 6"/></svg>
         </a>
 
-        <!-- Opción Google Maps -->
-        <a href="#" id="link-app-gmaps" target="_blank" rel="noopener noreferrer" class="nav-app-link">
-          <div class="nav-app-left">
-            <div class="nav-app-icon gmaps">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-              </svg>
+        <a href="#" id="link-gmaps" target="_blank" rel="noopener noreferrer" class="nav-link">
+          <div class="nav-left">
+            <div class="nav-icon gmaps">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             </div>
-            <div>
-              <div class="nav-app-name">Google Maps</div>
-              <div class="nav-app-subtitle">Navegación estándar y satélite</div>
-            </div>
+            <div><div class="nav-name">Google Maps</div><div class="nav-sub">Navegación estándar y satélite</div></div>
           </div>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted);"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--text-muted);"><polyline points="9 18 15 12 9 6"/></svg>
         </a>
 
-        <!-- Opción Apple Maps -->
-        <a href="#" id="link-app-apple" target="_blank" rel="noopener noreferrer" class="nav-app-link">
-          <div class="nav-app-left">
-            <div class="nav-app-icon apple">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
-              </svg>
+        <a href="#" id="link-apple" target="_blank" rel="noopener noreferrer" class="nav-link">
+          <div class="nav-left">
+            <div class="nav-icon apple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
             </div>
-            <div>
-              <div class="nav-app-name">Apple Maps</div>
-              <div class="nav-app-subtitle">Recomendado para iPhone / iOS</div>
-            </div>
+            <div><div class="nav-name">Apple Maps</div><div class="nav-sub">Recomendado para iPhone</div></div>
           </div>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted);"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--text-muted);"><polyline points="9 18 15 12 9 6"/></svg>
         </a>
 
-        <!-- Opción Reseñas de Google -->
-        <a href="#" id="link-app-reviews" target="_blank" rel="noopener noreferrer" class="nav-app-link" style="border-color: rgba(216, 178, 110, 0.35); background: rgba(216, 178, 110, 0.06);">
-          <div class="nav-app-left">
-            <div class="nav-app-icon" style="background: rgba(251, 191, 36, 0.18); color: #fbbf24;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-              </svg>
+        <a href="#" id="link-reviews" target="_blank" rel="noopener noreferrer" class="nav-link" style="border-color:rgba(255,215,0,0.4);background:rgba(255,215,0,0.06);">
+          <div class="nav-left">
+            <div class="nav-icon" style="background:rgba(251,191,36,0.2);color:#fbbf24;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
             <div>
-              <div class="nav-app-name" style="color: var(--gold-glow);">Calificar en Google ★★★★★</div>
-              <div class="nav-app-subtitle">Déjanos tu opinión o reseña 5 estrellas</div>
+              <div class="nav-name" style="color:var(--gold);">Calificar en Google ★★★★★</div>
+              <div class="nav-sub">Déjanos tu opinión o reseña 5 estrellas</div>
             </div>
           </div>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--gold-primary);"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gold);"><polyline points="9 18 15 12 9 6"/></svg>
         </a>
       </div>
     </div>
   </div>
 
-  <!-- ====================================================================
-       MODAL 2: GESTOR GPS EN TIEMPO REAL (MODO ADMIN - 5 TOQUES EN LOGO)
-       ==================================================================== -->
-  <div class="modal-backdrop" id="modal-gps-admin" role="dialog" aria-modal="true" aria-labelledby="gps-admin-title">
-    <div class="modal-window">
-      <div class="modal-header">
-        <div class="modal-title-group">
-          <h3 id="gps-admin-title">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--gold-glow);">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="22" y1="12" x2="18" y2="12"/>
-              <line x1="6" y1="12" x2="2" y2="12"/>
-              <line x1="12" y1="6" x2="12" y2="2"/>
-              <line x1="12" y1="22" x2="12" y2="18"/>
-            </svg>
+  <!-- ================================================================
+       MODAL 2: GPS ADMIN (5 TOQUES)
+       ================================================================ -->
+  <div class="modal-bg" id="modal-gps" role="dialog" aria-modal="true" aria-labelledby="gps-title">
+    <div class="modal-win">
+      <div class="modal-head">
+        <div>
+          <h3 id="gps-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gold);"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg>
             <span>Configurar Ubicación GPS</span>
           </h3>
-          <p>Toca el botón cuando estés en el negocio para guardar la ubicación satelital exacta.</p>
+          <p>Toca el botón cuando estés en el negocio para guardar la ubicación exacta.</p>
         </div>
-        <button type="button" class="btn-close-modal" onclick="closeModal('modal-gps-admin')" aria-label="Cerrar ventana">✕</button>
+        <button type="button" class="btn-close" onclick="closeModal('modal-gps')" aria-label="Cerrar">✕</button>
       </div>
 
-      <!-- Selector de Sede -->
       <div class="form-group">
-        <label for="admin-select-branch" class="form-label">Sede a Configurar:</label>
-        <select id="admin-select-branch" class="form-select" onchange="loadBranchDataInForm()">
+        <label for="admin-branch" class="form-label">Sede a Configurar:</label>
+        <select id="admin-branch" class="form-select" onchange="loadBranchForm()">
           <option value="1">Sede 1: Viña 1 (Centro)</option>
           <option value="2">Sede 2: Viña 2 (Segunda Sede)</option>
         </select>
       </div>
 
-      <!-- Nombre del Lugar / Descripción -->
       <div class="form-group">
-        <label for="admin-loc-name" class="form-label">Nombre del Lugar / Descripción:</label>
-        <input type="text" id="admin-loc-name" class="form-input" placeholder="Ej. Viña 1 - Minisúper & Licorera" />
+        <label for="admin-name" class="form-label">Nombre del Lugar:</label>
+        <input type="text" id="admin-name" class="form-input" placeholder="Ej. Viña 1 - Minisúper & Licorera">
       </div>
 
       <div class="form-group">
-        <label for="admin-loc-desc" class="form-label">Subtítulo o Referencia:</label>
-        <input type="text" id="admin-loc-desc" class="form-input" placeholder="Ej. Sede Principal • Centro de Turrúcares" />
+        <label for="admin-desc" class="form-label">Subtítulo o Referencia:</label>
+        <input type="text" id="admin-desc" class="form-input" placeholder="Ej. Sede Principal • Centro de Turrúcares">
       </div>
 
-      <!-- URL de Reseñas de Google -->
       <div class="form-group">
-        <label for="admin-review-url" class="form-label">⭐ URL de Reseñas de Google (Review Link):</label>
-        <input type="url" id="admin-review-url" class="form-input" placeholder="https://g.page/r/.../review o link de Google Maps" />
-        <span style="font-size:0.71rem; color:var(--text-muted); line-height:1.35;">Pega el enlace directo para que los clientes califiquen esta sede en Google.</span>
+        <label for="admin-review" class="form-label">⭐ URL de Reseñas de Google:</label>
+        <input type="url" id="admin-review" class="form-input" placeholder="https://g.page/r/.../review">
+        <span style="font-size:0.71rem;color:var(--text-muted);">Pega el enlace directo para reseñas de Google.</span>
       </div>
 
-      <!-- Botón para capturar GPS del teléfono en tiempo real -->
-      <button type="button" class="btn-gps-trigger" id="btn-gps-capture" onclick="captureLiveGPS()">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="3"/>
-          <path d="M12 2v3m0 14v3M2 12h3m14 0h3"/>
-        </svg>
+      <button type="button" class="btn-gps" id="btn-gps" onclick="captureLiveGPS()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/></svg>
         <span id="btn-gps-text">Capturar Ubicación Actual de mi Celular</span>
       </button>
 
-      <!-- Caja de Coordenadas Capturadas -->
-      <div class="gps-results-box" id="gps-results-box">
-        <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
-          <strong style="color:#ffffff;">📍 Coordenadas Capturadas:</strong>
-          <span id="gps-accuracy-badge" style="color:var(--gold-primary); font-size:0.7rem;"></span>
+      <div class="gps-box" id="gps-box">
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+          <strong style="color:#fff;">📍 Coordenadas Capturadas:</strong>
+          <span id="gps-acc" style="color:var(--gold);font-size:0.7rem;"></span>
         </div>
-        <div class="gps-coords-badge" id="gps-coords-display">Lat: 0.00000, Lon: 0.00000</div>
-        
-        <div style="margin-top:10px; display:flex; gap:6px; flex-wrap:wrap;">
-          <a href="#" id="preview-waze" target="_blank" class="btn-branch btn-branch-map" style="padding:6px 10px; font-size:0.72rem;">Probar Waze</a>
-          <a href="#" id="preview-gmaps" target="_blank" class="btn-branch btn-branch-map" style="padding:6px 10px; font-size:0.72rem;">Probar Maps</a>
-          <a href="#" id="preview-apple" target="_blank" class="btn-branch btn-branch-map" style="padding:6px 10px; font-size:0.72rem;">Probar Apple</a>
+        <div class="gps-coords" id="gps-coords">Lat: 0.00000, Lon: 0.00000</div>
+        <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;">
+          <a href="#" id="preview-waze" target="_blank" class="btn-act btn-map" style="padding:6px 10px;font-size:0.72rem;">Probar Waze</a>
+          <a href="#" id="preview-gmaps" target="_blank" class="btn-act btn-map" style="padding:6px 10px;font-size:0.72rem;">Probar Maps</a>
+          <a href="#" id="preview-apple" target="_blank" class="btn-act btn-map" style="padding:6px 10px;font-size:0.72rem;">Probar Apple</a>
         </div>
       </div>
 
-      <!-- Acciones de Guardar y Copiar -->
-      <div class="admin-actions-row">
-        <button type="button" class="btn-admin-action btn-admin-save" onclick="saveLocationToStorage()">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
-            <polyline points="17 21 17 13 7 13 7 21"/>
-            <polyline points="7 3 7 8 15 8"/>
-          </svg>
+      <div class="admin-row">
+        <button type="button" class="btn-admin btn-save" onclick="saveLocation()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
           <span>Guardar Sede</span>
         </button>
-
-        <button type="button" class="btn-admin-action btn-admin-copy" onclick="copyLocationData()">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
-            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
-          </svg>
+        <button type="button" class="btn-admin btn-copy" onclick="copyLocation()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
           <span>Copiar Enlaces</span>
         </button>
       </div>
-
     </div>
   </div>
 
-  <!-- Notificación Toast Dinámica -->
-  <div class="toast-notification" id="toast-notify" role="alert" aria-live="polite">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--emerald-online);">
-      <polyline points="20 6 9 17 4 12"/>
-    </svg>
-    <span>Tarjeta de contacto lista para guardar</span>
+  <!-- Toast -->
+  <div class="toast" id="toast" role="alert" aria-live="polite">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--emerald);"><polyline points="20 6 9 17 4 12"/></svg>
+    <span>Notificación</span>
   </div>
 
-  <!-- ====================================================================
-       SCRIPTS: DETECTOR 5 TOQUES, GEOLOCALIZACIÓN Y GENERACIÓN VCARD
-       ==================================================================== -->
+  <!-- ================================================================
+       SCRIPTS
+       ================================================================ -->
   <script>
-    // Estado global de sedes (Coordenadas y URLs de reseñas por defecto)
+    // ============================================================
+    // PARTÍCULAS DORADAS (Canvas 2D — Ultra liviano)
+    // ============================================================
+    (function() {
+      const canvas = document.getElementById('particles-canvas');
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      let W, H;
+
+      function resize() {
+        W = canvas.width = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+      }
+
+      function createParticles() {
+        const count = Math.min(Math.floor((W * H) / 18000), 80);
+        particles = [];
+        for (let i = 0; i < count; i++) {
+          particles.push({
+            x: Math.random() * W,
+            y: Math.random() * H,
+            r: Math.random() * 2.5 + 0.8,
+            dx: (Math.random() - 0.5) * 0.3,
+            dy: -Math.random() * 0.4 - 0.1,
+            opacity: Math.random() * 0.6 + 0.2,
+            flicker: Math.random() * Math.PI * 2
+          });
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        const time = Date.now() * 0.001;
+        particles.forEach(p => {
+          p.x += p.dx;
+          p.y += p.dy;
+          p.flicker += 0.02;
+          const alpha = p.opacity * (0.6 + 0.4 * Math.sin(p.flicker + time));
+
+          if (p.y < -10) p.y = H + 10;
+          if (p.x < -10) p.x = W + 10;
+          if (p.x > W + 10) p.x = -10;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255, 215, 0, ${alpha})`;
+          ctx.shadowColor = 'rgba(255, 215, 0, 0.4)';
+          ctx.shadowBlur = p.r * 4;
+          ctx.fill();
+          ctx.shadowBlur = 0;
+        });
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener('resize', () => { resize(); createParticles(); });
+      resize();
+      createParticles();
+      draw();
+    })();
+
+    // ============================================================
+    // SOBRE NOSOTROS TOGGLE
+    // ============================================================
+    function toggleAbout() {
+      const content = document.getElementById('about-content');
+      const section = document.getElementById('about-section');
+      const chevron = document.getElementById('about-chevron');
+      const btn = document.getElementById('btn-about');
+
+      if (content.classList.contains('open')) {
+        content.classList.remove('open');
+        section.classList.remove('expanded');
+        chevron.style.transform = 'rotate(0deg)';
+        btn.style.borderRadius = '';
+      } else {
+        content.classList.add('open');
+        section.classList.add('expanded');
+        chevron.style.transform = 'rotate(180deg)';
+        btn.style.borderRadius = 'var(--radius-md) var(--radius-md) 0 0';
+      }
+    }
+
+    // ============================================================
+    // DATOS DE SEDES
+    // ============================================================
     const branchesData = {
       1: {
-        name: "Viña 1 - Cava & Licorera Principal",
-        desc: "Sede Principal • Centro de Turrúcares",
-        lat: 9.95758,
-        lon: -84.31885,
+        name: "Viña 1 — Cava & Licorera Principal",
+        desc: "Sede Principal · Centro de Turrúcares",
+        lat: 9.95758, lon: -84.31885,
         query: "Turrucares, Alajuela, Licorera La Vina 1",
         reviewUrl: "https://www.google.com/maps/search/?api=1&query=Licorera+La+Vi%C3%B1a+Turr%C3%BAcares+Alajuela"
       },
       2: {
-        name: "Viña 2 - Minisúper & Cava Artesanal",
-        desc: "Segunda Sede • Turrúcares y alrededores",
-        lat: 9.96100,
-        lon: -84.32200,
+        name: "Viña 2 — Minisúper & Cava Artesanal",
+        desc: "Segunda Sede · Turrúcares y alrededores",
+        lat: 9.96100, lon: -84.32200,
         query: "Turrucares, Alajuela, Licorera La Vina 2",
         reviewUrl: "https://www.google.com/maps/search/?api=1&query=Licorera+La+Vi%C3%B1a+2+Turr%C3%BAcares+Alajuela"
       }
     };
 
     let activeNavBranch = 1;
-    let tempCapturedGPS = null;
+    let tempGPS = null;
 
-    // Detector de toques secretos en el logotipo (5 toques para Modo Admin)
-    let logoTapCounter = 0;
-    let logoTapTimer = null;
+    // ============================================================
+    // 5-TAP LOGO SECRET (GPS ADMIN)
+    // ============================================================
+    let tapCount = 0, tapTimer = null;
 
     function handleLogoTap() {
-      logoTapCounter++;
+      tapCount++;
+      const av = document.getElementById('brand-avatar');
+      if (av) { av.style.transform = 'scale(0.92)'; setTimeout(() => av.style.transform = 'scale(1)', 140); }
+      if (navigator.vibrate) navigator.vibrate(35);
 
-      // Animación táctil suave en el avatar
-      const avatar = document.getElementById('brand-avatar');
-      if (avatar) {
-        avatar.style.transform = 'scale(0.92)';
-        setTimeout(() => { avatar.style.transform = 'scale(1)'; }, 140);
-      }
+      clearTimeout(tapTimer);
+      tapTimer = setTimeout(() => tapCount = 0, 2800);
 
-      if (navigator.vibrate) {
-        navigator.vibrate(35);
-      }
-
-      clearTimeout(logoTapTimer);
-      logoTapTimer = setTimeout(() => {
-        logoTapCounter = 0;
-      }, 2800);
-
-      if (logoTapCounter === 3) {
-        showToast('Modo Admin: Toque 3 de 5...');
-      } else if (logoTapCounter === 4) {
-        showToast('Modo Admin: Toque 4 de 5...');
-      } else if (logoTapCounter >= 5) {
-        logoTapCounter = 0;
-        if (navigator.vibrate) navigator.vibrate([70, 50, 70]);
-        openGPSAdminModal();
+      if (tapCount === 3) showToast('Modo Admin: Toque 3 de 5...');
+      else if (tapCount === 4) showToast('Modo Admin: Toque 4 de 5...');
+      else if (tapCount >= 5) {
+        tapCount = 0;
+        if (navigator.vibrate) navigator.vibrate([70,50,70]);
+        loadBranchForm();
+        openModal('modal-gps');
+        showToast('📍 Modo Administrador GPS Activado');
       }
     }
 
-    /**
-     * Abre el modal de navegación (Waze / Google Maps / Apple Maps / Reseñas)
-     */
+    // ============================================================
+    // NAVIGATION SHEET
+    // ============================================================
     function openNavSheet(branchId) {
       activeNavBranch = branchId;
-      const data = branchesData[branchId];
-      
-      const titleElem = document.getElementById('nav-target-name');
-      if (titleElem) titleElem.textContent = data.name;
+      const d = branchesData[branchId];
+      const tn = document.getElementById('nav-target-name');
+      if (tn) tn.textContent = d.name;
 
-      const lat = data.lat;
-      const lon = data.lon;
+      document.getElementById('link-waze').href = `https://waze.com/ul?ll=${d.lat},${d.lon}&navigate=yes`;
+      document.getElementById('link-gmaps').href = `https://www.google.com/maps/search/?api=1&query=${d.lat},${d.lon}`;
+      document.getElementById('link-apple').href = `https://maps.apple.com/?daddr=${d.lat},${d.lon}&dirflg=d`;
 
-      // Generar enlaces para las aplicaciones de mapas
-      const wazeUrl = `https://waze.com/ul?ll=${lat},${lon}&navigate=yes`;
-      const gmapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`;
-      const appleUrl = `https://maps.apple.com/?daddr=${lat},${lon}&dirflg=d`;
+      const rv = document.getElementById('link-reviews');
+      if (rv) rv.href = d.reviewUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(d.name)}`;
 
-      document.getElementById('link-app-waze').href = wazeUrl;
-      document.getElementById('link-app-gmaps').href = gmapsUrl;
-      document.getElementById('link-app-apple').href = appleUrl;
-
-      // Enlace directo a reseñas de Google para esta tienda
-      const revLink = document.getElementById('link-app-reviews');
-      if (revLink) {
-        revLink.href = data.reviewUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(data.name)}`;
-      }
-
-      openModal('modal-nav-sheet');
+      openModal('modal-nav');
     }
 
-    /**
-     * Abre el modal de administración GPS
-     */
-    function openGPSAdminModal() {
-      loadBranchDataInForm();
-      openModal('modal-gps-admin');
-      showToast('📍 Modo Administrador GPS Activado');
+    // ============================================================
+    // GPS ADMIN FORM
+    // ============================================================
+    function loadBranchForm() {
+      const sel = document.getElementById('admin-branch');
+      const id = sel ? sel.value : 1;
+      const d = branchesData[id];
+      document.getElementById('admin-name').value = d.name || '';
+      document.getElementById('admin-desc').value = d.desc || '';
+      document.getElementById('admin-review').value = d.reviewUrl || '';
+      if (d.lat && d.lon) displayCoords(d.lat, d.lon, null);
     }
 
-    function loadBranchDataInForm() {
-      const select = document.getElementById('admin-select-branch');
-      const branchId = select ? select.value : 1;
-      const data = branchesData[branchId];
-      
-      document.getElementById('admin-loc-name').value = data.name || '';
-      document.getElementById('admin-loc-desc').value = data.desc || '';
-      document.getElementById('admin-review-url').value = data.reviewUrl || '';
-      
-      // Mostrar coordenadas actuales guardadas
-      if (data.lat && data.lon) {
-        displayCoords(data.lat, data.lon, null);
-      }
-    }
-
-    /**
-     * Captura en tiempo real la ubicación GPS del celular con alta precisión
-     */
     function captureLiveGPS() {
-      const btn = document.getElementById('btn-gps-capture');
-      const btnText = document.getElementById('btn-gps-text');
+      const btn = document.getElementById('btn-gps');
+      const txt = document.getElementById('btn-gps-text');
+      if (!navigator.geolocation) { alert('Tu navegador no soporta geolocalización GPS.'); return; }
 
-      if (!navigator.geolocation) {
-        alert('Tu navegador o dispositivo no soporta geolocalización GPS.');
-        return;
-      }
-
-      btnText.textContent = '🛰️ Conectando con satélites GPS...';
+      txt.textContent = '🛰️ Conectando con satélites GPS...';
       btn.style.opacity = '0.75';
 
       navigator.geolocation.getCurrentPosition(
-        (position) => {
-          btnText.textContent = '📍 Capturar Ubicación Actual de mi Celular';
+        (pos) => {
+          txt.textContent = '📍 Capturar Ubicación Actual de mi Celular';
           btn.style.opacity = '1';
-
-          const lat = position.coords.latitude;
-          const lon = position.coords.longitude;
-          const accuracy = Math.round(position.coords.accuracy);
-
-          tempCapturedGPS = { lat, lon, accuracy };
-          displayCoords(lat, lon, accuracy);
-
-          if (navigator.vibrate) navigator.vibrate([50, 40, 50]);
-          showToast(`¡Ubicación GPS capturada con precisión de ±${accuracy}m!`);
+          const lat = pos.coords.latitude, lon = pos.coords.longitude, acc = Math.round(pos.coords.accuracy);
+          tempGPS = { lat, lon, acc };
+          displayCoords(lat, lon, acc);
+          if (navigator.vibrate) navigator.vibrate([50,40,50]);
+          showToast(`¡GPS capturado con precisión de ±${acc}m!`);
         },
-        (error) => {
-          btnText.textContent = '📍 Capturar Ubicación Actual de mi Celular';
+        (err) => {
+          txt.textContent = '📍 Capturar Ubicación Actual de mi Celular';
           btn.style.opacity = '1';
-          console.error('Error de geolocalización:', error);
-          
-          let errMsg = 'No se pudo obtener la ubicación.';
-          if (error.code === error.PERMISSION_DENIED) {
-            errMsg = 'Permiso denegado. Por favor permite el acceso a la ubicación en tu navegador.';
-          } else if (error.code === error.POSITION_UNAVAILABLE) {
-            errMsg = 'Señal GPS no disponible. Verifica que tu ubicación esté activada en ajustes.';
-          } else if (error.code === error.TIMEOUT) {
-            errMsg = 'Tiempo de espera agotado al conectar con el GPS.';
-          }
-          alert(errMsg);
+          let msg = 'No se pudo obtener la ubicación.';
+          if (err.code === err.PERMISSION_DENIED) msg = 'Permiso denegado. Permite el acceso a la ubicación.';
+          else if (err.code === err.POSITION_UNAVAILABLE) msg = 'Señal GPS no disponible.';
+          else if (err.code === err.TIMEOUT) msg = 'Tiempo de espera agotado.';
+          alert(msg);
         },
-        {
-          enableHighAccuracy: true,
-          timeout: 12000,
-          maximumAge: 0
-        }
+        { enableHighAccuracy: true, timeout: 12000, maximumAge: 0 }
       );
     }
 
-    function displayCoords(lat, lon, accuracy) {
-      const box = document.getElementById('gps-results-box');
-      const coordsDisplay = document.getElementById('gps-coords-display');
-      const accBadge = document.getElementById('gps-accuracy-badge');
-
+    function displayCoords(lat, lon, acc) {
+      const box = document.getElementById('gps-box');
+      document.getElementById('gps-coords').textContent = `Lat: ${lat.toFixed(6)}, Lon: ${lon.toFixed(6)}`;
+      document.getElementById('gps-acc').textContent = acc ? `Precisión: ±${acc}m` : 'Guardado';
       box.classList.add('active');
-      coordsDisplay.textContent = `Lat: ${lat.toFixed(6)}, Lon: ${lon.toFixed(6)}`;
-      accBadge.textContent = accuracy ? `Precisión: ±${accuracy}m` : 'Guardado';
-
-      // Actualizar botones de prueba previa
-      const wazeUrl = `https://waze.com/ul?ll=${lat},${lon}&navigate=yes`;
-      const gmapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`;
-      const appleUrl = `https://maps.apple.com/?daddr=${lat},${lon}&dirflg=d`;
-
-      document.getElementById('preview-waze').href = wazeUrl;
-      document.getElementById('preview-gmaps').href = gmapsUrl;
-      document.getElementById('preview-apple').href = appleUrl;
+      document.getElementById('preview-waze').href = `https://waze.com/ul?ll=${lat},${lon}&navigate=yes`;
+      document.getElementById('preview-gmaps').href = `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`;
+      document.getElementById('preview-apple').href = `https://maps.apple.com/?daddr=${lat},${lon}&dirflg=d`;
     }
 
-    /**
-     * Guarda la ubicación y el link de reseñas en localStorage y actualiza la interfaz
-     */
-    function saveLocationToStorage() {
-      const branchId = document.getElementById('admin-select-branch').value;
-      const name = document.getElementById('admin-loc-name').value.trim();
-      const desc = document.getElementById('admin-loc-desc').value.trim();
-      const reviewUrl = document.getElementById('admin-review-url').value.trim();
+    function saveLocation() {
+      const id = document.getElementById('admin-branch').value;
+      const name = document.getElementById('admin-name').value.trim();
+      const desc = document.getElementById('admin-desc').value.trim();
+      const review = document.getElementById('admin-review').value.trim();
+      if (!name) { alert('Ingresa un nombre para la sede.'); return; }
 
-      if (!name) {
-        alert('Por favor ingresa un nombre para la sede.');
-        return;
-      }
+      if (tempGPS) { branchesData[id].lat = tempGPS.lat; branchesData[id].lon = tempGPS.lon; }
+      if (name) branchesData[id].name = name;
+      if (desc) branchesData[id].desc = desc;
+      if (review) branchesData[id].reviewUrl = review;
 
-      if (tempCapturedGPS) {
-        branchesData[branchId].lat = tempCapturedGPS.lat;
-        branchesData[branchId].lon = tempCapturedGPS.lon;
-      }
-
-      if (name) branchesData[branchId].name = name;
-      if (desc) branchesData[branchId].desc = desc;
-      if (reviewUrl) branchesData[branchId].reviewUrl = reviewUrl;
-
-      try {
-        localStorage.setItem('vina_branches_custom', JSON.stringify(branchesData));
-      } catch (e) {
-        console.warn('LocalStorage error:', e);
-      }
-
-      applyBranchesDataToDOM();
-      closeModal('modal-gps-admin');
-      showToast(`¡Datos y reseñas de Sede ${branchId} guardados!`);
+      try { localStorage.setItem('vina_branches_custom', JSON.stringify(branchesData)); } catch(e) {}
+      applyDOM();
+      closeModal('modal-gps');
+      showToast(`¡Datos de Sede ${id} guardados!`);
     }
 
-    /**
-     * Copia los enlaces de navegación, reseñas y coordenadas al portapapeles
-     */
-    function copyLocationData() {
-      const branchId = document.getElementById('admin-select-branch').value;
-      const data = branchesData[branchId];
-      const lat = tempCapturedGPS ? tempCapturedGPS.lat : data.lat;
-      const lon = tempCapturedGPS ? tempCapturedGPS.lon : data.lon;
-
-      const textToCopy = [
-        `📍 ${data.name}`,
-        `Coordenadas: ${lat}, ${lon}`,
-        `⭐ Reseñas Google: ${data.reviewUrl || ''}`,
+    function copyLocation() {
+      const id = document.getElementById('admin-branch').value;
+      const d = branchesData[id];
+      const lat = tempGPS ? tempGPS.lat : d.lat, lon = tempGPS ? tempGPS.lon : d.lon;
+      const text = [
+        `📍 ${d.name}`, `Coords: ${lat}, ${lon}`,
+        `⭐ Reseñas: ${d.reviewUrl || ''}`,
         `🚗 Waze: https://waze.com/ul?ll=${lat},${lon}&navigate=yes`,
-        `🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=${lat},${lon}`,
-        `🍏 Apple Maps: https://maps.apple.com/?daddr=${lat},${lon}&dirflg=d`
+        `🗺️ Maps: https://www.google.com/maps/search/?api=1&query=${lat},${lon}`,
+        `🍏 Apple: https://maps.apple.com/?daddr=${lat},${lon}&dirflg=d`
       ].join('\n');
 
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(textToCopy).then(() => {
-          showToast('¡Enlaces y coordenadas copiados al portapapeles!');
-        }).catch(() => {
-          prompt('Copia tus coordenadas y enlaces:', textToCopy);
-        });
-      } else {
-        prompt('Copia tus coordenadas y enlaces:', textToCopy);
-      }
+        navigator.clipboard.writeText(text).then(() => showToast('¡Enlaces copiados!')).catch(() => prompt('Copia:', text));
+      } else { prompt('Copia:', text); }
     }
 
-    /**
-     * Aplica los nombres, referencias y enlaces de reseñas a las tarjetas de la página
-     */
-    function applyBranchesDataToDOM() {
+    function applyDOM() {
       try {
         const saved = localStorage.getItem('vina_branches_custom');
-        if (saved) {
-          const parsed = JSON.parse(saved);
-          if (parsed[1]) Object.assign(branchesData[1], parsed[1]);
-          if (parsed[2]) Object.assign(branchesData[2], parsed[2]);
-        }
-      } catch (e) {
-        console.warn('Error reading saved branches:', e);
-      }
+        if (saved) { const p = JSON.parse(saved); if (p[1]) Object.assign(branchesData[1], p[1]); if (p[2]) Object.assign(branchesData[2], p[2]); }
+      } catch(e) {}
 
-      // Sede 1
-      const t1 = document.getElementById('title-sede-1');
-      const d1 = document.getElementById('desc-sede-1');
-      const r1 = document.getElementById('review-link-sede-1');
-      if (t1 && branchesData[1].name) t1.textContent = branchesData[1].name;
-      if (d1 && branchesData[1].desc) d1.textContent = branchesData[1].desc;
-      if (r1 && branchesData[1].reviewUrl) r1.href = branchesData[1].reviewUrl;
-
-      // Sede 2
-      const t2 = document.getElementById('title-sede-2');
-      const d2 = document.getElementById('desc-sede-2');
-      const r2 = document.getElementById('review-link-sede-2');
-      if (t2 && branchesData[2].name) t2.textContent = branchesData[2].name;
-      if (d2 && branchesData[2].desc) d2.textContent = branchesData[2].desc;
-      if (r2 && branchesData[2].reviewUrl) r2.href = branchesData[2].reviewUrl;
+      [1,2].forEach(id => {
+        const t = document.getElementById(`title-sede-${id}`);
+        const d = document.getElementById(`desc-sede-${id}`);
+        const r = document.getElementById(`review-link-sede-${id}`);
+        if (t && branchesData[id].name) t.textContent = branchesData[id].name;
+        if (d && branchesData[id].desc) d.textContent = branchesData[id].desc;
+        if (r && branchesData[id].reviewUrl) r.href = branchesData[id].reviewUrl;
+      });
     }
 
-    function openModal(id) {
-      const m = document.getElementById(id);
-      if (m) m.classList.add('active');
-    }
+    // ============================================================
+    // MODALES
+    // ============================================================
+    function openModal(id) { const m = document.getElementById(id); if (m) m.classList.add('active'); }
+    function closeModal(id) { const m = document.getElementById(id); if (m) m.classList.remove('active'); }
+    window.addEventListener('click', e => { if (e.target.classList.contains('modal-bg')) e.target.classList.remove('active'); });
 
-    function closeModal(id) {
-      const m = document.getElementById(id);
-      if (m) m.classList.remove('active');
-    }
-
-    // Cerrar modal al tocar el fondo oscuro exterior
-    window.addEventListener('click', (e) => {
-      if (e.target.classList.contains('modal-backdrop')) {
-        e.target.classList.remove('active');
-      }
-    });
-
-    /**
-     * Genera y descarga el archivo de contacto vCard (.vcf)
-     * Compatible con iOS (Contactos de Apple) y Android (Contactos de Google).
-     */
+    // ============================================================
+    // VCARD
+    // ============================================================
     function saveVCard() {
-      const vcardContent = [
-        'BEGIN:VCARD',
-        'VERSION:3.0',
+      const vc = [
+        'BEGIN:VCARD', 'VERSION:3.0',
         'N:La Viña;Licorera & Minisúper;;;',
         'FN:Licorera & Minisúper La Viña',
         'ORG:Licorera & Minisúper La Viña',
         'TITLE:Vinos, cervezas, licores y minisúper',
         'TEL;TYPE=CELL,VOICE,PREF:+50687759835',
         'ADR;TYPE=WORK,PREF:;;Turrúcares;Alajuela;;;Costa Rica',
-        'NOTE:Licorera & Minisúper La Viña en Turrúcares, Alajuela. Servicio a domicilio y retiro en tienda. WhatsApp: +506 8775 9835',
+        'NOTE:La Viña — Turrúcares, Alajuela. Domicilio y retiro. WhatsApp: +506 8775 9835',
         'URL;TYPE=Facebook:https://www.facebook.com/LicoLaVina/',
         'URL;TYPE=Instagram:https://instagram.com/licolavina',
         'URL;TYPE=TikTok:https://tiktok.com/@licolavina',
@@ -2147,44 +1786,33 @@
       ].join('\r\n');
 
       try {
-        const blob = new Blob([vcardContent], { type: 'text/vcard;charset=utf-8' });
+        const blob = new Blob([vc], { type: 'text/vcard;charset=utf-8' });
         const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', 'Licorera_La_Vina_Contacto.vcf');
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-
-        showToast('Tarjeta de contacto descargada con éxito');
-      } catch (err) {
-        console.error('Error al generar la vCard:', err);
-        showToast('Abriendo llamada directa...');
+        const a = document.createElement('a');
+        a.href = url; a.download = 'Licorera_La_Vina_Contacto.vcf';
+        document.body.appendChild(a); a.click();
+        document.body.removeChild(a); URL.revokeObjectURL(url);
+        showToast('Tarjeta de contacto descargada');
+      } catch(e) {
+        showToast('Abriendo llamada...');
         window.location.href = 'tel:+50687759835';
       }
     }
 
-    /**
-     * Muestra una notificación visual no intrusiva
-     */
-    function showToast(message) {
-      const toast = document.getElementById('toast-notify');
-      if (!toast) return;
-      if (message) {
-        const span = toast.querySelector('span');
-        if (span) span.textContent = message;
-      }
-      toast.classList.add('show');
-      setTimeout(() => {
-        toast.classList.remove('show');
-      }, 3500);
+    // ============================================================
+    // TOAST
+    // ============================================================
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      if (!t) return;
+      const s = t.querySelector('span');
+      if (s && msg) s.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3500);
     }
 
-    // Inicializar datos al cargar la página
-    document.addEventListener('DOMContentLoaded', () => {
-      applyBranchesDataToDOM();
-    });
+    // INIT
+    document.addEventListener('DOMContentLoaded', () => { applyDOM(); });
   </script>
 </body>
 </html>
